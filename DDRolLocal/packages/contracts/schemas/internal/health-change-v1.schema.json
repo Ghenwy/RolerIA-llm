@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:health-change:1.0",
+  "title": "HealthChangeV1",
+  "description": "[DESIGN DEC-081] Explicit HP_CHANGED payload for canonical D&D health. Built by code from confirmed weapon damage; legacy delta/hit_points payloads are never reinterpreted.",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "kind", "character_id", "delta", "before_hp", "after_hp", "before_death_state", "after_death_state"],
+  "properties": {
+    "schema_version": { "const": "1.0" }, "kind": { "const": "WEAPON_DAMAGE" },
+    "character_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+    "delta": { "type": "integer", "minimum": -9007199254740991, "maximum": -1 },
+    "before_hp": { "type": "integer", "minimum": -9, "maximum": 9007199254740991 },
+    "after_hp": { "type": "integer", "minimum": -9007199254740991, "maximum": 9007199254740991 },
+    "before_death_state": { "enum": ["alive", "disabled", "dying"] },
+    "after_death_state": { "enum": ["alive", "disabled", "dying", "dead"] }
+  }
+}

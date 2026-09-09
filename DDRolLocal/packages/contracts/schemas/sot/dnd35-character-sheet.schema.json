@@ -1,0 +1,554 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rpg-engine:character-sheet:dnd35:1.0",
+  "title": "DND35CharacterSheet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "character_id",
+    "entity_type",
+    "name",
+    "ruleset",
+    "version",
+    "identity",
+    "advancement",
+    "abilities",
+    "health",
+    "defense",
+    "combat",
+    "saves",
+    "skills",
+    "features",
+    "magic",
+    "conditions",
+    "inventory_ref",
+    "location_id",
+    "knowledge",
+    "beliefs",
+    "secrets",
+    "relationships",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "character_id": {
+      "type": "string"
+    },
+    "entity_type": {
+      "enum": [
+        "player_character",
+        "npc_full",
+        "npc_lite",
+        "creature"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ruleset": {
+      "const": "dnd35"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "player_name",
+        "race",
+        "alignment",
+        "deity",
+        "size",
+        "age",
+        "gender",
+        "languages",
+        "public_description"
+      ],
+      "properties": {
+        "player_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "race": {
+          "type": "string"
+        },
+        "alignment": {
+          "type": "string"
+        },
+        "deity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "size": {
+          "type": "string"
+        },
+        "age": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "gender": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "public_description": {
+          "type": "string"
+        }
+      }
+    },
+    "advancement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "xp",
+        "classes"
+      ],
+      "properties": {
+        "level": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "xp": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "classes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "level"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "level": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "source_ref": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "abilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "str",
+        "dex",
+        "con",
+        "int",
+        "wis",
+        "cha"
+      ],
+      "properties": {
+        "str": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score",
+            "temporary_score",
+            "modifier"
+          ],
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "temporary_score": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "modifier": {
+              "type": "integer"
+            }
+          }
+        },
+        "dex": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score",
+            "temporary_score",
+            "modifier"
+          ],
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "temporary_score": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "modifier": {
+              "type": "integer"
+            }
+          }
+        },
+        "con": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score",
+            "temporary_score",
+            "modifier"
+          ],
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "temporary_score": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "modifier": {
+              "type": "integer"
+            }
+          }
+        },
+        "int": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score",
+            "temporary_score",
+            "modifier"
+          ],
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "temporary_score": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "modifier": {
+              "type": "integer"
+            }
+          }
+        },
+        "wis": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score",
+            "temporary_score",
+            "modifier"
+          ],
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "temporary_score": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "modifier": {
+              "type": "integer"
+            }
+          }
+        },
+        "cha": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "score",
+            "temporary_score",
+            "modifier"
+          ],
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "temporary_score": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "modifier": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "health": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hp_max",
+        "hp_current",
+        "temporary_hp",
+        "nonlethal_damage",
+        "hit_dice",
+        "death_state"
+      ],
+      "properties": {
+        "hp_max": {
+          "type": "integer"
+        },
+        "hp_current": {
+          "type": "integer"
+        },
+        "temporary_hp": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nonlethal_damage": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hit_dice": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "death_state": {
+          "enum": [
+            "alive",
+            "disabled",
+            "dying",
+            "stable",
+            "dead",
+            "destroyed"
+          ]
+        }
+      }
+    },
+    "defense": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "ac",
+        "touch_ac",
+        "flat_footed_ac"
+      ],
+      "properties": {
+        "ac": {
+          "type": "integer"
+        },
+        "touch_ac": {
+          "type": "integer"
+        },
+        "flat_footed_ac": {
+          "type": "integer"
+        }
+      }
+    },
+    "combat": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "initiative",
+        "base_attack_bonus",
+        "grapple",
+        "speed",
+        "attacks"
+      ],
+      "properties": {
+        "initiative": {
+          "type": "integer"
+        },
+        "base_attack_bonus": {
+          "type": "integer"
+        },
+        "grapple": {
+          "type": "integer"
+        },
+        "speed": {
+          "type": "object"
+        },
+        "attacks": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "saves": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fortitude",
+        "reflex",
+        "will"
+      ],
+      "properties": {
+        "fortitude": {
+          "type": "integer"
+        },
+        "reflex": {
+          "type": "integer"
+        },
+        "will": {
+          "type": "integer"
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "feats",
+        "class_features",
+        "racial_traits",
+        "special_abilities"
+      ],
+      "properties": {
+        "feats": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "class_features": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "racial_traits": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "special_abilities": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "magic": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "caster_profiles",
+        "active_effects"
+      ],
+      "properties": {
+        "caster_profiles": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "active_effects": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "inventory_ref": {
+      "type": "string"
+    },
+    "location_id": {
+      "type": "string"
+    },
+    "knowledge": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "beliefs": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "secrets": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "active",
+        "present_in_scene",
+        "last_seen_at"
+      ],
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "present_in_scene": {
+          "type": "boolean"
+        },
+        "last_seen_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

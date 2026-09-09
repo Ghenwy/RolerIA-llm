@@ -1,0 +1,57 @@
+{
+  "id": "dnd35.prestige.horizon_walker",
+  "name_es": "Caminante del horizonte",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d8",
+  "bab": "full",
+  "good_saves": [
+    "fortitude"
+  ],
+  "requirements": {
+    "skills": {
+      "Knowledge (geography)": 8
+    },
+    "feats_all": [
+      "Endurance"
+    ]
+  },
+  "progression": {},
+  "milestones": {
+    "1": [
+      "terrain_mastery"
+    ],
+    "2": [
+      "terrain_mastery"
+    ],
+    "3": [
+      "terrain_mastery"
+    ],
+    "4": [
+      "terrain_mastery"
+    ],
+    "5": [
+      "terrain_mastery"
+    ],
+    "6": [
+      "planar_terrain_mastery"
+    ],
+    "7": [
+      "planar_terrain_mastery"
+    ],
+    "8": [
+      "planar_terrain_mastery"
+    ],
+    "9": [
+      "planar_terrain_mastery"
+    ],
+    "10": [
+      "planar_terrain_mastery"
+    ]
+  },
+  "notes": [
+    "Each mastery selects an eligible terrain not already selected.",
+    "Benefits apply using the detailed terrain entry; do not infer an unlisted terrain benefit."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/horizonWalker.htm"
+}

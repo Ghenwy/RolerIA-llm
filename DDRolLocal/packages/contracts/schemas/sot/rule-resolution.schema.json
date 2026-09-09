@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx-rpg:dnd35:rule-resolution:1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "query_id",
+    "status",
+    "ruling",
+    "sources",
+    "required_rolls",
+    "modifiers",
+    "resource_changes",
+    "state_events",
+    "ambiguities",
+    "confidence"
+  ],
+  "properties": {
+    "query_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "resolved",
+        "partial",
+        "blocked",
+        "conflict"
+      ]
+    },
+    "ruling": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "section",
+          "url",
+          "authority"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "authority": {
+            "enum": [
+              "house_rule",
+              "official_errata",
+              "srd_ogc",
+              "campaign_ruling",
+              "user_excerpt"
+            ]
+          }
+        }
+      }
+    },
+    "required_rolls": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "modifiers": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "resource_changes": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "state_events": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "ambiguities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

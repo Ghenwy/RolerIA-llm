@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rpg-engine:turn-resolution:1.0",
+  "title": "TurnResolution",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "turn_id",
+    "base_state_version",
+    "resolution_status",
+    "required_rolls",
+    "events_to_commit",
+    "patches_to_commit",
+    "player_facing_narration",
+    "open_threads",
+    "memory_signals",
+    "checkpoint_recommended"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "turn_id": {
+      "type": "string"
+    },
+    "base_state_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "resolution_status": {
+      "enum": [
+        "READY",
+        "AWAITING_ROLL",
+        "AWAITING_WORKER",
+        "BLOCKED"
+      ]
+    },
+    "required_rolls": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "events_to_commit": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "patches_to_commit": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "player_facing_narration": {
+      "type": "string"
+    },
+    "open_threads": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "memory_signals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "checkpoint_recommended": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "dnd35.race.troll",
+  "name_es": "Trol",
+  "source_family": "core_srd",
+  "type": "giant",
+  "size": "large",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": 12,
+    "dex": 4,
+    "con": 12,
+    "int": -4,
+    "wis": -2,
+    "cha": -4
+  },
+  "racial_hd": 6,
+  "level_adjustment": 5,
+  "minimum_starting_ecl": 11,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 4,
+    "saves": {
+      "fort": 5,
+      "ref": 2,
+      "will": 2
+    },
+    "feats": 3
+  },
+  "traits": [
+    "space_10_reach_10",
+    "darkvision_60_ft",
+    "low_light_vision",
+    "natural_armor_+5",
+    "two_claws_1d6",
+    "bite_1d6",
+    "rend_2d6_plus_1_5_strength",
+    "regeneration_5",
+    "scent"
+  ],
+  "favored_class": "fighter",
+  "languages": {
+    "automatic": [
+      "Giant"
+    ],
+    "bonus": [
+      "Common",
+      "Orc"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/troll.htm"
+}

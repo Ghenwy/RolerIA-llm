@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:fallback-handoff:1.0",
+  "title": "FallbackHandoffV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "campaign_id", "branch_id", "committed_state_version", "checkpoint_id", "event_tail_hash", "rng_hash", "source_runtime", "target_runtime", "reason", "integrity_status", "foreign_writer_lock_present"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "branch_id": { "type": "string", "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "committed_state_version": { "type": "integer", "minimum": 0 },
+    "checkpoint_id": { "type": "string", "pattern": "^CHECKPOINT-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "event_tail_hash": { "$ref": "#/$defs/sha256" },
+    "rng_hash": { "$ref": "#/$defs/sha256" },
+    "source_runtime": { "enum": ["typescript", "python"] },
+    "target_runtime": { "enum": ["typescript", "python"] },
+    "reason": { "type": "string", "minLength": 1, "maxLength": 2048 },
+    "integrity_status": { "const": "PASS" },
+    "foreign_writer_lock_present": { "const": false }
+  },
+  "allOf": [
+    { "not": { "properties": { "source_runtime": { "const": "typescript" }, "target_runtime": { "const": "typescript" } }, "required": ["source_runtime", "target_runtime"] } },
+    { "not": { "properties": { "source_runtime": { "const": "python" }, "target_runtime": { "const": "python" } }, "required": ["source_runtime", "target_runtime"] } }
+  ],
+  "$defs": { "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" } }
+}

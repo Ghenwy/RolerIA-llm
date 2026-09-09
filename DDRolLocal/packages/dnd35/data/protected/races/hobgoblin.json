@@ -1,0 +1,34 @@
+{
+  "id": "dnd35.race.hobgoblin",
+  "name_es": "Hobgoblin",
+  "source_family": "core_srd",
+  "type": "humanoid_goblinoid",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "dex": 2,
+    "con": 2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 1,
+  "minimum_starting_ecl": 2,
+  "traits": [
+    "darkvision_60_ft",
+    "move_silently_+4"
+  ],
+  "favored_class": "fighter",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Goblin"
+    ],
+    "bonus": [
+      "Draconic",
+      "Dwarven",
+      "Infernal",
+      "Giant",
+      "Orc"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/hobgoblin.htm"
+}

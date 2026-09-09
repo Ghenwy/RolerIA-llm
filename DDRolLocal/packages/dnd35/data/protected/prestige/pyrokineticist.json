@@ -1,0 +1,67 @@
+{
+  "id": "dnd35.prestige.pyrokineticist",
+  "name_es": "Piroquinético",
+  "source_family": "psionic_srd",
+  "levels": 10,
+  "hit_die": "d8",
+  "bab": "three_quarters",
+  "good_saves": [
+    "fortitude",
+    "reflex"
+  ],
+  "requirements": {
+    "alignment": "chaotic",
+    "skills": {
+      "Concentration": 8,
+      "Craft (alchemy)": 1,
+      "Knowledge (psionics)": 2
+    },
+    "psionics": [
+      "power_point_reserve>=1"
+    ],
+    "special": [
+      "set_structure_on_fire_for_pleasure"
+    ]
+  },
+  "progression": {
+    "manifesting_levels": []
+  },
+  "milestones": {
+    "1": [
+      "fire_lash"
+    ],
+    "2": [
+      "fire_adaptation",
+      "hand_afire"
+    ],
+    "3": [
+      "bolt_of_fire"
+    ],
+    "4": [
+      "weapon_afire"
+    ],
+    "5": [
+      "nimbus"
+    ],
+    "6": [
+      "firewalk"
+    ],
+    "7": [
+      "fear_no_fire"
+    ],
+    "8": [
+      "greater_weapon_afire"
+    ],
+    "9": [
+      "heat_death"
+    ],
+    "10": [
+      "conflagration"
+    ]
+  },
+  "notes": [
+    "This class does not advance a manifesting class.",
+    "All fire effects, action types, uses, and save DCs must come from the SRD feature entry."
+  ],
+  "source_url": "https://www.d20srd.org/srd/psionic/prestigeClasses/pyrokineticist.htm"
+}

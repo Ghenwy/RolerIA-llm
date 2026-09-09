@@ -1,0 +1,68 @@
+{
+  "id": "dnd35.prestige.assassin",
+  "name_es": "Asesino",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d6",
+  "bab": "three_quarters",
+  "good_saves": [
+    "reflex"
+  ],
+  "requirements": {
+    "alignment": "evil",
+    "skills": {
+      "Disguise": 4,
+      "Hide": 8,
+      "Move Silently": 8
+    },
+    "special": [
+      "must_kill_someone_for_no_other_reason_than_joining_assassins"
+    ]
+  },
+  "progression": {
+    "own_spellcasting": "intelligence_based_arcane_up_to_level_4"
+  },
+  "milestones": {
+    "1": [
+      "death_attack",
+      "poison_use",
+      "sneak_attack_+1d6",
+      "assassin_spells"
+    ],
+    "2": [
+      "save_bonus_against_poison_+1",
+      "uncanny_dodge"
+    ],
+    "3": [
+      "sneak_attack_+2d6_total"
+    ],
+    "4": [
+      "save_bonus_against_poison_+2"
+    ],
+    "5": [
+      "improved_uncanny_dodge",
+      "sneak_attack_+3d6_total"
+    ],
+    "6": [
+      "save_bonus_against_poison_+3"
+    ],
+    "7": [
+      "sneak_attack_+4d6_total"
+    ],
+    "8": [
+      "hide_in_plain_sight",
+      "save_bonus_against_poison_+4"
+    ],
+    "9": [
+      "sneak_attack_+5d6_total"
+    ],
+    "10": [
+      "save_bonus_against_poison_+5"
+    ]
+  },
+  "notes": [
+    "Death Attack requires observation and then an attack inside the allowed time window.",
+    "Assassin spellcasting is independent; it does not advance a prior casting class."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/assassin.htm"
+}

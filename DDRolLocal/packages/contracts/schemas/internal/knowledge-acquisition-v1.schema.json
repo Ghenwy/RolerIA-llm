@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:knowledge-acquisition:1.0",
+  "title": "KnowledgeAcquisitionV1",
+  "description": "[DESIGN] Provenance required only at new knowledge-event admission. Historical DomainEvent/replay remain unchanged. REQ-ST-007, IMP-C09-T03.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "kind", "source_subject_id", "source_id"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "kind": {"enum": ["DISCLOSURE", "OBSERVATION"]},
+    "source_subject_id": {"type": ["string", "null"], "minLength": 1, "maxLength": 128},
+    "source_id": {"type": "string", "minLength": 1, "maxLength": 256}
+  }
+}

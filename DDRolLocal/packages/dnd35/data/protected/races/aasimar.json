@@ -1,0 +1,40 @@
+{
+  "id": "dnd35.race.aasimar",
+  "name_es": "Aasimar",
+  "source_family": "core_srd",
+  "type": "outsider_native",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "wis": 2,
+    "cha": 2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 1,
+  "minimum_starting_ecl": 2,
+  "traits": [
+    "darkvision_60_ft",
+    "daylight_1_per_day",
+    "acid_resistance_5",
+    "cold_resistance_5",
+    "electricity_resistance_5",
+    "listen_+2",
+    "spot_+2"
+  ],
+  "favored_class": "paladin",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Celestial"
+    ],
+    "bonus": [
+      "Draconic",
+      "Dwarven",
+      "Elven",
+      "Gnome",
+      "Halfling",
+      "Sylvan"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/planetouched.htm"
+}

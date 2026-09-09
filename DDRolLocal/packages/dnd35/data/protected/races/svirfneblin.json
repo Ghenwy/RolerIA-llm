@@ -1,0 +1,49 @@
+{
+  "id": "dnd35.race.svirfneblin",
+  "name_es": "Svirfneblin",
+  "source_family": "core_srd",
+  "type": "humanoid_gnome",
+  "size": "small",
+  "speed_ft": 20,
+  "ability_mods": {
+    "str": -2,
+    "dex": 2,
+    "wis": 2,
+    "cha": -4
+  },
+  "racial_hd": 0,
+  "level_adjustment": 3,
+  "minimum_starting_ecl": 4,
+  "traits": [
+    "stonecunning",
+    "darkvision_120_ft",
+    "low_light_vision",
+    "spell_resistance_11_plus_class_levels",
+    "all_saves_+2",
+    "illusion_save_DC_+1",
+    "attack_vs_kobolds_and_goblinoids_+1",
+    "dodge_AC_+4",
+    "blindness_deafness_blur_disguise_self_1_per_day",
+    "continuous_nondetection",
+    "craft_alchemy_+2",
+    "listen_+2",
+    "hide_+2_or_+4_underground"
+  ],
+  "favored_class": "rogue",
+  "languages": {
+    "automatic": [
+      "Undercommon",
+      "Gnome",
+      "Common"
+    ],
+    "bonus": [
+      "Dwarven",
+      "Elven",
+      "Giant",
+      "Goblin",
+      "Orc",
+      "Terran"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/gnome.htm"
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:campaign-state:1.0",
+  "title": "CampaignStateV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "campaign_id",
+    "branch_id",
+    "state_version",
+    "applied_event_ids",
+    "world",
+    "scene",
+    "quests",
+    "factions",
+    "rng",
+    "characters",
+    "inventories",
+    "canon",
+    "knowledge",
+    "beliefs",
+    "rumors"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "branch_id": { "type": "string", "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "state_version": { "type": "integer", "minimum": 0 },
+    "applied_event_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^EV(?:ENT)?-[A-Za-z0-9][A-Za-z0-9._-]*$" }
+    },
+    "world": {
+      "type": "object",
+      "required": ["elapsed_minutes"],
+      "properties": { "elapsed_minutes": { "type": "integer", "minimum": 0 } },
+      "additionalProperties": true
+    },
+    "scene": { "type": "object" },
+    "quests": { "type": "object" },
+    "factions": { "type": "object" },
+    "rng": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "campaign_seed", "roll_index"],
+      "properties": {
+        "algorithm": { "const": "sha256-seeded-python-random" },
+        "campaign_seed": { "type": "string", "minLength": 1 },
+        "roll_index": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "characters": { "type": "object", "additionalProperties": { "$ref": "#/$defs/character" } },
+    "inventories": { "type": "object", "additionalProperties": { "type": "object" } },
+    "canon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["facts", "secrets", "rulings"],
+      "properties": {
+        "facts": { "type": "object" },
+        "secrets": { "type": "object", "additionalProperties": { "$ref": "#/$defs/secret" } },
+        "rulings": { "type": "object" }
+      }
+    },
+    "knowledge": { "type": "object", "additionalProperties": { "type": "object" } },
+    "beliefs": { "type": "object", "additionalProperties": { "type": "object" } },
+    "rumors": { "type": "object", "additionalProperties": { "type": "object" } }
+  },
+  "$defs": {
+    "character": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["character_id", "kind", "detail", "sheet"],
+      "properties": {
+        "character_id": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["player", "npc"] },
+        "detail": { "enum": ["full", "lite"] },
+        "sheet": { "type": "object" }
+      }
+    },
+    "secret": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "authorized_subject_ids"],
+      "properties": {
+        "value": true,
+        "authorized_subject_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+      }
+    }
+  }
+}

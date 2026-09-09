@@ -1,0 +1,44 @@
+{
+  "id": "dnd35.prestige.psionic_fist",
+  "name_es": "Puño psiónico",
+  "source_family": "psionic_srd",
+  "levels": 10,
+  "hit_die": "d6",
+  "bab": "three_quarters",
+  "good_saves": [
+    "reflex",
+    "will"
+  ],
+  "requirements": {
+    "bab_min": 4,
+    "skills": {
+      "Concentration": 9
+    },
+    "feats_all": [
+      "Wild Talent"
+    ],
+    "special": [
+      "still_mind_class_feature"
+    ]
+  },
+  "progression": {
+    "own_manifesting": "wisdom_based_psychic_warrior_list_up_to_level_5",
+    "power_points_by_class_table": true
+  },
+  "milestones": {
+    "1": [
+      "monk_abilities_stack"
+    ],
+    "5": [
+      "bonus_psionic_feat"
+    ],
+    "10": [
+      "bonus_psionic_feat"
+    ]
+  },
+  "notes": [
+    "Class levels stack with monk for unarmed damage, AC bonus, and unarmored speed only.",
+    "This class has its own PP and powers-known progression."
+  ],
+  "source_url": "https://www.d20srd.org/srd/psionic/prestigeClasses/psionicFist.htm"
+}

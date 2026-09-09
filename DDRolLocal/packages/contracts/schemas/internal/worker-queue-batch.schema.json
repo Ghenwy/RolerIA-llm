@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:worker-queue-batch:1.0",
+  "title": "WorkerQueueBatchV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "batch_id", "campaign_id", "turn_id", "base_state_version", "job_ids", "status"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "batch_id": { "type": "string", "pattern": "^BATCH-[a-f0-9]{64}$" },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "turn_id": { "type": "string", "pattern": "^TURN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "base_state_version": { "type": "integer", "minimum": 0 },
+    "job_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^JOB-[A-Za-z0-9][A-Za-z0-9._-]*$" }
+    },
+    "status": { "enum": ["PREPARED", "COMMITTED"] }
+  }
+}

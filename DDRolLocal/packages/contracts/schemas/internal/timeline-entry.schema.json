@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:timeline-entry:1.0",
+  "title": "TimelineEntryV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "timeline_event_id", "type", "campaign_id", "branch_id", "parent_branch_id", "parent_checkpoint_id", "occurred_at"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "timeline_event_id": { "type": "string", "pattern": "^TIMELINE-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "type": { "enum": ["BRANCH_CREATED", "BRANCH_DEACTIVATED"] },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "branch_id": { "type": "string", "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "parent_branch_id": { "type": ["string", "null"], "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "parent_checkpoint_id": { "type": ["string", "null"], "pattern": "^CHECKPOINT-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "occurred_at": { "type": "string", "format": "date-time" }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "dnd35.race.minotaur",
+  "name_es": "Minotauro",
+  "source_family": "core_srd",
+  "type": "monstrous_humanoid",
+  "size": "large",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": 8,
+    "con": 4,
+    "int": -4,
+    "cha": -2
+  },
+  "racial_hd": 6,
+  "level_adjustment": 2,
+  "minimum_starting_ecl": 8,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 6,
+    "saves": {
+      "fort": 2,
+      "ref": 5,
+      "will": 5
+    },
+    "feats": 3
+  },
+  "traits": [
+    "space_10_reach_10",
+    "darkvision_60_ft",
+    "natural_armor_+5",
+    "gore_1d8",
+    "powerful_charge_4d6_plus_strength",
+    "natural_cunning",
+    "scent",
+    "search_spot_listen_+4",
+    "greataxe_and_simple_weapon_proficiency"
+  ],
+  "favored_class": "barbarian",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Giant"
+    ],
+    "bonus": [
+      "Orc",
+      "Goblin",
+      "Terran"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/minotaur.htm"
+}

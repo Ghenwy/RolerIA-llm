@@ -1,0 +1,49 @@
+{
+  "id": "dnd35.prestige.hierophant",
+  "name_es": "Hierofante",
+  "source_family": "core_srd",
+  "levels": 5,
+  "hit_die": "d8",
+  "bab": "half",
+  "good_saves": [
+    "fortitude",
+    "will"
+  ],
+  "requirements": {
+    "skills": {
+      "Knowledge (religion)": 15
+    },
+    "feats_pattern": [
+      "any_metamagic_feat"
+    ],
+    "spellcasting": [
+      "cast_divine_level>=7"
+    ]
+  },
+  "progression": {
+    "spells_per_day": [],
+    "caster_level": "add_hierophant_level_to_selected_divine_class"
+  },
+  "milestones": {
+    "1": [
+      "special_ability"
+    ],
+    "2": [
+      "special_ability"
+    ],
+    "3": [
+      "special_ability"
+    ],
+    "4": [
+      "special_ability"
+    ],
+    "5": [
+      "special_ability"
+    ]
+  },
+  "notes": [
+    "This class does not grant new spells per day.",
+    "Validate each special ability, prerequisites, costs, and repeatability from the SRD entry."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/hierophant.htm"
+}

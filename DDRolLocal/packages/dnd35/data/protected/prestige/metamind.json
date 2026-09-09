@@ -1,0 +1,69 @@
+{
+  "id": "dnd35.prestige.metamind",
+  "name_es": "Metamente",
+  "source_family": "psionic_srd",
+  "levels": 10,
+  "hit_die": "d4",
+  "bab": "half",
+  "good_saves": [
+    "will"
+  ],
+  "requirements": {
+    "skills": {
+      "Knowledge (psionics)": 8,
+      "Psicraft": 4
+    },
+    "feats_all": [
+      "Psicrystal Affinity"
+    ],
+    "psionics": [
+      "manifester_level>=4"
+    ]
+  },
+  "progression": {
+    "manifesting_levels": [
+      2,
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "milestones": {
+    "1": [
+      "free_manifesting_level_1_3_per_day"
+    ],
+    "2": [
+      "cognizance_psicrystal_5_PP"
+    ],
+    "3": [
+      "free_manifesting_level_2_3_per_day"
+    ],
+    "4": [
+      "cognizance_psicrystal_7_PP"
+    ],
+    "5": [
+      "free_manifesting_level_3_1_per_day"
+    ],
+    "6": [
+      "cognizance_psicrystal_9_PP"
+    ],
+    "7": [
+      "free_manifesting_level_4_1_per_day"
+    ],
+    "8": [
+      "cognizance_psicrystal_11_PP"
+    ],
+    "9": [
+      "free_manifesting_level_5_1_per_day"
+    ],
+    "10": [
+      "font_of_power"
+    ]
+  },
+  "notes": [
+    "Only even levels advance an existing manifesting class.",
+    "Free Manifesting waives the unaugmented PP cost; augment and XP costs remain."
+  ],
+  "source_url": "https://www.d20srd.org/srd/psionic/prestigeClasses/metamind.htm"
+}

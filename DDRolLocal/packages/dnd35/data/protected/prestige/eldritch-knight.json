@@ -1,0 +1,42 @@
+{
+  "id": "dnd35.prestige.eldritch_knight",
+  "name_es": "Caballero arcano",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d6",
+  "bab": "full",
+  "good_saves": [
+    "fortitude"
+  ],
+  "requirements": {
+    "proficiencies": [
+      "all_martial_weapons"
+    ],
+    "spellcasting": [
+      "cast_arcane_level>=3"
+    ]
+  },
+  "progression": {
+    "arcane_spellcasting_levels": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "milestones": {
+    "1": [
+      "bonus_fighter_feat"
+    ]
+  },
+  "notes": [
+    "Level 1 does not advance spellcasting; levels 2–10 do.",
+    "The bonus feat must be selected from fighter bonus feats and prerequisites still apply."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/eldritchKnight.htm"
+}

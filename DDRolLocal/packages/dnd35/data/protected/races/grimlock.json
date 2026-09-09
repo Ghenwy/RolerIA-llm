@@ -1,0 +1,51 @@
+{
+  "id": "dnd35.race.grimlock",
+  "name_es": "Grimlock",
+  "source_family": "core_srd",
+  "type": "monstrous_humanoid",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": 4,
+    "dex": 2,
+    "con": 2,
+    "wis": -2,
+    "cha": -4
+  },
+  "racial_hd": 2,
+  "level_adjustment": 2,
+  "minimum_starting_ecl": 4,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 2,
+    "saves": {
+      "fort": 0,
+      "ref": 3,
+      "will": 3
+    },
+    "feats": 1
+  },
+  "traits": [
+    "natural_armor_+4",
+    "blindsight_40_ft",
+    "scent",
+    "immune_to_gaze_visual_and_sight_dependent_illusions",
+    "hide_+10_mountain_or_underground",
+    "battleaxe_proficiency"
+  ],
+  "favored_class": "barbarian",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Grimlock"
+    ],
+    "bonus": [
+      "Draconic",
+      "Dwarven",
+      "Gnome",
+      "Terran",
+      "Undercommon"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/grimlock.htm"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "dnd35.prestige.blackguard",
+  "name_es": "Guardia negro",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d10",
+  "bab": "full",
+  "good_saves": [
+    "fortitude"
+  ],
+  "requirements": {
+    "alignment": "evil",
+    "bab_min": 6,
+    "skills": {
+      "Hide": 5,
+      "Knowledge (religion)": 2
+    },
+    "feats_all": [
+      "Cleave",
+      "Improved Sunder",
+      "Power Attack"
+    ],
+    "special": [
+      "peaceful_contact_with_summoned_evil_outsider"
+    ]
+  },
+  "progression": {
+    "own_spellcasting": "wisdom_based_divine_up_to_level_4"
+  },
+  "milestones": {
+    "1": [
+      "aura_of_evil",
+      "detect_good",
+      "poison_use"
+    ],
+    "2": [
+      "dark_blessing",
+      "smite_good_1_per_day"
+    ],
+    "3": [
+      "aura_of_despair",
+      "command_undead"
+    ],
+    "4": [
+      "sneak_attack_+1d6"
+    ],
+    "5": [
+      "fiendish_servant",
+      "smite_good_2_per_day"
+    ],
+    "7": [
+      "sneak_attack_+2d6_total"
+    ],
+    "10": [
+      "sneak_attack_+3d6_total",
+      "smite_good_3_per_day"
+    ]
+  },
+  "notes": [
+    "Fallen-paladin interactions and fiendish-servant progression must be read from the SRD entry.",
+    "Its own spell table is separate from prior casting."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/blackguard.htm"
+}

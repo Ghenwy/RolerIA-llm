@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:transcript-entry:1.0",
+  "title": "TranscriptEntryV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "transcript_id", "campaign_id", "branch_id", "turn_id", "speaker", "content", "occurred_at", "source_refs"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "transcript_id": { "type": "string", "pattern": "^TRANSCRIPT-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "branch_id": { "type": "string", "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "turn_id": { "type": "string", "minLength": 1 },
+    "speaker": { "enum": ["player", "gm", "system"] },
+    "content": { "type": "string", "minLength": 1 },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "source_refs": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+  }
+}

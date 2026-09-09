@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rpg-engine:turn-plan:1.0",
+  "title": "TurnPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "turn_id",
+    "base_state_version",
+    "player_intent",
+    "decision",
+    "jobs",
+    "blocking_job_ids",
+    "preconditions",
+    "safety"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "turn_id": {
+      "type": "string"
+    },
+    "base_state_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "player_intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "declared_action",
+        "target",
+        "desired_outcome",
+        "ambiguities"
+      ],
+      "properties": {
+        "declared_action": {
+          "type": "string"
+        },
+        "target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "desired_outcome": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ambiguities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "decision": {
+      "enum": [
+        "DIRECT",
+        "DELEGATE",
+        "ASK_CLARIFICATION",
+        "BLOCKED"
+      ]
+    },
+    "jobs": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "$id": "urn:rpg-engine:job-card:1.0",
+        "title": "RPGJobCard",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "schema_version",
+          "job_id",
+          "turn_id",
+          "priority",
+          "worker_id",
+          "objective",
+          "base_state_version",
+          "inputs",
+          "constraints",
+          "dependencies",
+          "blocking",
+          "expected_output",
+          "definition_of_done",
+          "budget",
+          "status"
+        ],
+        "properties": {
+          "schema_version": {
+            "const": "1.0"
+          },
+          "job_id": {
+            "type": "string",
+            "pattern": "^JOB-[A-Z0-9-]+$"
+          },
+          "turn_id": {
+            "type": "string",
+            "pattern": "^TURN-[A-Z0-9-]+$"
+          },
+          "priority": {
+            "enum": [
+              "P0",
+              "P1",
+              "P2",
+              "P3"
+            ]
+          },
+          "worker_id": {
+            "enum": [
+              "rpg.rules_arbiter",
+              "rpg.npc_director",
+              "rpg.world_simulator",
+              "rpg.encounter_engine",
+              "rpg.state_keeper",
+              "rpg.memory_keeper",
+              "rpg.canon_validator",
+              "rpg.lore_curator"
+            ]
+          },
+          "objective": {
+            "type": "string",
+            "minLength": 8
+          },
+          "base_state_version": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "inputs": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "state_refs",
+              "event_refs",
+              "transcript_refs",
+              "rules_refs",
+              "facts"
+            ],
+            "properties": {
+              "state_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "event_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "transcript_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "rules_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "facts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "constraints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "blocking": {
+            "type": "boolean"
+          },
+          "expected_output": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "type",
+              "required_fields"
+            ],
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "required_fields": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "definition_of_done": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          },
+          "budget": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "max_context_tokens",
+              "max_output_tokens",
+              "deadline_class"
+            ],
+            "properties": {
+              "max_context_tokens": {
+                "type": "integer",
+                "minimum": 2048,
+                "maximum": 114688
+              },
+              "max_output_tokens": {
+                "type": "integer",
+                "minimum": 128,
+                "maximum": 16384
+              },
+              "deadline_class": {
+                "enum": [
+                  "before_resolution",
+                  "before_narration",
+                  "after_response",
+                  "idle"
+                ]
+              }
+            }
+          },
+          "status": {
+            "enum": [
+              "PENDING",
+              "READY",
+              "RUNNING",
+              "COMPLETED",
+              "PARTIAL",
+              "BLOCKED",
+              "FAILED",
+              "STALE",
+              "CANCELLED"
+            ]
+          }
+        }
+      },
+      "maxItems": 8
+    },
+    "blocking_job_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "player_agency_preserved",
+        "secret_boundaries_preserved"
+      ],
+      "properties": {
+        "player_agency_preserved": {
+          "type": "boolean"
+        },
+        "secret_boundaries_preserved": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.1",
+  "production_profile": "64k",
+  "experimental_profiles": [],
+  "model": {
+    "repository": "REPLACE_OWNER/REPLACE_MODEL",
+    "revision": "REPLACE_VERIFIED_MODEL_REVISION",
+    "file": "REPLACE_MODEL_FILE.gguf",
+    "directory": "local-model",
+    "alias": "local-model",
+    "sha256": "REPLACE_VERIFIED_MODEL_SHA256"
+  },
+  "profiles": [
+    {
+      "schema_version": "1.1",
+      "profile": "64k",
+      "context_per_slot": 65536,
+      "parallel": 3,
+      "cache_type_k": "Q5_1",
+      "cache_type_v": "Q5_1",
+      "batch": 1024,
+      "ubatch": 256,
+      "fit": true,
+      "fit_target_mib": 1536,
+      "host": "127.0.0.1",
+      "port": 8090,
+      "overrides": [],
+      "runtime": {
+        "source_revision": "REPLACE_VERIFIED_LLAMA_COMMIT",
+        "executable": "runtime/llama.cpp/build/bin/llama-server.exe",
+        "sha256": "REPLACE_VERIFIED_EXECUTABLE_SHA256",
+        "artifacts": {
+          "REPLACE_ACTUAL_DLL.dll": "REPLACE_VERIFIED_DLL_SHA256"
+        }
+      }
+    }
+  ]
+}

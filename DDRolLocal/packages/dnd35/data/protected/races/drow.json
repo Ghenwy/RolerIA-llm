@@ -1,0 +1,45 @@
+{
+  "id": "dnd35.race.drow",
+  "name_es": "Drow",
+  "source_family": "core_srd",
+  "type": "humanoid_elf",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "dex": 2,
+    "con": -2,
+    "int": 2,
+    "cha": 2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 2,
+  "minimum_starting_ecl": 3,
+  "traits": [
+    "elf_traits_except_as_replaced",
+    "darkvision_120_ft",
+    "spell_resistance_11_plus_class_levels",
+    "will_vs_spells_and_spell_like_+2",
+    "dancing_lights_1_per_day",
+    "darkness_1_per_day",
+    "faerie_fire_1_per_day",
+    "hand_crossbow_rapier_short_sword_proficiency",
+    "light_blindness"
+  ],
+  "favored_class": "wizard_male_or_cleric_female",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Elven",
+      "Undercommon"
+    ],
+    "bonus": [
+      "Abyssal",
+      "Aquan",
+      "Draconic",
+      "Drow Sign Language",
+      "Gnome",
+      "Goblin"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/elf.htm"
+}

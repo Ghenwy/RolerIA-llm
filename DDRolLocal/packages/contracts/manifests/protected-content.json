@@ -1,0 +1,948 @@
+{
+  "schema": "nyx.protected_content_manifest.v1",
+  "authority": "planificacion/_qa/contract-inventory.json backed by modular SOT ranges",
+  "extraction": "literal UTF-8 payload plus one final LF; source_payload_sha256 excludes that generated final LF",
+  "expected": {
+    "json_schemas": 11,
+    "schema_documents": 10,
+    "nyx_prompts": 9,
+    "dnd35_prompts": 3,
+    "prestige_classes": 24,
+    "exotic_races": 27,
+    "event_types": 35
+  },
+  "extracted_counts": {
+    "schemas": 10,
+    "prompts": 12,
+    "prestige_classes": 24,
+    "exotic_races": 27,
+    "event_types": 35
+  },
+  "event_types": [
+    "ITEM_ACQUIRED",
+    "ITEM_TRANSFERRED",
+    "ITEM_CONSUMED",
+    "ITEM_CHARGES_CHANGED",
+    "CURRENCY_CHANGED",
+    "HP_CHANGED",
+    "NONLETHAL_CHANGED",
+    "CONDITION_ADDED",
+    "CONDITION_REMOVED",
+    "SPELL_SLOT_USED",
+    "SPELL_SLOT_RESTORED",
+    "DAILY_USE_CHANGED",
+    "XP_CHANGED",
+    "LEVEL_CHANGED",
+    "LOCATION_CHANGED",
+    "TIME_ADVANCED",
+    "QUEST_UPDATED",
+    "NPC_KNOWLEDGE_ADDED",
+    "NPC_BELIEF_CHANGED",
+    "RELATIONSHIP_CHANGED",
+    "CANON_FACT_ADDED",
+    "CHARACTER_DIED",
+    "FACTION_CLOCK_CHANGED",
+    "RULE_RULING_RECORDED",
+    "RACE_OPTION_SELECTED",
+    "RACIAL_HD_APPLIED",
+    "LEVEL_ADJUSTMENT_APPLIED",
+    "PRESTIGE_ELIGIBILITY_CHECKED",
+    "PRESTIGE_LEVEL_GAINED",
+    "SPELLCASTING_PROGRESSION_CHOSEN",
+    "MANIFESTING_PROGRESSION_CHOSEN",
+    "RACE_VARIANT_CHOSEN",
+    "RULE_SOURCE_REGISTERED",
+    "HOUSE_RULE_ENABLED",
+    "HOUSE_RULE_DISABLED"
+  ],
+  "entries": [
+    {
+      "kind": "schema",
+      "id": "urn:rpg-engine:character-sheet:dnd35:1.0",
+      "source_file": "estrcuttura/02-nyx-estado-reglas.md",
+      "source_lines": [
+        23,
+        576
+      ],
+      "source_payload_sha256": "096fe73a49ab3e309c02a349b56ac0b7940d4d6a056e097d38597bb773dc4987",
+      "output_file": "packages/contracts/schemas/sot/dnd35-character-sheet.schema.json",
+      "output_file_sha256": "2ceb0ede44982b338a29913b176fdcfe8077fbfeac7cbef570b389b7e2be8c72"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:rpg-engine:inventory:1.0",
+      "source_file": "estrcuttura/02-nyx-estado-reglas.md",
+      "source_lines": [
+        605,
+        833
+      ],
+      "source_payload_sha256": "97aa40d3602744140d4314e7704a6deb65a2c7ff6b25bf55d177e0207ecd99bd",
+      "output_file": "packages/contracts/schemas/sot/inventory.schema.json",
+      "output_file_sha256": "c2d3372526e3002ca614b2a1938374055ef14cee9033386f30073996fb3c72a2"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:rpg-engine:job-card:1.0",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        15,
+        205
+      ],
+      "source_payload_sha256": "876e65ec0400d98b7f625d90904f91c209c336d03ec11c0090b050426ae2114d",
+      "output_file": "packages/contracts/schemas/sot/rpgjob-card.schema.json",
+      "output_file_sha256": "0a10565da554f073d85a8f8c068088b28c4d1ce93b9e5d379192dfae97e121a2"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:rpg-engine:worker-result:1.0",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        211,
+        347
+      ],
+      "source_payload_sha256": "a38a2dab4daacd3e40c0cc81cf627382634ab6d1d1ed18905f7dc2344486e5ea",
+      "output_file": "packages/contracts/schemas/sot/rpgworker-result.schema.json",
+      "output_file_sha256": "9813563934457426e0619efcb4d5eed2290692b99fee3a7614efbb3f8b3f7e69"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:rpg-engine:turn-plan:1.0",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        353,
+        646
+      ],
+      "source_payload_sha256": "f2f1a28a47171263d6c78cd4c37bfbc7add79a2ebd0d40115e3b7f1a86724288",
+      "output_file": "packages/contracts/schemas/sot/turn-plan.schema.json",
+      "output_file_sha256": "78d245578bdec074cc4cc3de9d2cbb0ded6cd0a0400eca110200332c0cb8beb6"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:rpg-engine:turn-resolution:1.0",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        652,
+        727
+      ],
+      "source_payload_sha256": "e190c3f003a6fb489c8e66bdd473659b76b764305616a1277312e8fc4bb69a79",
+      "output_file": "packages/contracts/schemas/sot/turn-resolution.schema.json",
+      "output_file_sha256": "44e3ad77f2165d58fa10af18ef41cf1de34cd97b7690a5ed0d4a5716e2acffa8"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:rpg-engine:compaction-proposal:1.0",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        733,
+        893
+      ],
+      "source_payload_sha256": "a7fd69b3efaab3138b07ae2a522e72423a166bb4ff941a803b6579d46eed0d4d",
+      "output_file": "packages/contracts/schemas/sot/compaction-proposal.schema.json",
+      "output_file_sha256": "aa53dfc0e0714b5e6a14e1f45e8817b5bd737aaa46ef21f034c7e1c67a518b97"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:nyx-rpg:dnd35:rule-query:1.0",
+      "source_file": "estrcuttura/07-dnd35-schemas-prompts.md",
+      "source_lines": [
+        15,
+        98
+      ],
+      "source_payload_sha256": "082506a462d847da8dfdacb1f4ef2ecb1516ced384164bb5629fe55a773b2671",
+      "output_file": "packages/contracts/schemas/sot/rule-query.schema.json",
+      "output_file_sha256": "884f7179e8b4b11bf449810393f91c71c0e95f8367b20c9b9db21cda30038bc1"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:nyx-rpg:dnd35:rule-resolution:1.0",
+      "source_file": "estrcuttura/07-dnd35-schemas-prompts.md",
+      "source_lines": [
+        104,
+        205
+      ],
+      "source_payload_sha256": "95eb77dd9130101d452ab178ccbd9e7b302de730489f6f2f6ae68e11d31b181e",
+      "output_file": "packages/contracts/schemas/sot/rule-resolution.schema.json",
+      "output_file_sha256": "7e6be2402dc2225accf645c77aef94da8e3c1b754936aba2e56b47989e151727"
+    },
+    {
+      "kind": "schema",
+      "id": "urn:nyx-rpg:dnd35:character-extension:1.0",
+      "source_file": "estrcuttura/07-dnd35-schemas-prompts.md",
+      "source_lines": [
+        211,
+        340
+      ],
+      "source_payload_sha256": "867a9cdf924acff240ee94bd2fa680112c0d7932bca260e8f3c24565e5db0de9",
+      "output_file": "packages/contracts/schemas/sot/d-d-3-5-character-extension.schema.json",
+      "output_file_sha256": "596866eefba49d012055d2281726f94d7ca85d263d0f636fe3a506cc625098c1"
+    },
+    {
+      "kind": "prompt",
+      "id": "NYX_GM",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        945,
+        981
+      ],
+      "source_payload_sha256": "fbf28703f4678717c8dcff97d1f2a3c668cf4a03568c36dc0b82af85485b553b",
+      "output_file": "packages/contracts/prompts/nyx/nyx_gm.txt",
+      "output_file_sha256": "1db6a1f533b7a439586ad4d7dd540ab1cbccaedc65722590e23c8c1912399433"
+    },
+    {
+      "kind": "prompt",
+      "id": "RPG_RULES_ARBITER",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        987,
+        1005
+      ],
+      "source_payload_sha256": "f5b9dfea4a8c0cd8a1e2a33f987840f4838788ce90d0c45cb3ce530c3677942e",
+      "output_file": "packages/contracts/prompts/nyx/rpg_rules_arbiter.txt",
+      "output_file_sha256": "251eb551c7c8b9cf65b61294be9c2fdc413fee5f632a946ff140cf9eac67e9b0"
+    },
+    {
+      "kind": "prompt",
+      "id": "RPG_NPC_DIRECTOR",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        1011,
+        1027
+      ],
+      "source_payload_sha256": "55efe0354e959fe84d9175c1e40df37781f93de8f8aebc5f12874357b9f359d3",
+      "output_file": "packages/contracts/prompts/nyx/rpg_npc_director.txt",
+      "output_file_sha256": "0091e7a85196e3b692a4a5cf535b201b25ce0ec2896ac59587d07fb29effa3ab"
+    },
+    {
+      "kind": "prompt",
+      "id": "RPG_WORLD_SIMULATOR",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        1033,
+        1048
+      ],
+      "source_payload_sha256": "744566f98b75e0b87641642c405a79f29c604ace17c7082954a8522ab4e58a02",
+      "output_file": "packages/contracts/prompts/nyx/rpg_world_simulator.txt",
+      "output_file_sha256": "2f0ae1ae6cdab757a9fedf7b9e4b7835bef9cb19b1f15bf56039ccddd927ce4c"
+    },
+    {
+      "kind": "prompt",
+      "id": "RPG_ENCOUNTER_ENGINE",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        1054,
+        1068
+      ],
+      "source_payload_sha256": "7be812f9eff4f14a1462ae7d47639dc544ea85472f1a2e68b8c29c7c3616306a",
+      "output_file": "packages/contracts/prompts/nyx/rpg_encounter_engine.txt",
+      "output_file_sha256": "653216dfa4ccb1a90e37b3a0d814815eb6a96afcf64fb18aea50cc77bb551058"
+    },
+    {
+      "kind": "prompt",
+      "id": "RPG_STATE_KEEPER",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        1074,
+        1091
+      ],
+      "source_payload_sha256": "ad7a4bafbe1f1d7337c02a838f1162f250935c8ac6da6ef2705c1efbb4a70ab9",
+      "output_file": "packages/contracts/prompts/nyx/rpg_state_keeper.txt",
+      "output_file_sha256": "d80c06a9313b0b485cbce54b3ce99f34063f8785a30ed824dd802f0b0de80664"
+    },
+    {
+      "kind": "prompt",
+      "id": "RPG_MEMORY_KEEPER",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        1097,
+        1138
+      ],
+      "source_payload_sha256": "7c06d54b8f02229a382b47e053aa98ff4115f4f9a7c1c3562131eb159c1b9a1e",
+      "output_file": "packages/contracts/prompts/nyx/rpg_memory_keeper.txt",
+      "output_file_sha256": "7c118d12d4dfaf5233d973ea9b63cfef6efdb5615153d6d0595d8ea0bd8591b1"
+    },
+    {
+      "kind": "prompt",
+      "id": "RPG_CANON_VALIDATOR",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        1144,
+        1160
+      ],
+      "source_payload_sha256": "46b1d91012d60f50cc856050377c8907e10f44ac97a9e3ec7bfa94b2685252cd",
+      "output_file": "packages/contracts/prompts/nyx/rpg_canon_validator.txt",
+      "output_file_sha256": "588b16e72682d5747222e0c963bbdee28436dcad8833676a98a88dff2277a71d"
+    },
+    {
+      "kind": "prompt",
+      "id": "RPG_LORE_CURATOR",
+      "family": "NYX",
+      "source_file": "estrcuttura/03-nyx-runtime-workers-prompts.md",
+      "source_lines": [
+        1166,
+        1178
+      ],
+      "source_payload_sha256": "98428a1dab88ab30cdba38b14761821aeb0359667d9ae665e25e7fbc8d9eac88",
+      "output_file": "packages/contracts/prompts/nyx/rpg_lore_curator.txt",
+      "output_file_sha256": "eb1321d5da8616c1bdcb07909a53af3159497bb8395da09aec058c150b9a2b94"
+    },
+    {
+      "kind": "prompt",
+      "id": "DND35_RULES_ARBITER",
+      "family": "DND35",
+      "source_file": "estrcuttura/07-dnd35-schemas-prompts.md",
+      "source_lines": [
+        348,
+        370
+      ],
+      "source_payload_sha256": "5346e298a6e328392d9ac785fc016a22c9d5c77e37b9d0f7ba2b16802c836c1c",
+      "output_file": "packages/contracts/prompts/dnd35/dnd35_rules_arbiter.txt",
+      "output_file_sha256": "f9c442cf252d8977d3b1da5639fa53088b79e90fdd8c2d35dce3cc520ad6d022"
+    },
+    {
+      "kind": "prompt",
+      "id": "DND35_CHARACTER_VALIDATOR",
+      "family": "DND35",
+      "source_file": "estrcuttura/07-dnd35-schemas-prompts.md",
+      "source_lines": [
+        378,
+        392
+      ],
+      "source_payload_sha256": "a8b503802f551b1571a9ea784a7055607de9181f0458944915c95c3d04ebd6d1",
+      "output_file": "packages/contracts/prompts/dnd35/dnd35_character_validator.txt",
+      "output_file_sha256": "13651b9d88e07db733fce1e46901e9c613acfba45dc2923524f3668e2f77262f"
+    },
+    {
+      "kind": "prompt",
+      "id": "DND35_MONSTER_PC_BUILDER",
+      "family": "DND35",
+      "source_file": "estrcuttura/07-dnd35-schemas-prompts.md",
+      "source_lines": [
+        400,
+        411
+      ],
+      "source_payload_sha256": "3e8367bdfffd09a3f4ab1f2eb4fd4d2021233c2e43df504f5719826b3710c0e4",
+      "output_file": "packages/contracts/prompts/dnd35/dnd35_monster_pc_builder.txt",
+      "output_file_sha256": "f561951b1cad364a48f67967f90d2f01a0c776f26609a6310bfeb8f692e9e95c"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.arcane_archer",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        23,
+        90
+      ],
+      "source_payload_sha256": "1065cadcba2836ca3687c7eab26381cd82170076b6d1992f5d2e136ebb260ee7",
+      "output_file": "packages/dnd35/data/protected/prestige/arcane-archer.json",
+      "output_file_sha256": "8cdc9d1498ba76929e9e1eded040f6ed6363008dff926218e1034a714b9525d8"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.arcane_trickster",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        96,
+        174
+      ],
+      "source_payload_sha256": "554a489fa2b15c64c1f77490497fd935e6d7e81f373f57aa0a6419b03cf67b5f",
+      "output_file": "packages/dnd35/data/protected/prestige/arcane-trickster.json",
+      "output_file_sha256": "910643bb58e7d1d074ee1d927d82aff46ee99b5ac9d968c8ff7437fd318c9cfc"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.archmage",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        180,
+        238
+      ],
+      "source_payload_sha256": "bc7dd57774eddfd31a31db2b9b23979957423a187bb5ade660aab6737593c7ef",
+      "output_file": "packages/dnd35/data/protected/prestige/archmage.json",
+      "output_file_sha256": "11ae6764ca9c9648eadb3591ec1463d2943d9218ebeeff05080cfe11f6d8455b"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.assassin",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        244,
+        311
+      ],
+      "source_payload_sha256": "e18a6fdd52fc641d1ff097f4ee88e9252d1240873f0d840d224826966cae11cd",
+      "output_file": "packages/dnd35/data/protected/prestige/assassin.json",
+      "output_file_sha256": "e35f9f20ca163b3aaa8d654680ccc254d5d31003a591a92202bb516037c8e6e8"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.blackguard",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        317,
+        380
+      ],
+      "source_payload_sha256": "292fb5ad27ce862e11dd745bc15b45cad64c9016e506ab78853e1ea2269b82c3",
+      "output_file": "packages/dnd35/data/protected/prestige/blackguard.json",
+      "output_file_sha256": "7d975cba5dd7178da15198bf53e1f5c2160f712a75fe9be6508f2427e9e47bd9"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.dragon_disciple",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        386,
+        476
+      ],
+      "source_payload_sha256": "255d50c0146dffb46d37d20e23f98a4078dcde4a796c83457ef18ca4f439b320",
+      "output_file": "packages/dnd35/data/protected/prestige/dragon-disciple.json",
+      "output_file_sha256": "cda0222d6ce2a2e7253a102266fa9727ef45e5694d2da458fa2ec2bb0d397c2a"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.duelist",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        482,
+        542
+      ],
+      "source_payload_sha256": "bbc2549d73a26172459d4e23c71b64dd1c5c0bb0b8c1cfa2213f375acdeaacfe",
+      "output_file": "packages/dnd35/data/protected/prestige/duelist.json",
+      "output_file_sha256": "3b2974b16a7241f276943bdfb7bbb84d2afafd4c9827185657387213f6c9e01d"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.dwarven_defender",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        548,
+        599
+      ],
+      "source_payload_sha256": "f75195da7cc23ddd8cab133165335a49d440b65fce11a7978c694a11316253b1",
+      "output_file": "packages/dnd35/data/protected/prestige/dwarven-defender.json",
+      "output_file_sha256": "06ec2a68112b56fa0d381bdd0bcb395f25663f910ac96ffb8d641027fb95e172"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.eldritch_knight",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        605,
+        646
+      ],
+      "source_payload_sha256": "8196047e1d9f01e9afb01fb9b26f1dbc31f3fd6d19762695672c48ecdfa8821a",
+      "output_file": "packages/dnd35/data/protected/prestige/eldritch-knight.json",
+      "output_file_sha256": "062e2a7b88d60783e97ae959feaaf30a7f493e2b8771a91f8b62a35bb9822f88"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.hierophant",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        652,
+        700
+      ],
+      "source_payload_sha256": "0ef77c9713a7e6434bce598008e561df77fa1a1b40351c65ece56ac557ed3f57",
+      "output_file": "packages/dnd35/data/protected/prestige/hierophant.json",
+      "output_file_sha256": "270a24cdf4285df72c4b89cb3d36cb5d4e1431c8d8578dbb93d2646bc8e7b46b"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.horizon_walker",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        706,
+        762
+      ],
+      "source_payload_sha256": "51686417340855b0144c3dceb4ea510e86a22e86eb2eff94d54dfc76cd5328c9",
+      "output_file": "packages/dnd35/data/protected/prestige/horizon-walker.json",
+      "output_file_sha256": "3865fe9f77bed51f4260b33b21eb099ee64a80df9ea8d1358b260bcc05f25ea2"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.loremaster",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        768,
+        844
+      ],
+      "source_payload_sha256": "b5595c8e980a8a4cc0cb9f158555b5018814c0df82b0ae4321efe0772c63860b",
+      "output_file": "packages/dnd35/data/protected/prestige/loremaster.json",
+      "output_file_sha256": "a2e5a346908a6d00c656872102cd8fd48687bf7292de2e67db47e7b47291eb1b"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.mystic_theurge",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        850,
+        902
+      ],
+      "source_payload_sha256": "5b97eeccf047335c4ea96f4452dded28c8dff65b701b57de68d932ba4b37ce53",
+      "output_file": "packages/dnd35/data/protected/prestige/mystic-theurge.json",
+      "output_file_sha256": "caecbfde636a151053bdf944355794104cda41a9fb7658b71827f5f8e405ed39"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.shadowdancer",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        908,
+        972
+      ],
+      "source_payload_sha256": "a88c58343a448febc26a9903fe3bd6c1c445627b6909bdf1e7793c78a4f3cbe5",
+      "output_file": "packages/dnd35/data/protected/prestige/shadowdancer.json",
+      "output_file_sha256": "616eefa354708a35fa76c5ced6f9de9862043ae1de9f076e8f8d8368713eba15"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.thaumaturgist",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        978,
+        1027
+      ],
+      "source_payload_sha256": "c26949a4fce794c8871fbb33c85b65c3068072d46c977e781211536c6f2656fa",
+      "output_file": "packages/dnd35/data/protected/prestige/thaumaturgist.json",
+      "output_file_sha256": "21ab8247bef1c3154140a24423911db8204e4e4d22bf4a3c79bded712430a21b"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.cerebremancer",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1033,
+        1086
+      ],
+      "source_payload_sha256": "433425d4801f5854df6bb471843a943648297235b1996a669b973e5098b4c17b",
+      "output_file": "packages/dnd35/data/protected/prestige/cerebremancer.json",
+      "output_file_sha256": "998a97e6ed4e5e63650d01b6249fa49a7b07db88db95dea7ea0d79452c01edb9"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.elocater",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1092,
+        1165
+      ],
+      "source_payload_sha256": "4c8096a35326eedaf3177332f9c4921666003405865f97eaec441ed738f73c49",
+      "output_file": "packages/dnd35/data/protected/prestige/elocater.json",
+      "output_file_sha256": "8be020e39d266b82e6279d62f1c7ca585ca8dd62872367f5376a2a8de6f8ca22"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.psionic_fist",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1171,
+        1214
+      ],
+      "source_payload_sha256": "f8b2b1d5e086fcdba8129de1f0c9eb90d6ef3912e9d9e97fd6ef5e0502a2d016",
+      "output_file": "packages/dnd35/data/protected/prestige/psionic-fist.json",
+      "output_file_sha256": "3684b764e3c9ca82515eea838356259398a4686ae3a40e3b4c3eb3befd985035"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.metamind",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1220,
+        1288
+      ],
+      "source_payload_sha256": "ea231eabd0b84537c73b38c69eceaa7742296a67228ac6fc71d6c94c1a6b9d75",
+      "output_file": "packages/dnd35/data/protected/prestige/metamind.json",
+      "output_file_sha256": "158290a84c46df3daadc46b22b7bab84624f63ed8e2d8b59252ad9bb885ee56a"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.psion_uncarnate",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1294,
+        1367
+      ],
+      "source_payload_sha256": "91d9691bb14e6474322c3386ef7bf1e9ec9ad91f53ff96d1c8c5782614d0e5c3",
+      "output_file": "packages/dnd35/data/protected/prestige/psion-uncarnate.json",
+      "output_file_sha256": "86e1387065bef26f2a3a9aece9ad9ef391ba1c593b62cec810f825365948dece"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.pyrokineticist",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1373,
+        1439
+      ],
+      "source_payload_sha256": "8632ea2032719d7fe3f153cec370edb7a77c3885575f2177e9acfa7a081e0a21",
+      "output_file": "packages/dnd35/data/protected/prestige/pyrokineticist.json",
+      "output_file_sha256": "026025b3fe200d41499c862d27d1ff2a82b59030031adfd5b7ef98215d87e510"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.slayer",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1445,
+        1516
+      ],
+      "source_payload_sha256": "432e1b0d2a334d36987dc796cdc9e1e97b827af8181437746d0584e8f1e43425",
+      "output_file": "packages/dnd35/data/protected/prestige/slayer.json",
+      "output_file_sha256": "011410939e6e17db66ee1301bedd61e6f17974e9a89f86c4b8957b3b29327bb2"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.thrallherd",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1522,
+        1583
+      ],
+      "source_payload_sha256": "61dc51f41fda12632676aca2de6ff4a4e45fb2faf389358a7a586c229b0ccfae",
+      "output_file": "packages/dnd35/data/protected/prestige/thrallherd.json",
+      "output_file_sha256": "08db8a6f52a2d91acb59c8212d0061e9ff2f61f401960359fe67acd9eb2caaf4"
+    },
+    {
+      "kind": "prestige",
+      "id": "dnd35.prestige.war_mind",
+      "source_file": "estrcuttura/08-dnd35-clases-prestigio.md",
+      "source_lines": [
+        1589,
+        1652
+      ],
+      "source_payload_sha256": "3681d8b99c1bfda4a7f25643cf052dd3ab26d053356fd1f0b7a6d459515ca583",
+      "output_file": "packages/dnd35/data/protected/prestige/war-mind.json",
+      "output_file_sha256": "a15bc6c95792a0b2ef75329b8d8573bca96c3c60ef336b0058b777b7fe69f2f0"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.aasimar",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        22,
+        61
+      ],
+      "source_payload_sha256": "84be9e616e7e5ec194f103f2495ae2f1783681782cc3b7963154852b3ed50c96",
+      "output_file": "packages/dnd35/data/protected/races/aasimar.json",
+      "output_file_sha256": "a0dd14352c241a6649f8cedee486ad89e067cbc573c2043d6bd6be69b3a91baa"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.tiefling",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        67,
+        108
+      ],
+      "source_payload_sha256": "546106c2d1182357d23a79f7dc3d87e492061bf62b01e3f7f8af5910b62065a7",
+      "output_file": "packages/dnd35/data/protected/races/tiefling.json",
+      "output_file_sha256": "1ce0c3f11e705a9f1b884254337116c472ebfe1b72364733ab598a5e54551d01"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.drow",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        114,
+        158
+      ],
+      "source_payload_sha256": "c9b551ba7a3b8234ec35de4e638d677a451a4cea501363932a0c19b4eadd45c4",
+      "output_file": "packages/dnd35/data/protected/races/drow.json",
+      "output_file_sha256": "2ab87e9b695da9a865c2e68ac190bbe1887d87d08e54412230ab2dcbbc48d05e"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.svirfneblin",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        164,
+        212
+      ],
+      "source_payload_sha256": "7a265662e5362a56879368572abb5d39a774293ef133c9cc118f01418361baa4",
+      "output_file": "packages/dnd35/data/protected/races/svirfneblin.json",
+      "output_file_sha256": "29e7373844ae728881efa508997d83defacb871ef827524dbfeee16f0073a06e"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.duergar_psionic",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        218,
+        266
+      ],
+      "source_payload_sha256": "da8b4065d93a72525b9a404926d93b70baf2ca984429814fd66b17572332e977",
+      "output_file": "packages/dnd35/data/protected/races/duergar-psionic.json",
+      "output_file_sha256": "0a1a09b12aebcc22b3cdc70b84fd42452d96f22dae3c5f915f7f70edb0e81fc2"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.dromite",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        272,
+        309
+      ],
+      "source_payload_sha256": "9274e11b686a27f15deee5a26ccd406a02974979b0c46fe5564e6f0014bccaba",
+      "output_file": "packages/dnd35/data/protected/races/dromite.json",
+      "output_file_sha256": "13a55f0bf3d739f38437323af1c9b6a8bf5bfc2923b2301d1abc5697aa5c83dc"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.elan",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        315,
+        345
+      ],
+      "source_payload_sha256": "7644b8f68daa865cce5eeade865be9382123f400117971a6c184ff1885dfc8eb",
+      "output_file": "packages/dnd35/data/protected/races/elan.json",
+      "output_file_sha256": "817f885ed774780469859514ea2968be3b266de62581f3c1d138dea78276bdcd"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.half_giant",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        351,
+        386
+      ],
+      "source_payload_sha256": "e439fd99d6a9ded729752bc3163d65e0047e5615bd9e188db2b0a32e33edf05f",
+      "output_file": "packages/dnd35/data/protected/races/half-giant.json",
+      "output_file_sha256": "63f9780e98f8d0594ee0db408a9a65106bae8e33ac867dcc30b1870abbec13b2"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.maenad",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        392,
+        423
+      ],
+      "source_payload_sha256": "6c10c44f5e9df9e82ea846aa12eb4894f44ad9020c03412d2f832fcba13befd4",
+      "output_file": "packages/dnd35/data/protected/races/maenad.json",
+      "output_file_sha256": "ef79bc5a1752791710555ce449c138e1eeb50617d74b8ca08a683f32c519098f"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.xeph",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        429,
+        465
+      ],
+      "source_payload_sha256": "6b4e80431b5636cf1c3aafd253a6f32cf08c928cfe67bbe05fb400fb1047e097",
+      "output_file": "packages/dnd35/data/protected/races/xeph.json",
+      "output_file_sha256": "d916391135249a3b8ccff1fcdab93fdbb679867cddd8d127a1dc8f6292f9b510"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.goblin",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        471,
+        506
+      ],
+      "source_payload_sha256": "d09c88d2fc7921f7a90fda88ee9e12de06e8cadd35acefaa586bf60424d33016",
+      "output_file": "packages/dnd35/data/protected/races/goblin.json",
+      "output_file_sha256": "f87026ef6560c4fe3230c0a82d949f220ec1985bb34e194323bc545ab0d8bb87"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.hobgoblin",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        512,
+        545
+      ],
+      "source_payload_sha256": "1c09bb4806d26291659e1660527d4b5e7241861360f143093def99e59485f5b8",
+      "output_file": "packages/dnd35/data/protected/races/hobgoblin.json",
+      "output_file_sha256": "1febd05d9bfe68dff7249543b3c8bd29cf05782a44870c3be962d7f49a0a318b"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.kobold",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        551,
+        585
+      ],
+      "source_payload_sha256": "44a0e45303d24a7b9a51d92eb6b3664ef91890b82a7380a2d1ef19dab800298b",
+      "output_file": "packages/dnd35/data/protected/races/kobold.json",
+      "output_file_sha256": "4f1f67cba14056a829196dff27bef2b1fb349e5387fd454cc2e65345f6c9fbf0"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.orc",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        591,
+        626
+      ],
+      "source_payload_sha256": "c264b203b44cea8f97006c78e51d669135e67a8b27ba6d537daa9816a5d7d459",
+      "output_file": "packages/dnd35/data/protected/races/orc.json",
+      "output_file_sha256": "a949a5d13db55d40480f50482eeeca140aa185d13ed628cd2c692088959613e1"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.bugbear",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        632,
+        679
+      ],
+      "source_payload_sha256": "b2281cac706d287a136f88e6a852bb114b3098cf37d6a21dcafbae02381dd4ef",
+      "output_file": "packages/dnd35/data/protected/races/bugbear.json",
+      "output_file_sha256": "d44c9bc39f0ab00b672eeb729ff3804aa8271d4e445517745a676292d1d1ee80"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.gnoll",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        685,
+        729
+      ],
+      "source_payload_sha256": "3d3f55387fd7ea493c10c3699477f7578dfc1936cac6c841405d37d488a3231e",
+      "output_file": "packages/dnd35/data/protected/races/gnoll.json",
+      "output_file_sha256": "22f75f62fccc28f575def79ae3682d0d08ff0790598c9b921991a3079dfc9e21"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.lizardfolk",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        735,
+        784
+      ],
+      "source_payload_sha256": "e73384fec2211eb2b436022134cef42f1a66046a3a032512ec440ed3b323ef39",
+      "output_file": "packages/dnd35/data/protected/races/lizardfolk.json",
+      "output_file_sha256": "0d8ac40c8e12ee6af4ac87a5dd3037dd36fd8da09b15bb16b4ab5b8a6bcbdd0e"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.grimlock",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        790,
+        840
+      ],
+      "source_payload_sha256": "731a824eb0c511da2688b13dceb4541ab1f7930a9dd4b5c444898a08a4e9314e",
+      "output_file": "packages/dnd35/data/protected/races/grimlock.json",
+      "output_file_sha256": "636ed9c131dffd8a8a0f4b69184b63939a07c3227ebb1fcbc030d9c2dbb5d2db"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.centaur",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        846,
+        891
+      ],
+      "source_payload_sha256": "4e85678db3e4389d143191aa2dd08364591f4408f470588764e1ddbbcf394f03",
+      "output_file": "packages/dnd35/data/protected/races/centaur.json",
+      "output_file_sha256": "e3508b8c2cdece3aa4824b0fe676a5e52fef473733d8aaf7534bfdad66c9bd83"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.troglodyte",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        897,
+        944
+      ],
+      "source_payload_sha256": "f13973c15b015b555e50603a88f8cfaac5267e90e4b645858e4a8ad3179fc1d0",
+      "output_file": "packages/dnd35/data/protected/races/troglodyte.json",
+      "output_file_sha256": "c9bae935e6690b719f3d77cb13a336f041a96d200ee8317022cf1bf6a8dfb889"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.pixie",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        950,
+        1000
+      ],
+      "source_payload_sha256": "3bf676b8f08f2206d96167d3ac1612894b5b380e7e83e146a7a153c5bcfe970b",
+      "output_file": "packages/dnd35/data/protected/races/pixie.json",
+      "output_file_sha256": "07c88b218f6dd03576bd4812894db30ddfac1cce7b54a989106a855e1031b3ae"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.minotaur",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        1006,
+        1056
+      ],
+      "source_payload_sha256": "c8d2f64d69b9eec6ef97d050b855dc1746ac059b7c699421c251b277eb43e713",
+      "output_file": "packages/dnd35/data/protected/races/minotaur.json",
+      "output_file_sha256": "10bffb0fe1c360300aa51c43c9e0ba792691e98ec27ede25e389d0439a138cbd"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.ogre",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        1062,
+        1111
+      ],
+      "source_payload_sha256": "f7d55fab48c66cb0f51a8614ced46f5223aec2ce1286072c48ef0f2f4936d216",
+      "output_file": "packages/dnd35/data/protected/races/ogre.json",
+      "output_file_sha256": "f843c7f5f71a389d79d1e68d90f8f399434cc0a55c23edcef4df0306cf577d42"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.gargoyle",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        1117,
+        1169
+      ],
+      "source_payload_sha256": "540f977ce45653c5594a0bbc0f4290008e7bcd95172ed1a43c00bcf28b93744d",
+      "output_file": "packages/dnd35/data/protected/races/gargoyle.json",
+      "output_file_sha256": "e9f2ca7c2c160cfcfc9e0698488040c8c568da51159ed7f51aa3886de12b4ff5"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.doppelganger",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        1175,
+        1228
+      ],
+      "source_payload_sha256": "64734337fde3c26d8bd939e23212959f70fd24ba60904ba4f405aeba5c99bbae",
+      "output_file": "packages/dnd35/data/protected/races/doppelganger.json",
+      "output_file_sha256": "bac2a1584a47113bb310147f9420366f466758ed836652fe6b2a74d6fb3d3248"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.troll",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        1234,
+        1284
+      ],
+      "source_payload_sha256": "8359a9ed4b55aeed9eb7165b04b57c590c31aa9317b561abbde4569d7b9c56a6",
+      "output_file": "packages/dnd35/data/protected/races/troll.json",
+      "output_file_sha256": "85da2c0d17477fe133a472873e72ba938d93f46cb9f7612d39787960499e6a37"
+    },
+    {
+      "kind": "race",
+      "id": "dnd35.race.scorpionfolk",
+      "source_file": "estrcuttura/09-dnd35-razas-exoticas.md",
+      "source_lines": [
+        1290,
+        1336
+      ],
+      "source_payload_sha256": "df3ba760c5170d192a26aa5e70897bf57408ece1550180fb6c180d125520d8c2",
+      "output_file": "packages/dnd35/data/protected/races/scorpionfolk.json",
+      "output_file_sha256": "b978be497126d527d5fbb153cd9c9dfbb415e8ec02a3a2a1f375c864075a2c46"
+    }
+  ]
+}

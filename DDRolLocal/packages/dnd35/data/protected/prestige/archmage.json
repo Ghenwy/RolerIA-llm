@@ -1,0 +1,59 @@
+{
+  "id": "dnd35.prestige.archmage",
+  "name_es": "Archimago",
+  "source_family": "core_srd",
+  "levels": 5,
+  "hit_die": "d4",
+  "bab": "half",
+  "good_saves": [
+    "will"
+  ],
+  "requirements": {
+    "skills": {
+      "Knowledge (arcana)": 15,
+      "Spellcraft": 15
+    },
+    "feats_all": [
+      "Skill Focus (Spellcraft)"
+    ],
+    "feats_pattern": [
+      "Spell Focus in two different schools"
+    ],
+    "spellcasting": [
+      "cast_arcane_level>=7",
+      "know_spells_level>=5_from_at_least_5_schools"
+    ]
+  },
+  "progression": {
+    "arcane_spellcasting_levels": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "milestones": {
+    "1": [
+      "high_arcana"
+    ],
+    "2": [
+      "high_arcana"
+    ],
+    "3": [
+      "high_arcana"
+    ],
+    "4": [
+      "high_arcana"
+    ],
+    "5": [
+      "high_arcana"
+    ]
+  },
+  "notes": [
+    "Each level advances an eligible arcane casting class.",
+    "Each High Arcana choice permanently consumes the specified spell slot or slots.",
+    "Validate each High Arcana option from the SRD entry before applying costs or effects."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/archmage.htm"
+}

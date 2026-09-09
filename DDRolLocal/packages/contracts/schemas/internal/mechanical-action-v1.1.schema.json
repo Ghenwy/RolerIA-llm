@@ -1,0 +1,394 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nyx.local/schemas/internal/mechanical-action/v1.1",
+  "title": "MechanicalActionV11",
+  "description": "[DESIGN] Alpha normal registered weapon attack with code-only canonical health damage. Historical v1.0 remains unchanged. REQ-DND-006/007 and REQ-ST-003/011. target_health_snapshot is a literal copy of the protected Dnd35 health facet, checked by contract tests.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "campaign_id",
+    "branch_id",
+    "turn_id",
+    "base_state_version",
+    "base_rng_counter",
+    "profile",
+    "parameters",
+    "rolls",
+    "next_roll",
+    "outcome",
+    "narration",
+    "target_health_snapshot"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "campaign_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "branch_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "turn_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "base_state_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "base_rng_counter": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "profile": {
+      "$ref": "#/$defs/MechanicalActionProfile"
+    },
+    "parameters": {
+      "$ref": "#/$defs/ConfirmedAttackParameters"
+    },
+    "rolls": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/MechanicalRollRef"
+      }
+    },
+    "next_roll": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/MechanicalRollRequest"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "outcome": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/MechanicalOutcome"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "narration": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1200
+    },
+    "target_health_snapshot": {
+      "$ref": "#/$defs/TargetHealthSnapshot"
+    }
+  },
+  "$defs": {
+    "MechanicalActionProfile": {
+      "title": "MechanicalActionProfile",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "action_id",
+        "kind",
+        "actor_id",
+        "target_id",
+        "effect",
+        "parameter_refs",
+        "source_refs",
+        "unsupported_effects"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "1.1"
+        },
+        "action_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "kind": {
+          "const": "ATTACK"
+        },
+        "actor_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "target_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "effect": {
+          "const": "APPLY_WEAPON_DAMAGE"
+        },
+        "parameter_refs": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "attack_bonus",
+            "armor_class",
+            "damage_expression",
+            "critical_threshold",
+            "critical_multiplier",
+            "critical_immune"
+          ],
+          "properties": {
+            "attack_bonus": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            },
+            "armor_class": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            },
+            "damage_expression": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            },
+            "critical_threshold": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            },
+            "critical_multiplier": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            },
+            "critical_immune": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 128
+              }
+            }
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "unsupported_effects": {
+          "type": "array",
+          "maxItems": 0,
+          "items": {
+            "type": "string"
+          },
+          "description": "Explicit source-gated attestation that this normal weapon action has no unsupported effects. Missing or nonempty is rejected."
+        }
+      }
+    },
+    "ConfirmedAttackParameters": {
+      "title": "ConfirmedAttackParameters",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attack_bonus",
+        "armor_class",
+        "damage_expression",
+        "critical_threshold",
+        "critical_multiplier",
+        "critical_immune"
+      ],
+      "properties": {
+        "attack_bonus": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        },
+        "armor_class": {
+          "type": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        },
+        "damage_expression": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{0,2}d[1-9][0-9]{0,5}([+-][0-9]{1,6})?$"
+        },
+        "critical_threshold": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 20
+        },
+        "critical_multiplier": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 4
+        },
+        "critical_immune": {
+          "type": "boolean"
+        }
+      }
+    },
+    "MechanicalRollRequest": {
+      "title": "MechanicalRollRequest",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "roll_id",
+        "expression"
+      ],
+      "properties": {
+        "roll_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 180
+        },
+        "expression": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*d[1-9][0-9]*([+-][0-9]+)?$"
+        }
+      }
+    },
+    "MechanicalRollRef": {
+      "title": "MechanicalRollRef",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "roll_id",
+        "expression",
+        "result",
+        "rng_counter"
+      ],
+      "properties": {
+        "roll_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 180
+        },
+        "expression": {
+          "type": "string"
+        },
+        "result": {
+          "type": "integer",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "rng_counter": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "MechanicalOutcome": {
+      "title": "MechanicalOutcome",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attack_total",
+        "natural_attack",
+        "hits",
+        "critical_confirmed",
+        "damage_total",
+        "effect"
+      ],
+      "properties": {
+        "attack_total": {
+          "type": "integer"
+        },
+        "natural_attack": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20
+        },
+        "hits": {
+          "type": "boolean"
+        },
+        "critical_confirmed": {
+          "type": "boolean"
+        },
+        "damage_total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "effect": {
+          "const": "APPLY_WEAPON_DAMAGE"
+        }
+      }
+    },
+    "TargetHealthSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hp_max",
+        "hp_current",
+        "temporary_hp",
+        "nonlethal_damage",
+        "hit_dice",
+        "death_state"
+      ],
+      "properties": {
+        "hp_max": {
+          "type": "integer"
+        },
+        "hp_current": {
+          "type": "integer"
+        },
+        "temporary_hp": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nonlethal_damage": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hit_dice": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "death_state": {
+          "enum": [
+            "alive",
+            "disabled",
+            "dying",
+            "stable",
+            "dead",
+            "destroyed"
+          ]
+        }
+      }
+    }
+  }
+}

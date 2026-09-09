@@ -1,0 +1,36 @@
+{
+  "id": "dnd35.race.orc",
+  "name_es": "Orco",
+  "source_family": "core_srd",
+  "type": "humanoid_orc",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": 4,
+    "int": -2,
+    "wis": -2,
+    "cha": -2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 0,
+  "minimum_starting_ecl": 1,
+  "traits": [
+    "darkvision_60_ft",
+    "light_sensitivity"
+  ],
+  "favored_class": "barbarian",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Orc"
+    ],
+    "bonus": [
+      "Dwarven",
+      "Giant",
+      "Gnoll",
+      "Goblin",
+      "Undercommon"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/orc.htm"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "dnd35.race.pixie",
+  "name_es": "Pixie",
+  "source_family": "core_srd",
+  "type": "fey",
+  "size": "small",
+  "speed_ft": 20,
+  "ability_mods": {
+    "str": -4,
+    "dex": 8,
+    "int": 6,
+    "wis": 4,
+    "cha": 6
+  },
+  "racial_hd": 0,
+  "level_adjustment": 4,
+  "minimum_starting_ecl": 5,
+  "traits": [
+    "fly_60_good",
+    "low_light_vision",
+    "listen_search_spot_+2",
+    "Dodge_bonus",
+    "Weapon_Finesse_bonus",
+    "natural_armor_+1",
+    "spell_like_abilities",
+    "damage_reduction_10_cold_iron",
+    "constant_greater_invisibility",
+    "spell_resistance_15_plus_class_levels",
+    "special_arrows"
+  ],
+  "variants": [
+    {
+      "id": "irresistible_dance",
+      "level_adjustment": 6,
+      "minimum_starting_ecl": 7
+    }
+  ],
+  "favored_class": "sorcerer",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Sylvan"
+    ],
+    "bonus": [
+      "Elven",
+      "Gnome",
+      "Halfling"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/sprite.htm"
+}

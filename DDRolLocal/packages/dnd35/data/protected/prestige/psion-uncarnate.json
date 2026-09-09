@@ -1,0 +1,74 @@
+{
+  "id": "dnd35.prestige.psion_uncarnate",
+  "name_es": "Psión desencarnado",
+  "source_family": "psionic_srd",
+  "levels": 10,
+  "hit_die": "d4",
+  "bab": "half",
+  "good_saves": [
+    "will"
+  ],
+  "requirements": {
+    "skills": {
+      "Knowledge (psionics)": 8,
+      "Psicraft": 8
+    },
+    "feats_all": [
+      "Psionic Body"
+    ],
+    "psionics": [
+      "manifest_power_level>=3"
+    ],
+    "special": [
+      "instruction_by_another_psion_uncarnate"
+    ]
+  },
+  "progression": {
+    "manifesting_levels": [
+      2,
+      3,
+      5,
+      6,
+      8,
+      9
+    ]
+  },
+  "milestones": {
+    "1": [
+      "incorporeal_touch_1d6",
+      "uncarnate_armor"
+    ],
+    "2": [
+      "shed_body_1_per_day"
+    ],
+    "3": [
+      "assume_equipment"
+    ],
+    "4": [
+      "assume_likeness"
+    ],
+    "5": [
+      "incorporeal_touch_2d6"
+    ],
+    "6": [
+      "shed_body_2_per_day"
+    ],
+    "7": [
+      "telekinetic_force"
+    ],
+    "8": [
+      "uncarnate_bridge"
+    ],
+    "9": [
+      "incorporeal_touch_3d6"
+    ],
+    "10": [
+      "permanent_uncarnate"
+    ]
+  },
+  "notes": [
+    "Six levels advance manifesting.",
+    "Permanent incorporeality at level 10 includes the SRD limited corporeal option."
+  ],
+  "source_url": "https://www.d20srd.org/srd/psionic/prestigeClasses/psionUncarnate.htm"
+}

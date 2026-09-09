@@ -1,0 +1,50 @@
+{
+  "id": "dnd35.prestige.thaumaturgist",
+  "name_es": "Taumaturgo",
+  "source_family": "core_srd",
+  "levels": 5,
+  "hit_die": "d4",
+  "bab": "half",
+  "good_saves": [
+    "will"
+  ],
+  "requirements": {
+    "feats_all": [
+      "Spell Focus (conjuration)"
+    ],
+    "spellcasting": [
+      "cast_lesser_planar_ally"
+    ]
+  },
+  "progression": {
+    "spellcasting_levels": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "milestones": {
+    "1": [
+      "improved_ally"
+    ],
+    "2": [
+      "Augment Summoning"
+    ],
+    "3": [
+      "extended_summoning"
+    ],
+    "4": [
+      "contingent_conjuration"
+    ],
+    "5": [
+      "planar_cohort"
+    ]
+  },
+  "notes": [
+    "Every level advances one prior spellcasting class.",
+    "Planar Cohort and bargaining costs follow the exact SRD text."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/thaumaturgist.htm"
+}

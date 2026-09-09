@@ -1,0 +1,15 @@
+{
+  "ruleset_id": "dnd35_srd_ogc",
+  "version": "1.0.0",
+  "edition": "3.5",
+  "system": "d20",
+  "source_policy": "SRD_OGL_plus_registered_excerpts",
+  "errata_precedence": true,
+  "psionics_magic_transparency_default": true,
+  "level_adjustment_buyoff_default": false,
+  "fractional_bab_saves_default": false,
+  "gestalt_default": false,
+  "language": "es",
+  "machine_keys": "en",
+  "closed_source_memory_answers": false
+}

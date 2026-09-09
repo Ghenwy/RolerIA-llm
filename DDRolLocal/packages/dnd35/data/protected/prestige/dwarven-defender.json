@@ -1,0 +1,52 @@
+{
+  "id": "dnd35.prestige.dwarven_defender",
+  "name_es": "Defensor enano",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d12",
+  "bab": "full",
+  "good_saves": [
+    "fortitude",
+    "will"
+  ],
+  "requirements": {
+    "race_tags_all": [
+      "dwarf"
+    ],
+    "alignment": "lawful",
+    "bab_min": 7,
+    "feats_all": [
+      "Dodge",
+      "Endurance",
+      "Toughness"
+    ]
+  },
+  "progression": {},
+  "milestones": {
+    "1": [
+      "armor_class_bonus_+1",
+      "defensive_stance"
+    ],
+    "2": [
+      "uncanny_dodge"
+    ],
+    "4": [
+      "trap_sense_+1"
+    ],
+    "6": [
+      "damage_reduction_3_per_dash",
+      "improved_uncanny_dodge"
+    ],
+    "8": [
+      "mobile_defense"
+    ],
+    "10": [
+      "damage_reduction_6_per_dash"
+    ]
+  },
+  "notes": [
+    "AC bonus and defensive-stance uses progress by class table.",
+    "Dwarf-tag validation includes subraces that explicitly retain dwarf identity."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/dwarvenDefender.htm"
+}

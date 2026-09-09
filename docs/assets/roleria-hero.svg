@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+<title id="title">RolerIA llm — tu mesa, tu mundo, tu máquina</title>
+<desc id="desc">Alpha asistida local. Ornith1.5, contexto64K, estado gobernado por código. Ilustración decorativa, no captura de una partida.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1025"/><stop offset="1" stop-color="#17234a"/></linearGradient><linearGradient id="accent"><stop stop-color="#61e6dd"/><stop offset="1" stop-color="#a6a0ff"/></linearGradient><radialGradient id="halo"><stop stop-color="#7774ff" stop-opacity=".25"/><stop offset="1" stop-color="#7774ff" stop-opacity="0"/></radialGradient></defs>
+<style>text{font-family:Segoe UI,Arial,sans-serif}.mono{font-family:Consolas,monospace}@media(prefers-reduced-motion:reduce){.motion{display:none}}</style>
+<rect width="1200" height="390" rx="24" fill="url(#bg)"/><circle cx="970" cy="184" r="225" fill="url(#halo)"/>
+<path d="M40 326H1160" stroke="#8395c3" opacity=".2"/>
+<text x="64" y="70" fill="#77e3db" font-size="14" letter-spacing="4">LOCAL-FIRST · ASSISTED ROLEPLAY</text>
+<text x="59" y="166" font-size="84" font-weight="750" fill="#f0f4ff">Roler<tspan fill="url(#accent)">IA</tspan><tspan font-size="35" font-weight="350" fill="#adbddd"> llm</tspan></text>
+<text x="64" y="214" font-size="27" fill="#e0e8fa">Tu mesa. Tu mundo. Tu máquina.</text>
+<text x="64" y="250" font-size="18" fill="#a6b7d5">Narración libre. Dados deterministas. Memoria bajo control.</text>
+<g font-size="13" font-weight="600"><rect x="64" y="277" width="124" height="29" rx="14" fill="#ffe1a4"/><text x="78" y="297" fill="#302744">ALPHA · AVISOS</text><rect x="201" y="277" width="117" height="29" rx="14" fill="#253753"/><text x="219" y="297" fill="#80e8df">ORNITH 1.5</text><rect x="330" y="277" width="91" height="29" rx="14" fill="#253753"/><text x="344" y="297" fill="#c8caff">64K / SLOT</text></g>
+<g transform="translate(960 177)" fill="none" stroke="url(#accent)"><circle r="116" opacity=".25"/><circle r="92" stroke-dasharray="3 10" opacity=".5"/><path d="M0-82 78-25 49 66-49 66-78-25Z M0-82-49 66 78-25-78-25 49 66Z" stroke-width="2" opacity=".85"/><circle r="20" fill="#17213c" stroke-width="1.5"/><text text-anchor="middle" y="6" fill="#e7f8fa" stroke="none" font-size="17" class="mono">d20</text><g class="motion"><circle cx="116" r="4" fill="#72ede2" stroke="none"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/></g><g class="motion"><circle cx="-92" r="3" fill="#aaa8ff" stroke="none"/><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="32s" repeatCount="indefinite"/></g></g>
+<text x="64" y="360" fill="#879fc8" font-size="13" class="mono">ON YOUR PC / NO CLOUD INFERENCE / NO PUBLIC GAME SERVER</text><text x="1129" y="360" text-anchor="end" fill="#a6b7d5" font-size="13">0.1.0-alpha.1</text>
+</svg>

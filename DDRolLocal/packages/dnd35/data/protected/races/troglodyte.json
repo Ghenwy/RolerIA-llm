@@ -1,0 +1,48 @@
+{
+  "id": "dnd35.race.troglodyte",
+  "name_es": "Troglodita",
+  "source_family": "core_srd",
+  "type": "humanoid_reptilian",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "dex": -2,
+    "con": 4,
+    "int": -2
+  },
+  "racial_hd": 2,
+  "level_adjustment": 2,
+  "minimum_starting_ecl": 4,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 1,
+    "saves": {
+      "fort": 3,
+      "ref": 0,
+      "will": 0
+    },
+    "feats": 1
+  },
+  "traits": [
+    "darkvision_90_ft",
+    "natural_armor_+6",
+    "two_claws_1d4",
+    "bite_1d4",
+    "stench",
+    "Multiattack_bonus",
+    "hide_+4_or_+8_rocky_or_underground"
+  ],
+  "favored_class": "cleric",
+  "languages": {
+    "automatic": [
+      "Draconic"
+    ],
+    "bonus": [
+      "Common",
+      "Giant",
+      "Goblin",
+      "Orc"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/troglodyte.htm"
+}

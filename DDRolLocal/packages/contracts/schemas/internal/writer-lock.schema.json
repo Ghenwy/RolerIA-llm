@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:writer-lock:1.0",
+  "title": "WriterLockV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "lock_token", "campaign_id", "branch_id", "owner_runtime", "pid", "checkpoint_id", "state_sha256", "acquired_at"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "lock_token": { "type": "string", "minLength": 32 },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "branch_id": { "type": "string", "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "owner_runtime": { "enum": ["typescript", "python"] },
+    "pid": { "type": "integer", "minimum": 1 },
+    "checkpoint_id": { "type": "string", "pattern": "^CHECKPOINT-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "state_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "acquired_at": { "type": "string", "format": "date-time" }
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:compaction-commit:1.2",
+  "title": "CompactionCommitV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "commit_id",
+    "sequence",
+    "proposal_id",
+    "campaign_id",
+    "branch_id",
+    "base_state_version",
+    "previous_commit_id",
+    "pre_checkpoint_id",
+    "post_checkpoint_id",
+    "proposal_sha256",
+    "memory_index_sha256",
+    "validation_manifest",
+    "context_view",
+    "memory_records",
+    "committed_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0",
+        "1.1",
+        "1.2"
+      ]
+    },
+    "commit_id": {
+      "type": "string",
+      "pattern": "^COMPACTION-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "proposal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "campaign_id": {
+      "type": "string",
+      "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "branch_id": {
+      "type": "string",
+      "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "base_state_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "previous_commit_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^COMPACTION-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "pre_checkpoint_id": {
+      "type": "string",
+      "pattern": "^CHECKPOINT-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "post_checkpoint_id": {
+      "type": "string",
+      "pattern": "^CHECKPOINT-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "proposal_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "memory_index_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "validation_manifest": {
+      "$ref": "#/$defs/validationManifest"
+    },
+    "context_view": {
+      "$ref": "#/$defs/contextView"
+    },
+    "memory_records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object"
+      }
+    },
+    "committed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "compaction_trigger": {
+      "enum": [
+        "TEST_SCENE_CLOSE",
+        "RUNTIME_CONTINUITY"
+      ]
+    },
+    "source_input_tokens": {
+      "type": "integer",
+      "minimum": 2
+    }
+  },
+  "$defs": {
+    "stringSet": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "turnRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from_turn",
+        "to_turn"
+      ],
+      "properties": {
+        "from_turn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "to_turn": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "validationManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pc_sheet_fingerprints",
+        "relevant_npc_sheet_fingerprints",
+        "party_inventory_fingerprints",
+        "character_inventory_fingerprints",
+        "quest_fingerprints",
+        "canon_sha256",
+        "knowledge_sha256",
+        "pc_sheet_ids_checked",
+        "relevant_npc_sheet_ids_checked",
+        "party_inventory_ids_checked",
+        "character_inventory_ids_checked",
+        "quest_ids_checked",
+        "canon_checked",
+        "knowledge_boundaries_checked",
+        "open_threads_checked",
+        "source_turn_ids_checked",
+        "source_event_ids_checked",
+        "source_event_range_covered",
+        "exact_refs_checked",
+        "unresolved_discrepancies",
+        "safe_to_evict_allowed",
+        "candidate_input_tokens",
+        "target_min_input_tokens",
+        "target_max_input_tokens"
+      ],
+      "properties": {
+        "pc_sheet_fingerprints": {
+          "$ref": "#/$defs/fingerprintMap"
+        },
+        "relevant_npc_sheet_fingerprints": {
+          "$ref": "#/$defs/fingerprintMap"
+        },
+        "party_inventory_fingerprints": {
+          "$ref": "#/$defs/fingerprintMap"
+        },
+        "character_inventory_fingerprints": {
+          "$ref": "#/$defs/fingerprintMap"
+        },
+        "quest_fingerprints": {
+          "$ref": "#/$defs/fingerprintMap"
+        },
+        "canon_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "knowledge_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pc_sheet_ids_checked": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "relevant_npc_sheet_ids_checked": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "party_inventory_ids_checked": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "character_inventory_ids_checked": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "quest_ids_checked": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "canon_checked": {
+          "const": true
+        },
+        "knowledge_boundaries_checked": {
+          "const": true
+        },
+        "open_threads_checked": {
+          "const": true
+        },
+        "source_turn_ids_checked": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "source_event_ids_checked": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "source_event_range_covered": {
+          "const": true
+        },
+        "exact_refs_checked": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "unresolved_discrepancies": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "safe_to_evict_allowed": {
+          "const": true
+        },
+        "candidate_input_tokens": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "target_min_input_tokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "target_max_input_tokens": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 62000
+        }
+      }
+    },
+    "fingerprintMap": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "contextView": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "campaign_id",
+        "branch_id",
+        "base_state_version",
+        "source_context_sha256",
+        "context_sha256",
+        "source_turn_range",
+        "retrieved_memory_ids",
+        "recent_transcript_refs",
+        "open_threads",
+        "preserved_exact_refs"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "campaign_id": {
+          "type": "string",
+          "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$"
+        },
+        "branch_id": {
+          "type": "string",
+          "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$"
+        },
+        "base_state_version": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_context_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "context_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_turn_range": {
+          "$ref": "#/$defs/turnRange"
+        },
+        "retrieved_memory_ids": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "recent_transcript_refs": {
+          "$ref": "#/$defs/stringSet"
+        },
+        "open_threads": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "preserved_exact_refs": {
+          "$ref": "#/$defs/stringSet"
+        }
+      }
+    }
+  },
+  "description": "Compatible reader for immutable 1.0/1.1 commits plus AMD-004 RUNTIME_CONTINUITY 1.2. No historical rewrite.",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.0"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "validation_manifest": {
+            "properties": {
+              "target_min_input_tokens": {
+                "const": 52000
+              },
+              "target_max_input_tokens": {
+                "const": 62000
+              }
+            },
+            "type": "object"
+          },
+          "compaction_trigger": false,
+          "source_input_tokens": false
+        }
+      },
+      "else": {
+        "required": [
+          "compaction_trigger",
+          "source_input_tokens"
+        ],
+        "properties": {
+          "validation_manifest": {
+            "type": "object",
+            "properties": {
+              "target_min_input_tokens": {
+                "const": 1
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "schema_version": {
+                  "const": "1.1"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "compaction_trigger": {
+                  "const": "TEST_SCENE_CLOSE"
+                },
+                "source_input_tokens": {
+                  "type": "integer",
+                  "minimum": 2,
+                  "maximum": 71999
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "compaction_trigger": {
+                  "const": "RUNTIME_CONTINUITY"
+                },
+                "source_input_tokens": {
+                  "type": "integer",
+                  "minimum": 2
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

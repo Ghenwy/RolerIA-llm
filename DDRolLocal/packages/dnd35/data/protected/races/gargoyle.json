@@ -1,0 +1,53 @@
+{
+  "id": "dnd35.race.gargoyle",
+  "name_es": "Gárgola",
+  "source_family": "core_srd",
+  "type": "monstrous_humanoid_earth",
+  "size": "medium",
+  "speed_ft": 40,
+  "ability_mods": {
+    "str": 4,
+    "dex": 4,
+    "con": 8,
+    "int": -4,
+    "cha": -4
+  },
+  "racial_hd": 4,
+  "level_adjustment": 5,
+  "minimum_starting_ecl": 9,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 4,
+    "saves": {
+      "fort": 1,
+      "ref": 4,
+      "will": 4
+    },
+    "feats": 2
+  },
+  "traits": [
+    "fly_60_average",
+    "darkvision_60_ft",
+    "natural_armor_+4",
+    "damage_reduction_10_magic",
+    "freeze",
+    "hide_listen_spot_+2",
+    "hide_additional_+8_against_stone"
+  ],
+  "favored_class": "fighter",
+  "languages": {
+    "automatic": [
+      "Common"
+    ],
+    "bonus": [
+      "Auran",
+      "Dwarven",
+      "Elven",
+      "Gnome",
+      "Halfling",
+      "Giant",
+      "Terran"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/gargoyle.htm"
+}

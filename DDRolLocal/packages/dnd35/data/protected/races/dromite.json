@@ -1,0 +1,38 @@
+{
+  "id": "dnd35.race.dromite",
+  "name_es": "Drómita",
+  "source_family": "psionic_srd",
+  "type": "monstrous_humanoid_psionic",
+  "size": "small",
+  "speed_ft": 20,
+  "ability_mods": {
+    "cha": 2,
+    "str": -2,
+    "wis": -2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 1,
+  "minimum_starting_ecl": 2,
+  "traits": [
+    "natural_armor_+3",
+    "choose_energy_resistance_5",
+    "naturally_psionic_1_PP",
+    "energy_ray_1_per_day_matching_resistance",
+    "scent",
+    "Blind-Fight_bonus",
+    "spot_+2"
+  ],
+  "favored_class": "wilder",
+  "languages": {
+    "automatic": [
+      "Common"
+    ],
+    "bonus": [
+      "Dwarven",
+      "Gnome",
+      "Goblin",
+      "Terran"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/psionic/psionicRaces.htm"
+}

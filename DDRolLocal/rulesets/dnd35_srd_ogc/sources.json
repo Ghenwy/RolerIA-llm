@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "source_file": "estrcuttura/06-dnd35-gobernanza-reglas-base.md",
+  "sources": [
+    {
+      "source_id": "wotc_support",
+      "title": "Wizards — preguntas de reglas 3/3.5/4 y erratas",
+      "authority": "official",
+      "url": "https://dnd-support.wizards.com/hc/es/articles/360000962623-Preguntas-sobre-las-reglas-de-Dungeons-Dragons-3-%C2%AA-3-5-y-4-%C2%AA-edici%C3%B3n",
+      "source_line": 77
+    },
+    {
+      "source_id": "wotc_errata_zip",
+      "title": "Wizards — 3E/3.5 Collected Errata",
+      "authority": "official",
+      "url": "https://media.wizards.com/2014/downloads/dnd/3ECollectedErrata.ZIP",
+      "source_line": 78
+    },
+    {
+      "source_id": "srd_md_snapshot",
+      "title": "SRD v3.5 Markdown — snapshot fijado",
+      "authority": "open_game_content_mirror",
+      "url": "https://github.com/olimot/srd-v3.5-md/tree/c7f30a0ce11a579f75456746f278a4c75f67b4c1",
+      "source_line": 79
+    },
+    {
+      "source_id": "d20srd",
+      "title": "Hypertext d20 SRD 3.5",
+      "authority": "open_game_content_mirror_with_errata",
+      "url": "https://www.d20srd.org/",
+      "source_line": 80
+    },
+    {
+      "source_id": "legal",
+      "title": "OGL v1.0a y legal information",
+      "authority": "license_text",
+      "url": "https://github.com/olimot/srd-v3.5-md/blob/c7f30a0ce11a579f75456746f278a4c75f67b4c1/basic-rules-and-legal/legal-information.md",
+      "source_line": 81
+    },
+    {
+      "source_id": "prestige_core",
+      "title": "Core SRD Prestige Classes",
+      "authority": "open_game_content",
+      "url": "https://github.com/olimot/srd-v3.5-md/blob/c7f30a0ce11a579f75456746f278a4c75f67b4c1/basic-rules-and-legal/prestige-classes.md",
+      "source_line": 82
+    },
+    {
+      "source_id": "monster_races",
+      "title": "Monsters as Races",
+      "authority": "open_game_content",
+      "url": "https://github.com/olimot/srd-v3.5-md/blob/c7f30a0ce11a579f75456746f278a4c75f67b4c1/monsters/monsters-as-races.md",
+      "source_line": 83
+    },
+    {
+      "source_id": "psionic_races",
+      "title": "Psionic Races",
+      "authority": "open_game_content",
+      "url": "https://github.com/olimot/srd-v3.5-md/blob/c7f30a0ce11a579f75456746f278a4c75f67b4c1/psionics/psionic-races.md",
+      "source_line": 84
+    },
+    {
+      "source_id": "psionic_classes",
+      "title": "Psionic Classes and Prestige Classes",
+      "authority": "open_game_content",
+      "url": "https://github.com/olimot/srd-v3.5-md/blob/c7f30a0ce11a579f75456746f278a4c75f67b4c1/psionics/psionic-classes.md",
+      "source_line": 85
+    }
+  ]
+}

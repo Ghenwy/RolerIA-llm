@@ -1,0 +1,31 @@
+{
+  "id": "dnd35.race.elan",
+  "name_es": "Elan",
+  "source_family": "psionic_srd",
+  "type": "aberration_psionic",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "cha": -2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 0,
+  "minimum_starting_ecl": 1,
+  "traits": [
+    "no_default_darkvision",
+    "naturally_psionic_2_PP",
+    "resistance_spend_1_PP_for_saves_+4_until_next_action",
+    "resilience_immediate_reduce_2_damage_per_PP",
+    "repletion_spend_1_PP_no_food_or_water_24h"
+  ],
+  "favored_class": "psion",
+  "languages": {
+    "automatic": [
+      "Common"
+    ],
+    "bonus": [
+      "Any nonsecret language"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/psionic/psionicRaces.htm"
+}

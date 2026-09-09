@@ -1,0 +1,46 @@
+{
+  "id": "dnd35.race.centaur",
+  "name_es": "Centauro",
+  "source_family": "core_srd",
+  "type": "monstrous_humanoid",
+  "size": "large",
+  "speed_ft": 50,
+  "ability_mods": {
+    "str": 8,
+    "dex": 4,
+    "con": 4,
+    "int": -2,
+    "wis": 2
+  },
+  "racial_hd": 4,
+  "level_adjustment": 2,
+  "minimum_starting_ecl": 6,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 4,
+    "saves": {
+      "fort": 1,
+      "ref": 4,
+      "will": 4
+    },
+    "feats": 2
+  },
+  "traits": [
+    "space_10_reach_5",
+    "darkvision_60_ft",
+    "natural_armor_+3"
+  ],
+  "favored_class": "ranger",
+  "languages": {
+    "automatic": [
+      "Sylvan",
+      "Elven"
+    ],
+    "bonus": [
+      "Common",
+      "Gnome",
+      "Halfling"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/centaur.htm"
+}

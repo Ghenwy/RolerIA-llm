@@ -1,0 +1,36 @@
+{
+  "id": "dnd35.race.half_giant",
+  "name_es": "Semigigante",
+  "source_family": "psionic_srd",
+  "type": "giant_psionic",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": 2,
+    "con": 2,
+    "dex": -2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 1,
+  "minimum_starting_ecl": 2,
+  "traits": [
+    "low_light_vision",
+    "saves_vs_fire_+2",
+    "powerful_build",
+    "naturally_psionic_2_PP",
+    "stomp_1_per_day"
+  ],
+  "favored_class": "psychic_warrior",
+  "languages": {
+    "automatic": [
+      "Common"
+    ],
+    "bonus": [
+      "Draconic",
+      "Giant",
+      "Gnoll",
+      "Ignan"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/psionic/psionicRaces.htm"
+}

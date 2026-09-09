@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:runtime-profile:1.0",
+  "title": "RuntimeProfileV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "profile", "context_per_slot", "parallel", "cache_type_k", "cache_type_v", "batch", "ubatch", "fit", "fit_target_mib", "host", "port", "overrides"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "profile": { "enum": ["96k", "112k"] },
+    "context_per_slot": { "enum": [98304, 114688] },
+    "parallel": { "const": 3 },
+    "cache_type_k": { "const": "Q5_1" },
+    "cache_type_v": { "const": "Q5_1" },
+    "batch": { "type": "integer", "minimum": 1, "default": 1024 },
+    "ubatch": { "type": "integer", "minimum": 1, "default": 256 },
+    "fit": { "const": true },
+    "fit_target_mib": { "type": "integer", "minimum": 1 },
+    "host": { "const": "127.0.0.1" },
+    "port": { "type": "integer", "minimum": 1, "maximum": 65535, "default": 8090 },
+    "overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["key", "value", "reason"],
+        "properties": {
+          "key": { "type": "string", "minLength": 1 },
+          "value": {},
+          "reason": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  },
+  "allOf": [
+    { "if": { "properties": { "profile": { "const": "96k" } }, "required": ["profile"] }, "then": { "properties": { "context_per_slot": { "const": 98304 } } } },
+    { "if": { "properties": { "profile": { "const": "112k" } }, "required": ["profile"] }, "then": { "properties": { "context_per_slot": { "const": 114688 } } } }
+  ]
+}

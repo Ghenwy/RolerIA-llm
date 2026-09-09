@@ -1,0 +1,68 @@
+{
+  "id": "dnd35.prestige.arcane_archer",
+  "name_es": "Arquero arcano",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d8",
+  "bab": "full",
+  "good_saves": [
+    "fortitude",
+    "reflex"
+  ],
+  "requirements": {
+    "race_tags_any": [
+      "elf",
+      "half_elf"
+    ],
+    "bab_min": 6,
+    "feats_all": [
+      "Point Blank Shot",
+      "Precise Shot",
+      "Weapon Focus (longbow or shortbow)"
+    ],
+    "spellcasting": [
+      "cast_arcane_level>=1"
+    ]
+  },
+  "progression": {
+    "spellcasting": []
+  },
+  "milestones": {
+    "1": [
+      "enhance_arrow_+1"
+    ],
+    "2": [
+      "imbue_arrow"
+    ],
+    "3": [
+      "enhance_arrow_+2"
+    ],
+    "4": [
+      "seeker_arrow_1_per_day"
+    ],
+    "5": [
+      "enhance_arrow_+3"
+    ],
+    "6": [
+      "phase_arrow_1_per_day"
+    ],
+    "7": [
+      "enhance_arrow_+4"
+    ],
+    "8": [
+      "hail_of_arrows_1_per_day"
+    ],
+    "9": [
+      "enhance_arrow_+5"
+    ],
+    "10": [
+      "arrow_of_death"
+    ]
+  },
+  "notes": [
+    "Enhance Arrow affects nonmagical arrows fired by the class owner.",
+    "Imbue Arrow places an area spell on an arrow and centers the area where it lands.",
+    "Race-tag validation treats drow and other elf subraces as elf when their source grants elf blood."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/arcaneArcher.htm"
+}

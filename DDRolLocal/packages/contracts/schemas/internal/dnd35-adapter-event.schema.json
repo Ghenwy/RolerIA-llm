@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:dnd35-adapter-event:1.0",
+  "title": "Dnd35AdapterEventV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_type",
+    "campaign_id",
+    "branch_id",
+    "base_adapter_version",
+    "committed_adapter_version",
+    "actor_id",
+    "occurred_at",
+    "payload",
+    "source_refs"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "event_id": { "type": "string", "pattern": "^DND35-EVENT-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "event_type": {
+      "enum": [
+        "RACE_OPTION_SELECTED",
+        "RACIAL_HD_APPLIED",
+        "LEVEL_ADJUSTMENT_APPLIED",
+        "PRESTIGE_ELIGIBILITY_CHECKED",
+        "PRESTIGE_LEVEL_GAINED",
+        "SPELLCASTING_PROGRESSION_CHOSEN",
+        "MANIFESTING_PROGRESSION_CHOSEN",
+        "RACE_VARIANT_CHOSEN",
+        "RULE_SOURCE_REGISTERED",
+        "RULE_RULING_RECORDED",
+        "HOUSE_RULE_ENABLED",
+        "HOUSE_RULE_DISABLED"
+      ]
+    },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "branch_id": { "type": "string", "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "base_adapter_version": { "type": "integer", "minimum": 0 },
+    "committed_adapter_version": { "type": "integer", "minimum": 1 },
+    "actor_id": { "type": "string", "minLength": 1 },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "payload": { "type": "object", "minProperties": 1 },
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

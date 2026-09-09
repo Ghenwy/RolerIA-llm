@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:runtime-profile:1.1",
+  "title": "RuntimeProfileV11",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "profile",
+    "context_per_slot",
+    "parallel",
+    "cache_type_k",
+    "cache_type_v",
+    "batch",
+    "ubatch",
+    "fit",
+    "fit_target_mib",
+    "host",
+    "port",
+    "overrides"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1"
+    },
+    "profile": {
+      "enum": [
+        "64k",
+        "96k",
+        "112k"
+      ]
+    },
+    "context_per_slot": {
+      "enum": [
+        65536,
+        98304,
+        114688
+      ]
+    },
+    "parallel": {
+      "const": 3
+    },
+    "cache_type_k": {
+      "const": "Q5_1"
+    },
+    "cache_type_v": {
+      "const": "Q5_1"
+    },
+    "batch": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 1024
+    },
+    "ubatch": {
+      "type": "integer",
+      "minimum": 1,
+      "default": 256
+    },
+    "fit": {
+      "const": true
+    },
+    "fit_target_mib": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "host": {
+      "const": "127.0.0.1"
+    },
+    "port": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 65535,
+      "default": 8090
+    },
+    "overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "value",
+          "reason"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {},
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_revision",
+        "executable",
+        "sha256",
+        "artifacts",
+        "environment"
+      ],
+      "properties": {
+        "source_revision": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "executable": {
+          "type": "string",
+          "pattern": "^runtime/(?:[A-Za-z0-9_-]+/)+llama-server\\.exe$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "artifacts": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {
+            "pattern": "^[A-Za-z0-9_-]+\\.dll$"
+          },
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "GGML_CUDA_NO_PINNED"
+          ],
+          "properties": {
+            "GGML_CUDA_NO_PINNED": {
+              "const": "1"
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "profile": {
+            "const": "64k"
+          }
+        },
+        "required": [
+          "profile"
+        ]
+      },
+      "then": {
+        "properties": {
+          "runtime": {},
+          "context_per_slot": {
+            "const": 65536
+          }
+        },
+        "required": [
+          "runtime"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "profile": {
+            "const": "96k"
+          }
+        },
+        "required": [
+          "profile"
+        ]
+      },
+      "then": {
+        "properties": {
+          "context_per_slot": {
+            "const": 98304
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "profile": {
+            "const": "112k"
+          }
+        },
+        "required": [
+          "profile"
+        ]
+      },
+      "then": {
+        "properties": {
+          "context_per_slot": {
+            "const": 114688
+          }
+        }
+      }
+    }
+  ],
+  "description": "[DESIGN] Add the explicitly selected 64K profile and pinned local runtime; 1.0 profiles remain valid without rewriting."
+}

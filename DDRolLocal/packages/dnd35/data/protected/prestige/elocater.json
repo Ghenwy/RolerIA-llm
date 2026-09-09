@@ -1,0 +1,74 @@
+{
+  "id": "dnd35.prestige.elocater",
+  "name_es": "Elocador",
+  "source_family": "psionic_srd",
+  "levels": 10,
+  "hit_die": "d6",
+  "bab": "three_quarters",
+  "good_saves": [
+    "reflex",
+    "will"
+  ],
+  "requirements": {
+    "bab_min": 3,
+    "skills": {
+      "Concentration": 8
+    },
+    "feats_all": [
+      "Mobility",
+      "Spring Attack"
+    ],
+    "psionics": [
+      "manifest_power_level>=1"
+    ]
+  },
+  "progression": {
+    "manifesting_levels": [
+      1,
+      3,
+      4,
+      6,
+      7,
+      9,
+      10
+    ]
+  },
+  "milestones": {
+    "1": [
+      "scorn_earth",
+      "Sidestep Charge"
+    ],
+    "2": [
+      "opportunistic_strike_+2"
+    ],
+    "3": [
+      "dimension_step"
+    ],
+    "4": [
+      "flanker"
+    ],
+    "5": [
+      "opportunistic_strike_+4"
+    ],
+    "6": [
+      "transporter"
+    ],
+    "7": [
+      "capricious_step"
+    ],
+    "8": [
+      "opportunistic_strike_+6"
+    ],
+    "9": [
+      "dimension_spring_attack"
+    ],
+    "10": [
+      "accelerated_action"
+    ]
+  },
+  "notes": [
+    "Seven of ten levels advance manifesting.",
+    "Transporter grants specified powers as class-list additions under the SRD rules."
+  ],
+  "source_url": "https://www.d20srd.org/srd/psionic/prestigeClasses/elocater.htm"
+}

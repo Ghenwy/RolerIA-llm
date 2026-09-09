@@ -1,0 +1,79 @@
+{
+  "id": "dnd35.prestige.arcane_trickster",
+  "name_es": "Embaucador arcano",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d4",
+  "bab": "half",
+  "good_saves": [
+    "reflex",
+    "will"
+  ],
+  "requirements": {
+    "alignment": "nonlawful",
+    "skills": {
+      "Decipher Script": 7,
+      "Disable Device": 7,
+      "Escape Artist": 7,
+      "Knowledge (arcana)": 4
+    },
+    "spellcasting": [
+      "knows_mage_hand",
+      "cast_arcane_level>=3"
+    ],
+    "special": [
+      "sneak_attack>=2d6"
+    ]
+  },
+  "progression": {
+    "arcane_spellcasting_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "milestones": {
+    "1": [
+      "ranged_legerdemain_1_per_day"
+    ],
+    "2": [
+      "sneak_attack_+1d6"
+    ],
+    "3": [
+      "impromptu_sneak_attack_1_per_day"
+    ],
+    "4": [
+      "sneak_attack_+2d6_total_from_class"
+    ],
+    "5": [
+      "ranged_legerdemain_2_per_day"
+    ],
+    "6": [
+      "sneak_attack_+3d6_total_from_class"
+    ],
+    "7": [
+      "impromptu_sneak_attack_2_per_day"
+    ],
+    "8": [
+      "sneak_attack_+4d6_total_from_class"
+    ],
+    "9": [
+      "ranged_legerdemain_3_per_day"
+    ],
+    "10": [
+      "sneak_attack_+5d6_total_from_class"
+    ]
+  },
+  "notes": [
+    "Every class level advances one prior arcane spellcasting class.",
+    "Ranged Legerdemain performs Disable Device, Open Lock, or Sleight of Hand at 30 ft with the SRD restrictions."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/arcaneTrickster.htm"
+}

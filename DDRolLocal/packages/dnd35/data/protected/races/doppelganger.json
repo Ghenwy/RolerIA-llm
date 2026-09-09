@@ -1,0 +1,54 @@
+{
+  "id": "dnd35.race.doppelganger",
+  "name_es": "Doppelgänger",
+  "source_family": "core_srd",
+  "type": "monstrous_humanoid_shapechanger",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": 2,
+    "dex": 2,
+    "con": 2,
+    "int": 2,
+    "wis": 4,
+    "cha": 2
+  },
+  "racial_hd": 4,
+  "level_adjustment": 4,
+  "minimum_starting_ecl": 8,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 4,
+    "saves": {
+      "fort": 1,
+      "ref": 4,
+      "will": 4
+    },
+    "feats": 2
+  },
+  "traits": [
+    "darkvision_60_ft",
+    "natural_armor_+4",
+    "bluff_+4",
+    "disguise_+4",
+    "change_shape",
+    "detect_thoughts",
+    "immune_sleep_and_charm"
+  ],
+  "favored_class": "rogue",
+  "languages": {
+    "automatic": [
+      "Common"
+    ],
+    "bonus": [
+      "Auran",
+      "Dwarven",
+      "Elven",
+      "Gnome",
+      "Halfling",
+      "Giant",
+      "Terran"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/doppelganger.htm"
+}

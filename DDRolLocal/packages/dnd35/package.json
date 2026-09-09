@@ -1,0 +1,12 @@
+{
+  "name": "@nyx/dnd35",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@nyx/contracts": "0.0.0",
+    "@nyx/domain": "0.0.0",
+    "@nyx/persistence-json": "0.0.0"
+  }
+}

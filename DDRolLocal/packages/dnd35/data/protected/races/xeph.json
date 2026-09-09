@@ -1,0 +1,37 @@
+{
+  "id": "dnd35.race.xeph",
+  "name_es": "Xeph",
+  "source_family": "psionic_srd",
+  "type": "humanoid_psionic",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "dex": 2,
+    "str": -2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 0,
+  "minimum_starting_ecl": 1,
+  "traits": [
+    "darkvision_60_ft",
+    "saves_vs_powers_spells_SLAs_+1",
+    "naturally_psionic_1_PP",
+    "burst_3_per_day_3_rounds_speed_bonus_scales_to_30_ft"
+  ],
+  "favored_class": "soulknife",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Xeph"
+    ],
+    "bonus": [
+      "Draconic",
+      "Elven",
+      "Gnoll",
+      "Goblin",
+      "Halfling",
+      "Sylvan"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/psionic/psionicRaces.htm"
+}

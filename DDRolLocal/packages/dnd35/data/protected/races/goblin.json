@@ -1,0 +1,36 @@
+{
+  "id": "dnd35.race.goblin",
+  "name_es": "Goblin",
+  "source_family": "core_srd",
+  "type": "humanoid_goblinoid",
+  "size": "small",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": -2,
+    "dex": 2,
+    "cha": -2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 0,
+  "minimum_starting_ecl": 1,
+  "traits": [
+    "darkvision_60_ft",
+    "move_silently_+4",
+    "ride_+4"
+  ],
+  "favored_class": "rogue",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Goblin"
+    ],
+    "bonus": [
+      "Draconic",
+      "Elven",
+      "Giant",
+      "Gnoll",
+      "Orc"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/goblin.htm"
+}

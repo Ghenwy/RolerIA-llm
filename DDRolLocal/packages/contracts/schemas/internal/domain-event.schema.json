@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:domain-event:1.0",
+  "title": "DomainEventV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "event_type", "campaign_id", "branch_id", "base_state_version", "committed_state_version", "correlation_id", "occurred_at", "payload", "source_refs"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "event_id": { "type": "string", "pattern": "^EVENT-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "event_type": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "branch_id": { "type": "string", "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "base_state_version": { "type": "integer", "minimum": 0 },
+    "committed_state_version": { "type": "integer", "minimum": 1 },
+    "correlation_id": { "type": "string", "minLength": 1 },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "payload": { "type": "object" },
+    "source_refs": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+  }
+}

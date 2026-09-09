@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rpg-engine:compaction-proposal:1.0",
+  "title": "CompactionProposal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "proposal_id",
+    "campaign_id",
+    "base_state_version",
+    "source_turn_range",
+    "preserved_exact_refs",
+    "scene_summary",
+    "durable_memories",
+    "npc_memory_patches",
+    "open_threads",
+    "retrieval_keys",
+    "state_patch_proposals",
+    "safe_to_evict",
+    "validation_manifest"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "proposal_id": {
+      "type": "string"
+    },
+    "campaign_id": {
+      "type": "string"
+    },
+    "base_state_version": {
+      "type": "integer"
+    },
+    "source_turn_range": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "from_turn",
+        "to_turn"
+      ],
+      "properties": {
+        "from_turn": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "to_turn": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "preserved_exact_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scene_summary": {
+      "type": "string"
+    },
+    "durable_memories": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "npc_memory_patches": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "open_threads": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "retrieval_keys": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "state_patch_proposals": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "safe_to_evict": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed",
+        "turn_ranges",
+        "reason"
+      ],
+      "properties": {
+        "allowed": {
+          "type": "boolean"
+        },
+        "turn_ranges": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "validation_manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "character_sheets_checked",
+        "inventories_checked",
+        "quests_checked",
+        "canon_checked",
+        "knowledge_boundaries_checked",
+        "unresolved_discrepancies"
+      ],
+      "properties": {
+        "character_sheets_checked": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inventories_checked": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "quests_checked": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "canon_checked": {
+          "type": "boolean"
+        },
+        "knowledge_boundaries_checked": {
+          "type": "boolean"
+        },
+        "unresolved_discrepancies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

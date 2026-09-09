@@ -1,0 +1,61 @@
+{
+  "id": "dnd35.prestige.duelist",
+  "name_es": "Duelista",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d10",
+  "bab": "full",
+  "good_saves": [
+    "reflex"
+  ],
+  "requirements": {
+    "bab_min": 6,
+    "skills": {
+      "Perform": 3,
+      "Tumble": 5
+    },
+    "feats_all": [
+      "Dodge",
+      "Mobility",
+      "Weapon Finesse"
+    ]
+  },
+  "progression": {},
+  "milestones": {
+    "1": [
+      "canny_defense"
+    ],
+    "2": [
+      "improved_reaction_+2"
+    ],
+    "3": [
+      "enhanced_mobility"
+    ],
+    "4": [
+      "grace_+2"
+    ],
+    "5": [
+      "precise_strike_+1d6"
+    ],
+    "6": [
+      "acrobatic_charge"
+    ],
+    "7": [
+      "elaborate_parry"
+    ],
+    "8": [
+      "improved_reaction_+4_total"
+    ],
+    "9": [
+      "deflect_arrows"
+    ],
+    "10": [
+      "precise_strike_+2d6_total"
+    ]
+  },
+  "notes": [
+    "Canny Defense and Precise Strike require the SRD weapon/armor conditions.",
+    "Do not apply Precise Strike to creatures immune to precision damage under the active rules."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/duelist.htm"
+}

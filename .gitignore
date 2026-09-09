@@ -1,0 +1,67 @@
+# Codex/project-local transient state
+.context/
+# Research downloaded for model selection, not public application source
+/research/
+/.release-local/
+*.bundle
+/DDRolLocal/packages/contracts/migrations/
+# Private development and research; never include in a public source snapshot.
+/estrcuttura/
+/planificacion/
+/Nyx-RP-9B*.md
+/DND-3.5*.md
+/DDRolLocal/config/
+/DDRolLocal/tests/
+/DDRolLocal/fallback/python/tests/
+/DDRolLocal/docs/
+/DDRolLocal/benchmarks/
+/docs/public-alpha-source-checks.json
+/DDRolLocal/tooling/build-control-plane.mjs
+/DDRolLocal/tooling/implementation-plan-data.mjs
+/DDRolLocal/tooling/verify-control-plane.mjs
+/DDRolLocal/tooling/extract-protected.mjs
+/DDRolLocal/tooling/test-python-matrix.mjs
+/DDRolLocal/tooling/inspect-attention-placement.mjs
+/DDRolLocal/tooling/audit-public-candidate.mjs
+/DDRolLocal/tooling/verify-encoding.mjs
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+credentials*.json
+
+# Node and generated build output
+node_modules/
+dist/
+coverage/
+.cache/
+*.tsbuildinfo
+
+# Python environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.py[cod]
+
+# Local Nyx runtime payloads and private campaign data
+DDRolLocal/models/**
+DDRolLocal/runtime/**
+DDRolLocal/campaigns/**
+DDRolLocal/logs/**
+DDRolLocal/benchmarks/raw/**
+
+# Keep intentionally tracked placeholders/readmes in ignored runtime trees
+!DDRolLocal/models/.gitkeep
+!DDRolLocal/runtime/.gitkeep
+!DDRolLocal/campaigns/.gitkeep
+!DDRolLocal/logs/.gitkeep
+!DDRolLocal/benchmarks/raw/.gitkeep
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+*.local.json

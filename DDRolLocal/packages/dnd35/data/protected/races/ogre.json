@@ -1,0 +1,50 @@
+{
+  "id": "dnd35.race.ogre",
+  "name_es": "Ogro",
+  "source_family": "core_srd",
+  "type": "giant",
+  "size": "large",
+  "speed_ft": 40,
+  "ability_mods": {
+    "str": 10,
+    "dex": -2,
+    "con": 4,
+    "int": -4,
+    "cha": -4
+  },
+  "racial_hd": 4,
+  "level_adjustment": 2,
+  "minimum_starting_ecl": 6,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 3,
+    "saves": {
+      "fort": 4,
+      "ref": 1,
+      "will": 1
+    },
+    "feats": 2
+  },
+  "traits": [
+    "space_10_reach_10",
+    "darkvision_60_ft",
+    "natural_armor_+5",
+    "simple_and_martial_weapons",
+    "light_and_medium_armor",
+    "shields"
+  ],
+  "favored_class": "barbarian",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Giant"
+    ],
+    "bonus": [
+      "Dwarven",
+      "Orc",
+      "Goblin",
+      "Terran"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/ogre.htm"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "dnd35.race.maenad",
+  "name_es": "Maénad",
+  "source_family": "psionic_srd",
+  "type": "humanoid_psionic",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {},
+  "racial_hd": 0,
+  "level_adjustment": 0,
+  "minimum_starting_ecl": 1,
+  "traits": [
+    "naturally_psionic_2_PP",
+    "sonic_energy_ray_1_per_day",
+    "outburst_1_per_day_up_to_4_rounds_str_+2_int_-2_wis_-2"
+  ],
+  "favored_class": "wilder",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Maenad"
+    ],
+    "bonus": [
+      "Aquan",
+      "Draconic",
+      "Dwarven",
+      "Elven",
+      "Goblin"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/psionic/psionicRaces.htm"
+}

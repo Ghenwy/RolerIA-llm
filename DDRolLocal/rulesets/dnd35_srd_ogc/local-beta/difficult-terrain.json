@@ -1,0 +1,15 @@
+{
+  "source_id": "SOURCE-SRD35-DIFFICULT-TERRAIN",
+  "title": "System Reference Document 3.5 — Difficult Terrain",
+  "edition": "3.5",
+  "upstream_commit": "c7f30a0ce11a579f75456746f278a4c75f67b4c1",
+  "upstream_git_blob": "538e22916db5df93ccfed2c7657da5cdb19346e9",
+  "upstream_file_sha256": "964fdfdf8f7bf449df77745eba63800f5e3218c9c4ff9f8cf750b3ea654b1229",
+  "source_url": "https://github.com/olimot/srd-v3.5-md/blob/c7f30a0ce11a579f75456746f278a4c75f67b4c1/basic-rules-and-legal/combat-ii-movement-modifiers-and-special-actions.md#L61-L65",
+  "legal_url": "https://github.com/olimot/srd-v3.5-md/blob/c7f30a0ce11a579f75456746f278a4c75f67b4c1/basic-rules-and-legal/legal-information.md",
+  "authority_ref": "estrcuttura/06-dnd35-gobernanza-reglas-base.md:79",
+  "extraction": "Upstream UTF-8 lines 61-65, joined with LF and one final LF; no translation or edits.",
+  "scope": "movement.difficult_terrain",
+  "excerpt_sha256": "6342ffb53f719ab87a5c4f4e7a2c2e7e5e6b25e9077701b18f9d00e186599770",
+  "content": "**Difficult Terrain:** Difficult terrain hampers movement. Each square of difficult terrain counts as 2 squares of movement. (Each diagonal move into a difficult terrain square counts as 3 squares.) You can’t run or charge across difficult terrain.\n\nIf you occupy squares with different kinds of terrain, you can move only as fast as the most difficult terrain you occupy will allow.\n\nFlying and incorporeal creatures are not hampered by difficult terrain.\n"
+}

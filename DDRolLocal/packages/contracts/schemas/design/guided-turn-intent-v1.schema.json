@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:guided-turn-intent:1.0",
+  "title": "GuidedTurnIntentV1",
+  "description": "[DESIGN DEC-081] Explicit assisted intent constructed by application code, never by the model. IDs select registered capabilities; free text does not grant authority.",
+  "oneOf": [
+    {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "kind", "text"],
+      "properties": { "schema_version": { "const": "1.0" }, "kind": { "const": "conversation" }, "text": { "$ref": "#/$defs/Text" } }
+    },
+    {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "kind", "scope", "question"],
+      "properties": { "schema_version": { "const": "1.0" }, "kind": { "const": "rule" }, "scope": { "$ref": "#/$defs/Id" }, "question": { "$ref": "#/$defs/Text" } }
+    },
+    {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "kind", "route_id"],
+      "properties": { "schema_version": { "const": "1.0" }, "kind": { "const": "travel" }, "route_id": { "$ref": "#/$defs/Id" } }
+    },
+    {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "kind", "action_id", "text"],
+      "properties": { "schema_version": { "const": "1.0" }, "kind": { "const": "action" }, "action_id": { "$ref": "#/$defs/Id" }, "text": { "type": "string", "maxLength": 32768 } }
+    }
+  ],
+  "$defs": {
+    "Id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$", "not": { "enum": ["__proto__", "prototype", "constructor"] } },
+    "Text": { "type": "string", "minLength": 1, "maxLength": 32768, "pattern": "\\S" }
+  }
+}

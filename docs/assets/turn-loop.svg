@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180" role="img" aria-labelledby="title desc">
+<title id="title">Dos caminos, una autoridad</title><desc id="desc">Esquema animado, no grabación. Diálogo sin efectos mecánicos; acciones explícitas validadas. Una memoria dudosa bloquea.</desc>
+<style>text{font-family:Segoe UI,Arial,sans-serif}@media(prefers-reduced-motion:reduce){.motion{display:none}}</style>
+<rect width="1200" height="180" rx="18" fill="#0e1730"/>
+<g fill="#172640" stroke="#314667"><rect x="30" y="45" width="220" height="80" rx="12"/><rect x="330" y="45" width="220" height="80" rx="12"/><rect x="630" y="45" width="220" height="80" rx="12"/><rect x="930" y="45" width="240" height="80" rx="12"/></g>
+<g fill="#e1ebff" font-size="18" text-anchor="middle"><text x="140" y="78">Tú decides</text><text x="440" y="78">Narrar o resolver</text><text x="740" y="78">Validar y confirmar</text><text x="1050" y="78">Continuar o bloquear</text></g>
+<g fill="#a1b5d7" font-size="13" text-anchor="middle"><text x="140" y="103">Diálogo · /rule · /travel · /action</text><text x="440" y="103">LLM libre · mecánica en código</text><text x="740" y="103">Eventos · journal · checkpoints</text><text x="1050" y="103">La duda no se convierte en estado</text></g>
+<path d="M254 85H325M554 85H625M854 85H925" stroke="#4d728e" stroke-width="2"/>
+<g class="motion" fill="#73e5d6"><circle r="4"><animateMotion path="M258 85L322 85" dur="4s" repeatCount="indefinite"/></circle><circle r="4"><animateMotion path="M558 85L622 85" dur="4s" begin="1s" repeatCount="indefinite"/></circle><circle r="4"><animateMotion path="M858 85L922 85" dur="4s" begin="2s" repeatCount="indefinite"/></circle></g>
+<text x="600" y="157" text-anchor="middle" fill="#97adcf" font-size="12">ESQUEMA ILUSTRATIVO · No representa métricas ni una campaña superada.</text>
+</svg>

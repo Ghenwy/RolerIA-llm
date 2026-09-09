@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:narration-proposal:1.0",
+  "title": "NarrationProposalV1",
+  "description": "[DESIGN DEC-081] Version belongs to the selected schema, not model output. Free narration only; code owns events, IDs, time, versions and dice. Schema validity does not certify narrative quality.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["narration"],
+  "properties": { "narration": { "type": "string", "minLength": 1, "maxLength": 1200, "pattern": "\\S" } }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "dnd35.prestige.slayer",
+  "name_es": "Cazador psiónico",
+  "source_family": "psionic_srd",
+  "levels": 10,
+  "hit_die": "d8",
+  "bab": "full",
+  "good_saves": [
+    "will"
+  ],
+  "requirements": {
+    "bab_min": 4,
+    "skills": {
+      "Knowledge (dungeoneering)": 4
+    },
+    "feats_all": [
+      "Track"
+    ],
+    "psionics": [
+      "power_point_reserve>=1"
+    ]
+  },
+  "progression": {
+    "manifesting_levels": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "milestones": {
+    "1": [
+      "favored_psionic_enemy_+2",
+      "enemy_sense"
+    ],
+    "2": [
+      "brain_nausea"
+    ],
+    "3": [
+      "lucid_buffer"
+    ],
+    "4": [
+      "favored_psionic_enemy_+4"
+    ],
+    "6": [
+      "cerebral_blind"
+    ],
+    "7": [
+      "favored_psionic_enemy_+6"
+    ],
+    "8": [
+      "breach_power_resistance"
+    ],
+    "9": [
+      "cerebral_immunity"
+    ],
+    "10": [
+      "blast_feedback",
+      "favored_psionic_enemy_+8"
+    ]
+  },
+  "notes": [
+    "Levels 2–10 advance an existing manifesting class.",
+    "Favored enemy must be an eligible psionic creature type under the SRD feature."
+  ],
+  "source_url": "https://www.d20srd.org/srd/psionic/prestigeClasses/slayer.htm"
+}

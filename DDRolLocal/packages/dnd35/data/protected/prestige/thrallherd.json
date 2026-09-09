@@ -1,0 +1,62 @@
+{
+  "id": "dnd35.prestige.thrallherd",
+  "name_es": "Pastor de esclavos psiónico",
+  "source_family": "psionic_srd",
+  "levels": 10,
+  "hit_die": "d4",
+  "bab": "half",
+  "good_saves": [
+    "will"
+  ],
+  "requirements": {
+    "skills": {
+      "Diplomacy": 4,
+      "Knowledge (psionics)": 8
+    },
+    "feats_all": [
+      "Inquisitor"
+    ],
+    "psionics": [
+      "manifester_level>=5",
+      "knows_mindlink"
+    ]
+  },
+  "progression": {
+    "manifesting_levels": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "milestones": {
+    "1": [
+      "thrall_and_believers"
+    ],
+    "3": [
+      "psionic_charm"
+    ],
+    "5": [
+      "psionic_dominate"
+    ],
+    "7": [
+      "greater_dominate"
+    ],
+    "9": [
+      "superior_dominate"
+    ],
+    "10": [
+      "twofold_master"
+    ]
+  },
+  "notes": [
+    "Levels 2–9 advance an existing manifesting class.",
+    "This feature is not the Leadership feat and uses its own score/table.",
+    "The RPG engine must model thralls and believers as actors with explicit agency constraints and campaign safety settings."
+  ],
+  "source_url": "https://www.d20srd.org/srd/psionic/prestigeClasses/thrallherd.htm"
+}

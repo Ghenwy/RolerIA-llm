@@ -1,0 +1,14 @@
+{
+  "name": "@nyx/persistence-json",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@nyx/contracts": "0.0.0",
+    "@nyx/domain": "0.0.0",
+    "@nyx/observability": "0.0.0",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1"
+  }
+}

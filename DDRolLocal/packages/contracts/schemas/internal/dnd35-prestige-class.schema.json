@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:dnd35:prestige-class:1.0",
+  "title": "Dnd35PrestigeClassV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name_es",
+    "source_family",
+    "levels",
+    "hit_die",
+    "bab",
+    "good_saves",
+    "requirements",
+    "progression",
+    "milestones",
+    "notes",
+    "source_url"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^dnd35\\.prestige\\.[a-z0-9_]+$" },
+    "name_es": { "type": "string", "minLength": 1 },
+    "source_family": { "enum": ["core_srd", "psionic_srd"] },
+    "levels": { "type": "integer", "minimum": 1, "maximum": 20 },
+    "hit_die": { "enum": ["d4", "d6", "d8", "d10", "d12"] },
+    "bab": { "enum": ["half", "three_quarters", "full"] },
+    "good_saves": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["fortitude", "reflex", "will"] }
+    },
+    "requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "alignment": { "type": "string", "minLength": 1 },
+        "bab_min": { "type": "integer", "minimum": 0 },
+        "feats_all": { "$ref": "#/$defs/stringArray" },
+        "feats_pattern": { "$ref": "#/$defs/stringArray" },
+        "languages_all": { "$ref": "#/$defs/stringArray" },
+        "proficiencies": { "$ref": "#/$defs/stringArray" },
+        "psionics": { "$ref": "#/$defs/stringArray" },
+        "race_exclusions": { "$ref": "#/$defs/stringArray" },
+        "race_tags_all": { "$ref": "#/$defs/stringArray" },
+        "race_tags_any": { "$ref": "#/$defs/stringArray" },
+        "skills": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "skills_pattern": { "$ref": "#/$defs/stringArray" },
+        "special": { "$ref": "#/$defs/stringArray" },
+        "spellcasting": { "$ref": "#/$defs/stringArray" }
+      }
+    },
+    "progression": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "arcane_spellcasting_levels": { "$ref": "#/$defs/levelArray" },
+        "bonus_spell_effect": { "type": "string", "minLength": 1 },
+        "bonus_spells_by_level": { "$ref": "#/$defs/numberByLevel" },
+        "caster_level": { "type": "string", "minLength": 1 },
+        "divine_spellcasting_levels": { "$ref": "#/$defs/levelArray" },
+        "manifesting_levels": { "$ref": "#/$defs/levelArray" },
+        "own_manifesting": { "type": "string", "minLength": 1 },
+        "own_spellcasting": { "type": "string", "minLength": 1 },
+        "power_points_by_class_table": { "type": "boolean" },
+        "prior_spellcasting": { "$ref": "#/$defs/scalarArray" },
+        "spellcasting": { "$ref": "#/$defs/scalarArray" },
+        "spellcasting_levels": { "$ref": "#/$defs/levelArray" },
+        "spells_per_day": { "$ref": "#/$defs/scalarArray" }
+      }
+    },
+    "milestones": {
+      "type": "object",
+      "propertyNames": { "pattern": "^(?:[1-9]|1[0-9]|20)$" },
+      "additionalProperties": { "$ref": "#/$defs/stringArray" }
+    },
+    "notes": { "$ref": "#/$defs/stringArray" },
+    "source_url": { "type": "string", "format": "uri", "pattern": "^https://" }
+  },
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "levelArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "integer", "minimum": 1, "maximum": 20 }
+    },
+    "scalarArray": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          { "type": "integer" },
+          { "type": "boolean" }
+        ]
+      }
+    },
+    "numberByLevel": {
+      "type": "object",
+      "propertyNames": { "pattern": "^(?:[1-9]|1[0-9]|20)$" },
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rpg-engine:worker-result:1.0",
+  "title": "RPGWorkerResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "job_id",
+    "turn_id",
+    "worker_id",
+    "base_state_version",
+    "status",
+    "summary",
+    "findings",
+    "proposed_events",
+    "proposed_patches",
+    "narrative_material",
+    "memory_candidates",
+    "unresolved",
+    "confidence",
+    "dod"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "job_id": {
+      "type": "string"
+    },
+    "turn_id": {
+      "type": "string"
+    },
+    "worker_id": {
+      "type": "string"
+    },
+    "base_state_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "partial",
+        "blocked",
+        "failed",
+        "stale"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim",
+          "evidence",
+          "certainty"
+        ],
+        "properties": {
+          "claim": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "certainty": {
+            "enum": [
+              "certain",
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        }
+      }
+    },
+    "proposed_events": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "proposed_patches": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "narrative_material": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "memory_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "dod": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "passed",
+        "missing"
+      ],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

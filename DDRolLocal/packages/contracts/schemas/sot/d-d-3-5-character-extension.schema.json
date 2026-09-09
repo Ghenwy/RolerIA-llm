@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx-rpg:dnd35:character-extension:1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ruleset_id",
+    "race_option_id",
+    "race_tags",
+    "racial_hit_dice",
+    "class_levels",
+    "prestige_levels",
+    "level_adjustment",
+    "total_hd",
+    "class_level_total",
+    "ecl",
+    "bab",
+    "saves",
+    "armor_class",
+    "grapple",
+    "initiative",
+    "speed",
+    "spellcasting",
+    "manifesting",
+    "feats",
+    "skills",
+    "conditions",
+    "source_refs"
+  ],
+  "properties": {
+    "ruleset_id": {
+      "const": "dnd35_srd_ogc"
+    },
+    "race_option_id": {
+      "type": "string"
+    },
+    "race_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "racial_hit_dice": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "class_levels": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "prestige_levels": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "level_adjustment": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "total_hd": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "class_level_total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ecl": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "bab": {
+      "type": "integer"
+    },
+    "saves": {
+      "type": "object"
+    },
+    "armor_class": {
+      "type": "object"
+    },
+    "grapple": {
+      "type": "integer"
+    },
+    "initiative": {
+      "type": "integer"
+    },
+    "speed": {
+      "type": "object"
+    },
+    "spellcasting": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "manifesting": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "feats": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

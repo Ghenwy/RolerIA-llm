@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:dnd35:exotic-race:1.0",
+  "title": "Dnd35ExoticRaceV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name_es",
+    "source_family",
+    "type",
+    "size",
+    "speed_ft",
+    "ability_mods",
+    "racial_hd",
+    "level_adjustment",
+    "minimum_starting_ecl",
+    "traits",
+    "favored_class",
+    "languages",
+    "source_url"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^dnd35\\.race\\.[a-z0-9_]+$" },
+    "name_es": { "type": "string", "minLength": 1 },
+    "source_family": { "enum": ["core_srd", "psionic_srd"] },
+    "type": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+    "size": { "enum": ["small", "medium", "large"] },
+    "speed_ft": { "type": "integer", "minimum": 0 },
+    "ability_mods": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "str": { "type": "integer" },
+        "dex": { "type": "integer" },
+        "con": { "type": "integer" },
+        "int": { "type": "integer" },
+        "wis": { "type": "integer" },
+        "cha": { "type": "integer" }
+      }
+    },
+    "racial_hd": { "type": "integer", "minimum": 0 },
+    "racial_hd_package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["die", "bab", "saves", "feats"],
+      "properties": {
+        "die": { "enum": ["d4", "d6", "d8", "d10", "d12"] },
+        "bab": { "type": "integer" },
+        "saves": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["fort", "ref", "will"],
+          "properties": {
+            "fort": { "type": "integer" },
+            "ref": { "type": "integer" },
+            "will": { "type": "integer" }
+          }
+        },
+        "feats": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "level_adjustment": { "type": "integer", "minimum": 0 },
+    "minimum_starting_ecl": { "type": "integer", "minimum": 1 },
+    "traits": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "favored_class": { "type": "string", "minLength": 1 },
+    "languages": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["automatic", "bonus"],
+      "properties": {
+        "automatic": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "bonus": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "variants": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "level_adjustment", "minimum_starting_ecl"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "level_adjustment": { "type": "integer", "minimum": 0 },
+          "minimum_starting_ecl": { "type": "integer", "minimum": 1 }
+        }
+      }
+    },
+    "source_url": { "type": "string", "format": "uri", "pattern": "^https://" }
+  }
+}

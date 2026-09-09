@@ -1,0 +1,48 @@
+{
+  "id": "dnd35.race.bugbear",
+  "name_es": "Osgo",
+  "source_family": "core_srd",
+  "type": "humanoid_goblinoid",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": 4,
+    "dex": 2,
+    "con": 2,
+    "cha": -2
+  },
+  "racial_hd": 3,
+  "level_adjustment": 1,
+  "minimum_starting_ecl": 4,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 2,
+    "saves": {
+      "fort": 1,
+      "ref": 3,
+      "will": 1
+    },
+    "feats": 2
+  },
+  "traits": [
+    "natural_armor_+3",
+    "move_silently_+4",
+    "darkvision_60_ft",
+    "scent"
+  ],
+  "favored_class": "rogue",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Goblin"
+    ],
+    "bonus": [
+      "Draconic",
+      "Elven",
+      "Giant",
+      "Gnoll",
+      "Orc"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/bugbear.htm"
+}

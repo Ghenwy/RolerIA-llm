@@ -1,0 +1,65 @@
+{
+  "id": "dnd35.prestige.shadowdancer",
+  "name_es": "Danzarín sombrío",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d8",
+  "bab": "three_quarters",
+  "good_saves": [
+    "reflex"
+  ],
+  "requirements": {
+    "skills": {
+      "Move Silently": 8,
+      "Hide": 10,
+      "Perform (dance)": 5
+    },
+    "feats_all": [
+      "Combat Reflexes",
+      "Dodge",
+      "Mobility"
+    ]
+  },
+  "progression": {},
+  "milestones": {
+    "1": [
+      "hide_in_plain_sight"
+    ],
+    "2": [
+      "evasion",
+      "darkvision",
+      "uncanny_dodge"
+    ],
+    "3": [
+      "shadow_illusion",
+      "summon_shadow"
+    ],
+    "4": [
+      "shadow_jump_20_ft"
+    ],
+    "5": [
+      "defensive_roll",
+      "improved_uncanny_dodge"
+    ],
+    "6": [
+      "shadow_jump_40_ft"
+    ],
+    "7": [
+      "slippery_mind"
+    ],
+    "8": [
+      "shadow_jump_80_ft"
+    ],
+    "9": [
+      "improved_evasion"
+    ],
+    "10": [
+      "shadow_jump_160_ft"
+    ]
+  },
+  "notes": [
+    "Summoned shadow progression and replacement conditions use the SRD entry.",
+    "Hide in Plain Sight requires the stated shadow proximity."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/shadowdancer.htm"
+}

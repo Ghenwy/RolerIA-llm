@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:transaction-journal:1.1",
+  "title": "TransactionJournalV11",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "transaction_id", "campaign_id", "branch_id", "base_state_version", "target_state_version", "stage", "state_temp_path", "state_final_path", "state_sha256", "event_ids", "event_batch_sha256", "created_at", "updated_at"],
+  "properties": {
+    "schema_version": { "const": "1.1" },
+    "transaction_id": { "type": "string", "pattern": "^TX-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "branch_id": { "type": "string", "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "base_state_version": { "type": "integer", "minimum": 0 },
+    "target_state_version": { "type": "integer", "minimum": 1 },
+    "stage": { "enum": ["PREPARED", "STATE_RENAMED", "EVENTS_APPENDED", "COMMITTED"] },
+    "state_temp_path": { "$ref": "#/$defs/relative_path" },
+    "state_final_path": { "$ref": "#/$defs/relative_path" },
+    "state_sha256": { "$ref": "#/$defs/sha256" },
+    "event_ids": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^EV(?:ENT)?-[A-Za-z0-9][A-Za-z0-9._-]*$" } },
+    "event_batch_sha256": { "$ref": "#/$defs/sha256" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "relative_path": { "type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:)(?![/\\\\])(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$" }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rpg-engine:inventory:1.0",
+  "title": "Inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "inventory_id",
+    "owner_type",
+    "owner_id",
+    "version",
+    "currencies",
+    "containers",
+    "items",
+    "carrying"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "inventory_id": {
+      "type": "string"
+    },
+    "owner_type": {
+      "enum": [
+        "character",
+        "party",
+        "location",
+        "vehicle",
+        "organization"
+      ]
+    },
+    "owner_id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "currencies": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "containers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "container_id",
+          "name",
+          "parent_container_id",
+          "capacity",
+          "location"
+        ],
+        "properties": {
+          "container_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "parent_container_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "capacity": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "location": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "item_instance_id",
+          "template_id",
+          "name",
+          "quantity",
+          "owner_id",
+          "container_id",
+          "equipped_slot",
+          "weight_each",
+          "identified",
+          "charges_current",
+          "charges_max",
+          "condition",
+          "quest_item",
+          "provenance",
+          "effects",
+          "source_ref"
+        ],
+        "properties": {
+          "item_instance_id": {
+            "type": "string"
+          },
+          "template_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "owner_id": {
+            "type": "string"
+          },
+          "container_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "equipped_slot": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "weight_each": {
+            "type": "number",
+            "minimum": 0
+          },
+          "identified": {
+            "type": "boolean"
+          },
+          "charges_current": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "charges_max": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "condition": {
+            "type": "string"
+          },
+          "quest_item": {
+            "type": "boolean"
+          },
+          "provenance": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "effects": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "source_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "carrying": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total_weight",
+        "light_limit",
+        "medium_limit",
+        "heavy_limit",
+        "load_state"
+      ],
+      "properties": {
+        "total_weight": {
+          "type": "number",
+          "minimum": 0
+        },
+        "light_limit": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "medium_limit": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "heavy_limit": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "load_state": {
+          "enum": [
+            "light",
+            "medium",
+            "heavy",
+            "overloaded",
+            "not_applicable"
+          ]
+        }
+      }
+    }
+  }
+}

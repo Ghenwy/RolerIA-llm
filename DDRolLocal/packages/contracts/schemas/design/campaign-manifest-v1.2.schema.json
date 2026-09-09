@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:campaign-manifest:1.2",
+  "title": "CampaignManifestV12",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "campaign_id",
+    "language",
+    "ruleset_id",
+    "runtime_profile",
+    "active_branch_id",
+    "state_version",
+    "paths",
+    "fingerprints",
+    "last_checkpoint_at",
+    "turn_profile"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.2"
+    },
+    "campaign_id": {
+      "type": "string",
+      "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "language": {
+      "type": "string",
+      "default": "es",
+      "pattern": "^[a-z]{2}(?:-[A-Z]{2})?$"
+    },
+    "ruleset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_profile": {
+      "enum": [
+        "64k",
+        "96k",
+        "112k"
+      ]
+    },
+    "active_branch_id": {
+      "type": "string",
+      "pattern": "^BRANCH-[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "state_version": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "events",
+        "transcript",
+        "checkpoints"
+      ],
+      "properties": {
+        "state": {
+          "$ref": "#/$defs/relative_path"
+        },
+        "events": {
+          "$ref": "#/$defs/relative_path"
+        },
+        "transcript": {
+          "$ref": "#/$defs/relative_path"
+        },
+        "checkpoints": {
+          "$ref": "#/$defs/relative_path"
+        }
+      }
+    },
+    "fingerprints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemas",
+        "prompts",
+        "model"
+      ],
+      "properties": {
+        "schemas": {
+          "$ref": "#/$defs/fingerprint_map"
+        },
+        "prompts": {
+          "$ref": "#/$defs/fingerprint_map"
+        },
+        "model": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "last_checkpoint_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "turn_profile": {
+      "enum": [
+        "ASSISTED_ALPHA",
+        "AUTOMATIC_EXPERIMENTAL"
+      ]
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?![A-Za-z]:)(?![/\\\\])(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$"
+    },
+    "fingerprint_map": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/sha256"
+      }
+    }
+  },
+  "description": "[DESIGN] New campaigns may explicitly record 64K without relabelling historical 96K/112K manifests. Versions 1.0/1.1 remain readable; no automatic persisted migration."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "dnd35.race.kobold",
+  "name_es": "Kobold",
+  "source_family": "core_srd",
+  "type": "humanoid_reptilian",
+  "size": "small",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": -4,
+    "dex": 2,
+    "con": -2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 0,
+  "minimum_starting_ecl": 1,
+  "traits": [
+    "darkvision_60_ft",
+    "natural_armor_+1",
+    "light_sensitivity",
+    "craft_trapmaking_+2",
+    "profession_miner_+2",
+    "search_+2"
+  ],
+  "favored_class": "sorcerer",
+  "languages": {
+    "automatic": [
+      "Draconic"
+    ],
+    "bonus": [
+      "Common",
+      "Undercommon"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/kobold.htm"
+}

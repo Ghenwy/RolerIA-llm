@@ -1,0 +1,49 @@
+{
+  "id": "dnd35.race.duergar_psionic",
+  "name_es": "Duergar psiónico",
+  "source_family": "psionic_srd",
+  "type": "humanoid_dwarf_psionic",
+  "size": "medium",
+  "speed_ft": 20,
+  "ability_mods": {
+    "con": 2,
+    "cha": -4
+  },
+  "racial_hd": 0,
+  "level_adjustment": 1,
+  "minimum_starting_ecl": 2,
+  "traits": [
+    "speed_not_reduced_by_armor_or_load",
+    "darkvision_120_ft",
+    "immunity_paralysis_phantasms_poison",
+    "saves_vs_spells_and_SLAs_+2",
+    "stability",
+    "stonecunning",
+    "expansion_1_per_day",
+    "invisibility_1_per_day",
+    "naturally_psionic_3_PP",
+    "attack_vs_orcs_and_goblinoids_+1",
+    "dodge_AC_vs_giants_+4",
+    "light_sensitivity",
+    "move_silently_+4",
+    "listen_+1",
+    "spot_+1",
+    "appraise_and_craft_stone_or_metal_+2"
+  ],
+  "favored_class": "fighter",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Dwarven",
+      "Undercommon"
+    ],
+    "bonus": [
+      "Draconic",
+      "Giant",
+      "Goblin",
+      "Orc",
+      "Terran"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/psionic/psionicRaces.htm"
+}

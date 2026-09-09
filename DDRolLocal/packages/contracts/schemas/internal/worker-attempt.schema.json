@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:nyx:worker-attempt:1.0",
+  "title": "WorkerAttemptV1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "attempt_id", "campaign_id", "turn_id", "job_id", "ordinal", "status", "reason_code", "retry_authorized"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "attempt_id": { "type": "string", "pattern": "^ATTEMPT-[a-f0-9]{64}$" },
+    "campaign_id": { "type": "string", "pattern": "^CAMPAIGN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "turn_id": { "type": "string", "pattern": "^TURN-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "job_id": { "type": "string", "pattern": "^JOB-[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "ordinal": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["RUNNING", "COMPLETED", "PARTIAL", "BLOCKED", "FAILED", "STALE", "CANCELLED"] },
+    "reason_code": { "type": "string", "pattern": "^[A-Z0-9_:-]+$", "minLength": 1, "maxLength": 96 },
+    "retry_authorized": { "type": "boolean" }
+  }
+}

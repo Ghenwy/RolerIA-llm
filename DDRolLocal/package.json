@@ -1,0 +1,40 @@
+{
+  "name": "nyx-rpg-local",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.12.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "bin": {
+    "nyx": "./dist/apps/tui/src/main.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node tooling/copy-build-assets.mjs && node tooling/rewrite-dist-imports.mjs",
+    "smoke:cli": "node tooling/smoke-cli.mjs",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "codegen": "node tooling/generate-types.mjs && pwsh -NoProfile -File tooling/generate-python-models.ps1",
+    "codegen:check": "node tooling/generate-types.mjs --check && pwsh -NoProfile -File tooling/generate-python-models.ps1 -Check",
+    "runtime:preflight": "pwsh -NoProfile -File scripts/runtime/Test-NyxRuntime.ps1 -Json",
+    "check:source": "npm run typecheck && npm run build && npm run smoke:cli"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.18",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "eslint": "10.9.1",
+    "fast-check": "4.9.0",
+    "json-schema-to-typescript": "16.0.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.69.0",
+    "vitest": "4.1.11"
+  }
+}

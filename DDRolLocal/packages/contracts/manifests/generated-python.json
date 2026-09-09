@@ -1,0 +1,277 @@
+{
+  "schema": "nyx.generated_python_manifest.v1",
+  "generator": "datamodel-code-generator",
+  "python": "3.12",
+  "records": [
+    {
+      "schema_file": "design/campaign-manifest-v1.1.schema.json",
+      "schema_sha256": "90b0f8d4eaade3f0d8d71370de7c3c5eda08f35bc50c1029c43f83e582b97ecd",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__campaign_manifest_v1_1.py",
+      "python_sha256": "12882771285985de493c28ed65ee55708ae841156fd1f047fa07834fb7d6360c"
+    },
+    {
+      "schema_file": "design/campaign-manifest-v1.2.schema.json",
+      "schema_sha256": "eba6ecdf3a82dcf1ce95e4c0fddd1b408e3bbbaa28293df7e6298c60d1a7a1fb",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__campaign_manifest_v1_2.py",
+      "python_sha256": "004aef78d6f3343f09718e132287d3982b88790ec60a7d82c002e5000d558cbf"
+    },
+    {
+      "schema_file": "design/campaign-manifest.schema.json",
+      "schema_sha256": "e37997332f192216cccd4b40c171c676e83949ab0da2955c567b0c5c4a52730a",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__campaign_manifest.py",
+      "python_sha256": "91cb74d6d47875332b942476c1e0dbe52b2e3ec81527bc792376edfc6dad5539"
+    },
+    {
+      "schema_file": "design/fallback-handoff.schema.json",
+      "schema_sha256": "c59838e9002616686cfcec731259085224b4e76fea40baba8ac86b55ad52e1dd",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__fallback_handoff.py",
+      "python_sha256": "e458fd6de584ec8ff164e523d6f43a9bd4da05b585c7e5d08ecd8dc1ebad7b8f"
+    },
+    {
+      "schema_file": "design/guided-turn-intent-v1.schema.json",
+      "schema_sha256": "7d87adfd5b58e62ff582e7ad7dc05e2edc47ef4f316d91c369a04a1eeba1a786",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__guided_turn_intent_v1.py",
+      "python_sha256": "1bf376f2500a931f28fd049880079d25133c98341aa0a4439ae348bf21632741"
+    },
+    {
+      "schema_file": "design/narration-proposal-v1.schema.json",
+      "schema_sha256": "7dd7f89c61ec94d6fe53d912de120f756b1c42d20cf21c1be007ab71cde84edd",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__narration_proposal_v1.py",
+      "python_sha256": "30abb6d1b25ecab268a7de907edf4d8500dd88e395f290580d6681f526a873c8"
+    },
+    {
+      "schema_file": "design/runtime-profile-v1.1.schema.json",
+      "schema_sha256": "d1a239693d935e9735bc33253c6995df67218222b134aae568491f3cbefe2632",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__runtime_profile_v1_1.py",
+      "python_sha256": "1088e45fd36fdb845a8958a97be287f40efb85803910119ff3f6182278aef7b1"
+    },
+    {
+      "schema_file": "design/runtime-profile.schema.json",
+      "schema_sha256": "106a3b2ff91219de49489c852d5226a554335c5714d63bbbf17b1757cbf39228",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__runtime_profile.py",
+      "python_sha256": "cdee5bc3991490f2d4c2a403141efe04fe68fe7bda8379db60ef504c80904ad8"
+    },
+    {
+      "schema_file": "design/turn-envelope.schema.json",
+      "schema_sha256": "d6ecf6649c8c5db90fc5566934cf728a8f8fa1107e4d4cf717c71cd2897bd578",
+      "python_file": "fallback/python/src/nyx_fallback/generated/design__turn_envelope.py",
+      "python_sha256": "265aa3a7391067d2eefdede8b7511a53c5534d83bf70c22a8bbff2414717d567"
+    },
+    {
+      "schema_file": "internal/campaign-state.schema.json",
+      "schema_sha256": "b187466f2634d1104a51612aefe8ef8c2a5c78bc28f58b77445426129af9622d",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__campaign_state.py",
+      "python_sha256": "143d8a2eb5151d216364410aa093be235258a98d7f076336c4447aa73f20602b"
+    },
+    {
+      "schema_file": "internal/checkpoint-manifest-v1.1.schema.json",
+      "schema_sha256": "4f08734ad83e949c9ca290f78381e943155dbcc8b282f8f0e83801f59150d784",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__checkpoint_manifest_v1_1.py",
+      "python_sha256": "8b626058bd59a96de91e1d0f96ee96005fe764a28883541412ad843c032abd61"
+    },
+    {
+      "schema_file": "internal/checkpoint-manifest-v1.2.schema.json",
+      "schema_sha256": "60b9272dcf7f351e70bb8744167d17bb8da1585b428457426a08b4f24d8c5c89",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__checkpoint_manifest_v1_2.py",
+      "python_sha256": "9354f9ee1446f8944f0a40aa6e5036af63d53067d90ff9a8c74895cd33dd3a2f"
+    },
+    {
+      "schema_file": "internal/checkpoint-manifest.schema.json",
+      "schema_sha256": "af5e83c4daa04abdd7566bf8574d7f91451431dc7f44b53668c1235fff7e6cb6",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__checkpoint_manifest.py",
+      "python_sha256": "df4ef4d119876440cf85c1602d3c5544ed1a45168d041e181cd3c8a503fbb168"
+    },
+    {
+      "schema_file": "internal/compaction-commit-v1.1.schema.json",
+      "schema_sha256": "00c7a4afc76eac21d58c8f310a83665893ff19165f62bd3aed98f50ba88f02a7",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__compaction_commit_v1_1.py",
+      "python_sha256": "3d36ad99081ed7b7b8f20b50cd6a0ce9be1d5b543e327b627ee8500fbb3a5667"
+    },
+    {
+      "schema_file": "internal/compaction-commit-v1.2.schema.json",
+      "schema_sha256": "cf4d1fad7fe77a199b6b70153b7ae03ef5ba5ffad10c9d00769b7a32fa4674b7",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__compaction_commit_v1_2.py",
+      "python_sha256": "4cb4bb67ccfc6cd22267c91d56ef58364e4c4005d0fa844ac6b14e56a0eb86c2"
+    },
+    {
+      "schema_file": "internal/compaction-commit.schema.json",
+      "schema_sha256": "31c44e2d1ffa0cdd85b2b26e055c3a85d0d81544c75fed22de2b24895a826cbf",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__compaction_commit.py",
+      "python_sha256": "e424851eca5b1ea84dd2121855129907dff786122454885ae7006b9e9a433ee2"
+    },
+    {
+      "schema_file": "internal/dnd35-adapter-event.schema.json",
+      "schema_sha256": "2ff0666da18dce6940adf381245a9753029e3d70539c5e1d0d4923aaa838be38",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__dnd35_adapter_event.py",
+      "python_sha256": "d0629cfb01e17bbf3108d78eb2fc53f552a00ae27c43e75995ae3755346c86c3"
+    },
+    {
+      "schema_file": "internal/dnd35-exotic-race.schema.json",
+      "schema_sha256": "44cccb8fb42967215057691ed0550fa691b09a2f0d6de6df52566c09c71fc8c0",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__dnd35_exotic_race.py",
+      "python_sha256": "b230195494d88cbbcf4b1af40689dae2497c368e10c1a3b739382bced94957f3"
+    },
+    {
+      "schema_file": "internal/dnd35-prestige-class.schema.json",
+      "schema_sha256": "436f2c0811b3937db54a68419e6f851b4d61a98d63dcdb7214ddca132c8c089f",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__dnd35_prestige_class.py",
+      "python_sha256": "a5eda10d93301238a61d24e3edc09f575e8ae1aae9215c26ed0168d83621213f"
+    },
+    {
+      "schema_file": "internal/domain-event-v1.1.schema.json",
+      "schema_sha256": "7c32efd392174b792a25a6607bf8f070e749f7eb732c096f27a071360a6145e3",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__domain_event_v1_1.py",
+      "python_sha256": "2981494ecd1f5bca92dd613cb364482cfc268be0305f33f5287ea7a8757bb2e9"
+    },
+    {
+      "schema_file": "internal/domain-event.schema.json",
+      "schema_sha256": "e5face97e57cc84e4ffd2d6ea6eab6cc00407827c2b82967179c2411b77db76f",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__domain_event.py",
+      "python_sha256": "d300db0c5a7d153d91c111a5c7c25bbc9c89ef72acc8181bc6dc6d2716bf309b"
+    },
+    {
+      "schema_file": "internal/health-change-v1.schema.json",
+      "schema_sha256": "1ed27975b4a33863996bbd3935ceffd0b061a78abfa556b5564fe390cf49eee2",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__health_change_v1.py",
+      "python_sha256": "564c703284b0035a365c3b14a6df85464635042c64f67ef6c6d531c5be6e38f6"
+    },
+    {
+      "schema_file": "internal/knowledge-acquisition-v1.schema.json",
+      "schema_sha256": "06c3651a5cf409e0218f013cdda623a565f47de47550a1e3d52ca9d2918d4fe0",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__knowledge_acquisition_v1.py",
+      "python_sha256": "7380988aa28e82a6fa675a8f4ae8b1bbe37ceda644cffe9f7d05d30363947453"
+    },
+    {
+      "schema_file": "internal/mechanical-action-v1.1.schema.json",
+      "schema_sha256": "7185eed1cdcab170a395eaaf68b886b75fc1c82a3a0d9ff07c8194ee8b864af3",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__mechanical_action_v1_1.py",
+      "python_sha256": "24d2ab2c5cfb41869184e305acf18653547b2b52a829bf44b4c2cec75cadeab2"
+    },
+    {
+      "schema_file": "internal/mechanical-action-v1.schema.json",
+      "schema_sha256": "1824f3ee546de1057a9fb8e97f0f9c4ce55ff4136992c5ef6073292857967b5c",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__mechanical_action_v1.py",
+      "python_sha256": "c3cbfc8b0c61974c4dcc5f35b42fe63185c8e0d068ef51abf54220ed30471924"
+    },
+    {
+      "schema_file": "internal/memory-record.schema.json",
+      "schema_sha256": "d34c150576b4157c86f42769dd9d30e484e0642c494cfb55741cc09e1bc0e27d",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__memory_record.py",
+      "python_sha256": "29f5e7c7968265992f63446a480146c8f737361e0b5f7296e42cc4021bef9ad2"
+    },
+    {
+      "schema_file": "internal/registered-travel-v1.schema.json",
+      "schema_sha256": "4d334ca959748e3010c905ff9f136fa654c3c717045cc5e68317546b789a4b8a",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__registered_travel_v1.py",
+      "python_sha256": "901e4b662a7e1ded35d97612b714c3727f3a6decb804298de98a1db969afe92c"
+    },
+    {
+      "schema_file": "internal/rule-source-record.schema.json",
+      "schema_sha256": "8242a47ff0b994a32beb6bbd38bec8a7f9448b240ae1f2755c29fb9def8d305d",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__rule_source_record.py",
+      "python_sha256": "1aae567f3a489e0493435b3d613fe4dbb4c5a31d665dfbd31abe85986fbe0b5d"
+    },
+    {
+      "schema_file": "internal/timeline-entry.schema.json",
+      "schema_sha256": "d9185c433b47957e1e37db4b765a02a8a83b24471444662f355cd903dd1e350f",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__timeline_entry.py",
+      "python_sha256": "eb8d3140987ee6d1b402c322b9f2f9611d814156a1aba3dae4a0b3af338faabf"
+    },
+    {
+      "schema_file": "internal/transaction-journal-v1.1.schema.json",
+      "schema_sha256": "1f57bef43d67fbe06242857c35d61de1d22da8cac3132f5bf95663e936cf19c3",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__transaction_journal_v1_1.py",
+      "python_sha256": "5e3ef634664fd6f0c1bfac3c770f64ac60a6c1e64077dc5784393fc7e97ae6ee"
+    },
+    {
+      "schema_file": "internal/transaction-journal.schema.json",
+      "schema_sha256": "c1b55283610e6abe4864395a035757d143767c0c52d17791d706c034c8c085ea",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__transaction_journal.py",
+      "python_sha256": "aa3e9f9c038d9a046dbbeab7da49865f93cbb90ed4c91992417c753118849a14"
+    },
+    {
+      "schema_file": "internal/transcript-entry.schema.json",
+      "schema_sha256": "984daf04c073106d02d6584d513b4c2d5cfae48451b9642c06915814a6a45c9f",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__transcript_entry.py",
+      "python_sha256": "61389b15995a509e6a76ca7c8cea6393d43ed97df59f54c77b249f92aefc0618"
+    },
+    {
+      "schema_file": "internal/worker-attempt.schema.json",
+      "schema_sha256": "200a0ad54a1da51058973719933de37add4bb5d4675d38118d763a338e53fe83",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__worker_attempt.py",
+      "python_sha256": "8821620d667d101915ecd71a5e1ca55015d51d59d25c41fddd563d20191d92f8"
+    },
+    {
+      "schema_file": "internal/worker-queue-batch.schema.json",
+      "schema_sha256": "27b562f74c9b6ad1174076ea6071f5fa0d90f3b63f053ae2cc0e9b8551f01670",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__worker_queue_batch.py",
+      "python_sha256": "a45e0ec68803160f33c65416856d25ade82847a97dc0cd1751718715b219a762"
+    },
+    {
+      "schema_file": "internal/writer-lock.schema.json",
+      "schema_sha256": "3a3b1a6486746f3d7d59270e8045022a3e124a03486a6acea5c6a01df444f9f1",
+      "python_file": "fallback/python/src/nyx_fallback/generated/internal__writer_lock.py",
+      "python_sha256": "53f22c41797d8bf023e3902a020afa003f6b43927e5fd9635d4a7c82015504ab"
+    },
+    {
+      "schema_file": "sot/compaction-proposal.schema.json",
+      "schema_sha256": "aa53dfc0e0714b5e6a14e1f45e8817b5bd737aaa46ef21f034c7e1c67a518b97",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__compaction_proposal.py",
+      "python_sha256": "ec73fb08487da9dfd4a42250ccd6ed8a6fc4e143d09ab7b7de6e9c7c662cfc31"
+    },
+    {
+      "schema_file": "sot/d-d-3-5-character-extension.schema.json",
+      "schema_sha256": "596866eefba49d012055d2281726f94d7ca85d263d0f636fe3a506cc625098c1",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__d_d_3_5_character_extension.py",
+      "python_sha256": "e07b85177b6271a9fcd49bb4e5e0d0ba7c4a5967e2b8201e37ddc60ea4dd52e9"
+    },
+    {
+      "schema_file": "sot/dnd35-character-sheet.schema.json",
+      "schema_sha256": "2ceb0ede44982b338a29913b176fdcfe8077fbfeac7cbef570b389b7e2be8c72",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__dnd35_character_sheet.py",
+      "python_sha256": "b1935197fe3c04b1f51026fe696d66a3bd7de03f3ac0ceb8291708b3bbeb7088"
+    },
+    {
+      "schema_file": "sot/inventory.schema.json",
+      "schema_sha256": "c2d3372526e3002ca614b2a1938374055ef14cee9033386f30073996fb3c72a2",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__inventory.py",
+      "python_sha256": "a213edd11b5edf87e92bac20b3d86aca67511b228d4b5939646bcf6ed4c08c57"
+    },
+    {
+      "schema_file": "sot/rpgjob-card.schema.json",
+      "schema_sha256": "0a10565da554f073d85a8f8c068088b28c4d1ce93b9e5d379192dfae97e121a2",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__rpgjob_card.py",
+      "python_sha256": "04ad8171a599820ad880910770ee808e4933f9ef9907c72df5d56158d703ccb3"
+    },
+    {
+      "schema_file": "sot/rpgworker-result.schema.json",
+      "schema_sha256": "9813563934457426e0619efcb4d5eed2290692b99fee3a7614efbb3f8b3f7e69",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__rpgworker_result.py",
+      "python_sha256": "92d5e49e1c98850db65dba0d10b6a76d36a581c2350234ba8ccccc98129dda12"
+    },
+    {
+      "schema_file": "sot/rule-query.schema.json",
+      "schema_sha256": "884f7179e8b4b11bf449810393f91c71c0e95f8367b20c9b9db21cda30038bc1",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__rule_query.py",
+      "python_sha256": "7b6c9e1e7bc00e3fee3987d63cfaf56f545ea2f51aa2b50731763fc53b110ed8"
+    },
+    {
+      "schema_file": "sot/rule-resolution.schema.json",
+      "schema_sha256": "7e6be2402dc2225accf645c77aef94da8e3c1b754936aba2e56b47989e151727",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__rule_resolution.py",
+      "python_sha256": "3e10de4e899e1fbad566aeaecb61b81701f2b43291db770f529211c80e8a6e29"
+    },
+    {
+      "schema_file": "sot/turn-plan.schema.json",
+      "schema_sha256": "78d245578bdec074cc4cc3de9d2cbb0ded6cd0a0400eca110200332c0cb8beb6",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__turn_plan.py",
+      "python_sha256": "91b7329e98443b44769d987376f70de635ae2b18b800acd5e034f647d9d5ed69"
+    },
+    {
+      "schema_file": "sot/turn-resolution.schema.json",
+      "schema_sha256": "44e3ad77f2165d58fa10af18ef41cf1de34cd97b7690a5ed0d4a5716e2acffa8",
+      "python_file": "fallback/python/src/nyx_fallback/generated/sot__turn_resolution.py",
+      "python_sha256": "fa54fecc9c2f99d5f5abb9ad527a507bf51771b9f1f6b83b1a05a0b458cae03a"
+    }
+  ]
+}

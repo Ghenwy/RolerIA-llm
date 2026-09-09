@@ -1,0 +1,50 @@
+{
+  "id": "dnd35.race.lizardfolk",
+  "name_es": "Hombre lagarto",
+  "source_family": "core_srd",
+  "type": "humanoid_reptilian",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "str": 2,
+    "con": 2,
+    "int": -2
+  },
+  "racial_hd": 2,
+  "level_adjustment": 1,
+  "minimum_starting_ecl": 3,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 1,
+    "saves": {
+      "fort": 0,
+      "ref": 3,
+      "will": 0
+    },
+    "feats": 1
+  },
+  "traits": [
+    "natural_armor_+5",
+    "two_claws_1d4",
+    "bite_1d4",
+    "hold_breath",
+    "balance_+4",
+    "jump_+4",
+    "swim_+4",
+    "simple_weapons_and_shields"
+  ],
+  "favored_class": "druid",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Draconic"
+    ],
+    "bonus": [
+      "Aquan",
+      "Goblin",
+      "Gnoll",
+      "Orc"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/lizardfolk.htm"
+}

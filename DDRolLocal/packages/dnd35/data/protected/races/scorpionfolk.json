@@ -1,0 +1,47 @@
+{
+  "id": "dnd35.race.scorpionfolk",
+  "name_es": "Pueblo escorpión",
+  "source_family": "core_srd",
+  "type": "monstrous_humanoid",
+  "size": "large",
+  "speed_ft": 40,
+  "ability_mods": {
+    "str": 8,
+    "dex": 2,
+    "con": 2,
+    "int": -2,
+    "wis": 4,
+    "cha": 4
+  },
+  "racial_hd": 12,
+  "level_adjustment": 4,
+  "minimum_starting_ecl": 16,
+  "racial_hd_package": {
+    "die": "d8",
+    "bab": 12,
+    "saves": {
+      "fort": 4,
+      "ref": 8,
+      "will": 8
+    },
+    "feats": 5
+  },
+  "traits": [
+    "space_10_reach_5",
+    "darkvision_60_ft",
+    "natural_armor_+6",
+    "fire_resistance_5",
+    "spell_resistance_18"
+  ],
+  "favored_class": "ranger",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Terran"
+    ],
+    "bonus": [
+      "Any"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/scorpionfolk.htm"
+}

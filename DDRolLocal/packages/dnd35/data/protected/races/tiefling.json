@@ -1,0 +1,42 @@
+{
+  "id": "dnd35.race.tiefling",
+  "name_es": "Tiefling",
+  "source_family": "core_srd",
+  "type": "outsider_native",
+  "size": "medium",
+  "speed_ft": 30,
+  "ability_mods": {
+    "dex": 2,
+    "int": 2,
+    "cha": -2
+  },
+  "racial_hd": 0,
+  "level_adjustment": 1,
+  "minimum_starting_ecl": 2,
+  "traits": [
+    "darkvision_60_ft",
+    "darkness_1_per_day",
+    "cold_resistance_5",
+    "electricity_resistance_5",
+    "fire_resistance_5",
+    "bluff_+2",
+    "hide_+2"
+  ],
+  "favored_class": "rogue",
+  "languages": {
+    "automatic": [
+      "Common",
+      "Infernal"
+    ],
+    "bonus": [
+      "Draconic",
+      "Dwarven",
+      "Elven",
+      "Gnome",
+      "Goblin",
+      "Halfling",
+      "Orc"
+    ]
+  },
+  "source_url": "https://www.d20srd.org/srd/monsters/planetouched.htm"
+}

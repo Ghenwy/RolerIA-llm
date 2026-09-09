@@ -1,0 +1,77 @@
+{
+  "id": "dnd35.prestige.loremaster",
+  "name_es": "Maestro del saber",
+  "source_family": "core_srd",
+  "levels": 10,
+  "hit_die": "d4",
+  "bab": "half",
+  "good_saves": [
+    "will"
+  ],
+  "requirements": {
+    "skills_pattern": [
+      "two_Knowledge_skills_each>=10"
+    ],
+    "feats_pattern": [
+      "three_metamagic_or_item_creation_feats"
+    ],
+    "feats_all": [
+      "Skill Focus (any Knowledge)"
+    ],
+    "spellcasting": [
+      "cast_seven_divination_spells",
+      "at_least_one_divination_level>=3"
+    ]
+  },
+  "progression": {
+    "spellcasting_levels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "milestones": {
+    "1": [
+      "secret"
+    ],
+    "2": [
+      "lore"
+    ],
+    "3": [
+      "secret"
+    ],
+    "4": [
+      "bonus_language"
+    ],
+    "5": [
+      "secret"
+    ],
+    "6": [
+      "greater_lore"
+    ],
+    "7": [
+      "secret"
+    ],
+    "8": [
+      "bonus_language"
+    ],
+    "9": [
+      "secret"
+    ],
+    "10": [
+      "true_lore"
+    ]
+  },
+  "notes": [
+    "Every class level advances one eligible spellcasting class.",
+    "Secret selection and minimum loremaster level use the SRD secret table."
+  ],
+  "source_url": "https://www.d20srd.org/srd/prestigeClasses/loremaster.htm"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@nyx/application",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@nyx/contracts": "0.0.0",
+    "@nyx/domain": "0.0.0",
+    "@nyx/observability": "0.0.0"
+  }
+}

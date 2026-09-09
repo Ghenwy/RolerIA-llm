@@ -1,0 +1,366 @@
+{
+  "schema": "nyx.generated_types_manifest.v1",
+  "generator": "json-schema-to-typescript",
+  "records": [
+    {
+      "schema_id": "urn:nyx:campaign-manifest:1.1",
+      "schema_file": "design/campaign-manifest-v1.1.schema.json",
+      "schema_sha256": "90b0f8d4eaade3f0d8d71370de7c3c5eda08f35bc50c1029c43f83e582b97ecd",
+      "typescript_file": "packages/contracts/src/generated/design--campaign-manifest-v1.1.ts",
+      "typescript_sha256": "30837dc9bec93c06960cc07e31c91ea2a35fac79239148110b9b8ba159e59a23",
+      "namespace": "DesignCampaignManifestV11"
+    },
+    {
+      "schema_id": "urn:nyx:campaign-manifest:1.2",
+      "schema_file": "design/campaign-manifest-v1.2.schema.json",
+      "schema_sha256": "eba6ecdf3a82dcf1ce95e4c0fddd1b408e3bbbaa28293df7e6298c60d1a7a1fb",
+      "typescript_file": "packages/contracts/src/generated/design--campaign-manifest-v1.2.ts",
+      "typescript_sha256": "a7cd65f7cbcf650f55412406c23d9895a00345b0056555607dabeb50436b4bb8",
+      "namespace": "DesignCampaignManifestV12"
+    },
+    {
+      "schema_id": "urn:nyx:campaign-manifest:1.0",
+      "schema_file": "design/campaign-manifest.schema.json",
+      "schema_sha256": "e37997332f192216cccd4b40c171c676e83949ab0da2955c567b0c5c4a52730a",
+      "typescript_file": "packages/contracts/src/generated/design--campaign-manifest.ts",
+      "typescript_sha256": "4e8e69f7f0b9fc48ba1be275d32243864052e6fbad24de92db91e44d12ad3a26",
+      "namespace": "DesignCampaignManifest"
+    },
+    {
+      "schema_id": "urn:nyx:fallback-handoff:1.0",
+      "schema_file": "design/fallback-handoff.schema.json",
+      "schema_sha256": "c59838e9002616686cfcec731259085224b4e76fea40baba8ac86b55ad52e1dd",
+      "typescript_file": "packages/contracts/src/generated/design--fallback-handoff.ts",
+      "typescript_sha256": "4bad6a611bc2a3b12f1f80810f4048309f33052de8354f25720336b06806bd13",
+      "namespace": "DesignFallbackHandoff"
+    },
+    {
+      "schema_id": "urn:nyx:guided-turn-intent:1.0",
+      "schema_file": "design/guided-turn-intent-v1.schema.json",
+      "schema_sha256": "7d87adfd5b58e62ff582e7ad7dc05e2edc47ef4f316d91c369a04a1eeba1a786",
+      "typescript_file": "packages/contracts/src/generated/design--guided-turn-intent-v1.ts",
+      "typescript_sha256": "597fb74da424be6c505338804744d5128b433ec6f557f908403e64d076ea2bed",
+      "namespace": "DesignGuidedTurnIntentV1"
+    },
+    {
+      "schema_id": "urn:nyx:narration-proposal:1.0",
+      "schema_file": "design/narration-proposal-v1.schema.json",
+      "schema_sha256": "7dd7f89c61ec94d6fe53d912de120f756b1c42d20cf21c1be007ab71cde84edd",
+      "typescript_file": "packages/contracts/src/generated/design--narration-proposal-v1.ts",
+      "typescript_sha256": "58b0fe17a022fa2e1cc1d8d707a96bdee7b5fdfb1a9b74bd4fe32dbfe7b1dc71",
+      "namespace": "DesignNarrationProposalV1"
+    },
+    {
+      "schema_id": "urn:nyx:runtime-profile:1.1",
+      "schema_file": "design/runtime-profile-v1.1.schema.json",
+      "schema_sha256": "d1a239693d935e9735bc33253c6995df67218222b134aae568491f3cbefe2632",
+      "typescript_file": "packages/contracts/src/generated/design--runtime-profile-v1.1.ts",
+      "typescript_sha256": "78ff47ce8f218ce593ae2fe9d569a4b86fceeb0596d92a115e02021412d75642",
+      "namespace": "DesignRuntimeProfileV11"
+    },
+    {
+      "schema_id": "urn:nyx:runtime-profile:1.0",
+      "schema_file": "design/runtime-profile.schema.json",
+      "schema_sha256": "106a3b2ff91219de49489c852d5226a554335c5714d63bbbf17b1757cbf39228",
+      "typescript_file": "packages/contracts/src/generated/design--runtime-profile.ts",
+      "typescript_sha256": "419c1fe7d79af5d8edb9d452b317bacf1897389b89ff1e2a5399f5ba40cab961",
+      "namespace": "DesignRuntimeProfile"
+    },
+    {
+      "schema_id": "urn:nyx:turn-envelope:1.0",
+      "schema_file": "design/turn-envelope.schema.json",
+      "schema_sha256": "d6ecf6649c8c5db90fc5566934cf728a8f8fa1107e4d4cf717c71cd2897bd578",
+      "typescript_file": "packages/contracts/src/generated/design--turn-envelope.ts",
+      "typescript_sha256": "4cbc26e954f4c0afdbf40f7b8cd6acb824abd1ab35fb451dddc68e448cc3b048",
+      "namespace": "DesignTurnEnvelope"
+    },
+    {
+      "schema_id": "urn:nyx:campaign-state:1.0",
+      "schema_file": "internal/campaign-state.schema.json",
+      "schema_sha256": "b187466f2634d1104a51612aefe8ef8c2a5c78bc28f58b77445426129af9622d",
+      "typescript_file": "packages/contracts/src/generated/internal--campaign-state.ts",
+      "typescript_sha256": "6115d54079325db3d71a3eacaf6a029ce803e22ea88f91807803a83c04f4d1e0",
+      "namespace": "InternalCampaignState"
+    },
+    {
+      "schema_id": "urn:nyx:checkpoint-manifest:1.1",
+      "schema_file": "internal/checkpoint-manifest-v1.1.schema.json",
+      "schema_sha256": "4f08734ad83e949c9ca290f78381e943155dbcc8b282f8f0e83801f59150d784",
+      "typescript_file": "packages/contracts/src/generated/internal--checkpoint-manifest-v1.1.ts",
+      "typescript_sha256": "74fc59dd9ef401dc6bd084c8427cc19d664f532e7f221e1df09baca6eedf6b9d",
+      "namespace": "InternalCheckpointManifestV11"
+    },
+    {
+      "schema_id": "urn:nyx:checkpoint-manifest:1.2",
+      "schema_file": "internal/checkpoint-manifest-v1.2.schema.json",
+      "schema_sha256": "60b9272dcf7f351e70bb8744167d17bb8da1585b428457426a08b4f24d8c5c89",
+      "typescript_file": "packages/contracts/src/generated/internal--checkpoint-manifest-v1.2.ts",
+      "typescript_sha256": "642a47aa9609db3641d98e6c66e3edd1902c5380dbc309a3329b456a47c37cfc",
+      "namespace": "InternalCheckpointManifestV12"
+    },
+    {
+      "schema_id": "urn:nyx:checkpoint-manifest:1.0",
+      "schema_file": "internal/checkpoint-manifest.schema.json",
+      "schema_sha256": "af5e83c4daa04abdd7566bf8574d7f91451431dc7f44b53668c1235fff7e6cb6",
+      "typescript_file": "packages/contracts/src/generated/internal--checkpoint-manifest.ts",
+      "typescript_sha256": "77f8ba41b80d8c236a56c402457b8ed6daeb75ac67475bd7a11c81eddcfe6743",
+      "namespace": "InternalCheckpointManifest"
+    },
+    {
+      "schema_id": "urn:nyx:compaction-commit:1.1",
+      "schema_file": "internal/compaction-commit-v1.1.schema.json",
+      "schema_sha256": "00c7a4afc76eac21d58c8f310a83665893ff19165f62bd3aed98f50ba88f02a7",
+      "typescript_file": "packages/contracts/src/generated/internal--compaction-commit-v1.1.ts",
+      "typescript_sha256": "db52cb88a1fadf90d9b5877bbb53e84a8493730fee32be3c84c7f6064efd2dc7",
+      "namespace": "InternalCompactionCommitV11"
+    },
+    {
+      "schema_id": "urn:nyx:compaction-commit:1.2",
+      "schema_file": "internal/compaction-commit-v1.2.schema.json",
+      "schema_sha256": "cf4d1fad7fe77a199b6b70153b7ae03ef5ba5ffad10c9d00769b7a32fa4674b7",
+      "typescript_file": "packages/contracts/src/generated/internal--compaction-commit-v1.2.ts",
+      "typescript_sha256": "c204b4b27c2e40ece313d00e94488bae5eefd16a811aed6bf98b596bde2c38a7",
+      "namespace": "InternalCompactionCommitV12"
+    },
+    {
+      "schema_id": "urn:nyx:compaction-commit:1.0",
+      "schema_file": "internal/compaction-commit.schema.json",
+      "schema_sha256": "31c44e2d1ffa0cdd85b2b26e055c3a85d0d81544c75fed22de2b24895a826cbf",
+      "typescript_file": "packages/contracts/src/generated/internal--compaction-commit.ts",
+      "typescript_sha256": "9af4b6d7c72c639ab054c35d20730dd518c6d07f102281e536bc9ecf9a48afa0",
+      "namespace": "InternalCompactionCommit"
+    },
+    {
+      "schema_id": "urn:nyx:dnd35-adapter-event:1.0",
+      "schema_file": "internal/dnd35-adapter-event.schema.json",
+      "schema_sha256": "2ff0666da18dce6940adf381245a9753029e3d70539c5e1d0d4923aaa838be38",
+      "typescript_file": "packages/contracts/src/generated/internal--dnd35-adapter-event.ts",
+      "typescript_sha256": "266fe2b4e59fdb70397eed3b39a5d8bf596c827589c2d2666a0e6c38e6707695",
+      "namespace": "InternalDnd35AdapterEvent"
+    },
+    {
+      "schema_id": "urn:nyx:dnd35:exotic-race:1.0",
+      "schema_file": "internal/dnd35-exotic-race.schema.json",
+      "schema_sha256": "44cccb8fb42967215057691ed0550fa691b09a2f0d6de6df52566c09c71fc8c0",
+      "typescript_file": "packages/contracts/src/generated/internal--dnd35-exotic-race.ts",
+      "typescript_sha256": "c208fd65ad5bdf6d1020e1205fc157963acd502fbc04c4903a33c5aff3557db9",
+      "namespace": "InternalDnd35ExoticRace"
+    },
+    {
+      "schema_id": "urn:nyx:dnd35:prestige-class:1.0",
+      "schema_file": "internal/dnd35-prestige-class.schema.json",
+      "schema_sha256": "436f2c0811b3937db54a68419e6f851b4d61a98d63dcdb7214ddca132c8c089f",
+      "typescript_file": "packages/contracts/src/generated/internal--dnd35-prestige-class.ts",
+      "typescript_sha256": "83e3087917cb89a0ae3b924b44d1d999574f4c268fb416c7d3e51d2297df9c0e",
+      "namespace": "InternalDnd35PrestigeClass"
+    },
+    {
+      "schema_id": "urn:nyx:domain-event:1.1",
+      "schema_file": "internal/domain-event-v1.1.schema.json",
+      "schema_sha256": "7c32efd392174b792a25a6607bf8f070e749f7eb732c096f27a071360a6145e3",
+      "typescript_file": "packages/contracts/src/generated/internal--domain-event-v1.1.ts",
+      "typescript_sha256": "ef76fee8d37efa2a6e4865fc838ce3fcfda9bded95ae6642d2420e5b47aac7b7",
+      "namespace": "InternalDomainEventV11"
+    },
+    {
+      "schema_id": "urn:nyx:domain-event:1.0",
+      "schema_file": "internal/domain-event.schema.json",
+      "schema_sha256": "e5face97e57cc84e4ffd2d6ea6eab6cc00407827c2b82967179c2411b77db76f",
+      "typescript_file": "packages/contracts/src/generated/internal--domain-event.ts",
+      "typescript_sha256": "33ec020249acf0a1d796753933df9c1b3dcb9c2213f70727294d584716a71da4",
+      "namespace": "InternalDomainEvent"
+    },
+    {
+      "schema_id": "urn:nyx:health-change:1.0",
+      "schema_file": "internal/health-change-v1.schema.json",
+      "schema_sha256": "1ed27975b4a33863996bbd3935ceffd0b061a78abfa556b5564fe390cf49eee2",
+      "typescript_file": "packages/contracts/src/generated/internal--health-change-v1.ts",
+      "typescript_sha256": "e6f9fdcab487ca5b50328b981eb76a60aeb276318718c77f23a12b58987a09f0",
+      "namespace": "InternalHealthChangeV1"
+    },
+    {
+      "schema_id": "urn:nyx:knowledge-acquisition:1.0",
+      "schema_file": "internal/knowledge-acquisition-v1.schema.json",
+      "schema_sha256": "06c3651a5cf409e0218f013cdda623a565f47de47550a1e3d52ca9d2918d4fe0",
+      "typescript_file": "packages/contracts/src/generated/internal--knowledge-acquisition-v1.ts",
+      "typescript_sha256": "5893b536ab7fc27ceeaa78f1bb17a520444bc729fb5ec22152a0fcec4716eeeb",
+      "namespace": "InternalKnowledgeAcquisitionV1"
+    },
+    {
+      "schema_id": "https://nyx.local/schemas/internal/mechanical-action/v1.1",
+      "schema_file": "internal/mechanical-action-v1.1.schema.json",
+      "schema_sha256": "7185eed1cdcab170a395eaaf68b886b75fc1c82a3a0d9ff07c8194ee8b864af3",
+      "typescript_file": "packages/contracts/src/generated/internal--mechanical-action-v1.1.ts",
+      "typescript_sha256": "432e75a155a9b2ac14bd29b5090c9eac80a5d3c4f3c33aa918d86af16d157b39",
+      "namespace": "InternalMechanicalActionV11"
+    },
+    {
+      "schema_id": "https://nyx.local/schemas/internal/mechanical-action/v1",
+      "schema_file": "internal/mechanical-action-v1.schema.json",
+      "schema_sha256": "1824f3ee546de1057a9fb8e97f0f9c4ce55ff4136992c5ef6073292857967b5c",
+      "typescript_file": "packages/contracts/src/generated/internal--mechanical-action-v1.ts",
+      "typescript_sha256": "fa3010c910f81c43709bd7f69b4e1963f8351df08227fe94e55eb8c1f0cb2448",
+      "namespace": "InternalMechanicalActionV1"
+    },
+    {
+      "schema_id": "urn:nyx:memory-record:1.0",
+      "schema_file": "internal/memory-record.schema.json",
+      "schema_sha256": "d34c150576b4157c86f42769dd9d30e484e0642c494cfb55741cc09e1bc0e27d",
+      "typescript_file": "packages/contracts/src/generated/internal--memory-record.ts",
+      "typescript_sha256": "06111bc638626bb62ea0071cd758e595a770ccccecf3d896e55557fd44f7af49",
+      "namespace": "InternalMemoryRecord"
+    },
+    {
+      "schema_id": "urn:nyx:registered-travel:1.0",
+      "schema_file": "internal/registered-travel-v1.schema.json",
+      "schema_sha256": "4d334ca959748e3010c905ff9f136fa654c3c717045cc5e68317546b789a4b8a",
+      "typescript_file": "packages/contracts/src/generated/internal--registered-travel-v1.ts",
+      "typescript_sha256": "996fd5c205df601a6d704a9c7b78b4d2efd78eb7798afb3aa69b05c64d6fd2bc",
+      "namespace": "InternalRegisteredTravelV1"
+    },
+    {
+      "schema_id": "urn:nyx:rule-source-record:1.0",
+      "schema_file": "internal/rule-source-record.schema.json",
+      "schema_sha256": "8242a47ff0b994a32beb6bbd38bec8a7f9448b240ae1f2755c29fb9def8d305d",
+      "typescript_file": "packages/contracts/src/generated/internal--rule-source-record.ts",
+      "typescript_sha256": "8b1046e7da83bbe87c05edc4e75c3da6d2747280a7c9f0cb359051400b4e2dfd",
+      "namespace": "InternalRuleSourceRecord"
+    },
+    {
+      "schema_id": "urn:nyx:timeline-entry:1.0",
+      "schema_file": "internal/timeline-entry.schema.json",
+      "schema_sha256": "d9185c433b47957e1e37db4b765a02a8a83b24471444662f355cd903dd1e350f",
+      "typescript_file": "packages/contracts/src/generated/internal--timeline-entry.ts",
+      "typescript_sha256": "11201467fc978b1d0a91f49b1ce0d028d4ecc7126729784c1055a05a07dc99c2",
+      "namespace": "InternalTimelineEntry"
+    },
+    {
+      "schema_id": "urn:nyx:transaction-journal:1.1",
+      "schema_file": "internal/transaction-journal-v1.1.schema.json",
+      "schema_sha256": "1f57bef43d67fbe06242857c35d61de1d22da8cac3132f5bf95663e936cf19c3",
+      "typescript_file": "packages/contracts/src/generated/internal--transaction-journal-v1.1.ts",
+      "typescript_sha256": "2d6c5810ec0e8032db219d547054e83115ba789d0a65512dddb1fbd2f9e776e8",
+      "namespace": "InternalTransactionJournalV11"
+    },
+    {
+      "schema_id": "urn:nyx:transaction-journal:1.0",
+      "schema_file": "internal/transaction-journal.schema.json",
+      "schema_sha256": "c1b55283610e6abe4864395a035757d143767c0c52d17791d706c034c8c085ea",
+      "typescript_file": "packages/contracts/src/generated/internal--transaction-journal.ts",
+      "typescript_sha256": "2b8b9e3b0b55234903576b99c437b5c3a6f7e82425d943010165b4293281e22e",
+      "namespace": "InternalTransactionJournal"
+    },
+    {
+      "schema_id": "urn:nyx:transcript-entry:1.0",
+      "schema_file": "internal/transcript-entry.schema.json",
+      "schema_sha256": "984daf04c073106d02d6584d513b4c2d5cfae48451b9642c06915814a6a45c9f",
+      "typescript_file": "packages/contracts/src/generated/internal--transcript-entry.ts",
+      "typescript_sha256": "17b15b18104c063a75553c19750a3838913eb1d6b7082f5e9f3e10edaf6f3ce1",
+      "namespace": "InternalTranscriptEntry"
+    },
+    {
+      "schema_id": "urn:nyx:worker-attempt:1.0",
+      "schema_file": "internal/worker-attempt.schema.json",
+      "schema_sha256": "200a0ad54a1da51058973719933de37add4bb5d4675d38118d763a338e53fe83",
+      "typescript_file": "packages/contracts/src/generated/internal--worker-attempt.ts",
+      "typescript_sha256": "b3faef177ad23e4149b94a7d7d5e0f28cb18de364ec273da1ce096424248e168",
+      "namespace": "InternalWorkerAttempt"
+    },
+    {
+      "schema_id": "urn:nyx:worker-queue-batch:1.0",
+      "schema_file": "internal/worker-queue-batch.schema.json",
+      "schema_sha256": "27b562f74c9b6ad1174076ea6071f5fa0d90f3b63f053ae2cc0e9b8551f01670",
+      "typescript_file": "packages/contracts/src/generated/internal--worker-queue-batch.ts",
+      "typescript_sha256": "06bcdf6474831752eb17c7b46ff5b93412e2c52945932b3f3f3275a04f32190f",
+      "namespace": "InternalWorkerQueueBatch"
+    },
+    {
+      "schema_id": "urn:nyx:writer-lock:1.0",
+      "schema_file": "internal/writer-lock.schema.json",
+      "schema_sha256": "3a3b1a6486746f3d7d59270e8045022a3e124a03486a6acea5c6a01df444f9f1",
+      "typescript_file": "packages/contracts/src/generated/internal--writer-lock.ts",
+      "typescript_sha256": "9bb599922223e9593bee8d0351c7e33a78cad7e76450140ef51811a4559e6d31",
+      "namespace": "InternalWriterLock"
+    },
+    {
+      "schema_id": "urn:rpg-engine:compaction-proposal:1.0",
+      "schema_file": "sot/compaction-proposal.schema.json",
+      "schema_sha256": "aa53dfc0e0714b5e6a14e1f45e8817b5bd737aaa46ef21f034c7e1c67a518b97",
+      "typescript_file": "packages/contracts/src/generated/sot--compaction-proposal.ts",
+      "typescript_sha256": "aae70eb17a4f0ede3571811ef057d419f98483aa85d4152946df2db0aa86011c",
+      "namespace": "SotCompactionProposal"
+    },
+    {
+      "schema_id": "urn:nyx-rpg:dnd35:character-extension:1.0",
+      "schema_file": "sot/d-d-3-5-character-extension.schema.json",
+      "schema_sha256": "596866eefba49d012055d2281726f94d7ca85d263d0f636fe3a506cc625098c1",
+      "typescript_file": "packages/contracts/src/generated/sot--d-d-3-5-character-extension.ts",
+      "typescript_sha256": "1f7475e02e3818ec82076cb80514c853a9c531870f722889fe1f624ed6a66914",
+      "namespace": "SotDD35CharacterExtension"
+    },
+    {
+      "schema_id": "urn:rpg-engine:character-sheet:dnd35:1.0",
+      "schema_file": "sot/dnd35-character-sheet.schema.json",
+      "schema_sha256": "2ceb0ede44982b338a29913b176fdcfe8077fbfeac7cbef570b389b7e2be8c72",
+      "typescript_file": "packages/contracts/src/generated/sot--dnd35-character-sheet.ts",
+      "typescript_sha256": "b9a3ddddbf4686489a56f5ce624a37d6343c1da57e1a4c1c45a19891c12c131a",
+      "namespace": "SotDnd35CharacterSheet"
+    },
+    {
+      "schema_id": "urn:rpg-engine:inventory:1.0",
+      "schema_file": "sot/inventory.schema.json",
+      "schema_sha256": "c2d3372526e3002ca614b2a1938374055ef14cee9033386f30073996fb3c72a2",
+      "typescript_file": "packages/contracts/src/generated/sot--inventory.ts",
+      "typescript_sha256": "9c10d07be5c33f7057ae46a8c43c838fb90a5bf22c8ce0f30018e89d2b278732",
+      "namespace": "SotInventory"
+    },
+    {
+      "schema_id": "urn:rpg-engine:job-card:1.0",
+      "schema_file": "sot/rpgjob-card.schema.json",
+      "schema_sha256": "0a10565da554f073d85a8f8c068088b28c4d1ce93b9e5d379192dfae97e121a2",
+      "typescript_file": "packages/contracts/src/generated/sot--rpgjob-card.ts",
+      "typescript_sha256": "5e5f9fddd06063d49f6adfd468fa3134bd2fd0ed65fb7de3ffe02d8ccc4a8646",
+      "namespace": "SotRpgjobCard"
+    },
+    {
+      "schema_id": "urn:rpg-engine:worker-result:1.0",
+      "schema_file": "sot/rpgworker-result.schema.json",
+      "schema_sha256": "9813563934457426e0619efcb4d5eed2290692b99fee3a7614efbb3f8b3f7e69",
+      "typescript_file": "packages/contracts/src/generated/sot--rpgworker-result.ts",
+      "typescript_sha256": "ac43d8e41a56aa38bb823d398403aa6e325d9f3eccc68408b00abcdec42a3b19",
+      "namespace": "SotRpgworkerResult"
+    },
+    {
+      "schema_id": "urn:nyx-rpg:dnd35:rule-query:1.0",
+      "schema_file": "sot/rule-query.schema.json",
+      "schema_sha256": "884f7179e8b4b11bf449810393f91c71c0e95f8367b20c9b9db21cda30038bc1",
+      "typescript_file": "packages/contracts/src/generated/sot--rule-query.ts",
+      "typescript_sha256": "351e7e63fa7e551d6fd278b0285f4889d6b6fd17e35d3616822bb81326d72f84",
+      "namespace": "SotRuleQuery"
+    },
+    {
+      "schema_id": "urn:nyx-rpg:dnd35:rule-resolution:1.0",
+      "schema_file": "sot/rule-resolution.schema.json",
+      "schema_sha256": "7e6be2402dc2225accf645c77aef94da8e3c1b754936aba2e56b47989e151727",
+      "typescript_file": "packages/contracts/src/generated/sot--rule-resolution.ts",
+      "typescript_sha256": "5c4ec553c253084cdd91407bf160cf80beb1f2407a8178b9824078e79a8d2626",
+      "namespace": "SotRuleResolution"
+    },
+    {
+      "schema_id": "urn:rpg-engine:turn-plan:1.0",
+      "schema_file": "sot/turn-plan.schema.json",
+      "schema_sha256": "78d245578bdec074cc4cc3de9d2cbb0ded6cd0a0400eca110200332c0cb8beb6",
+      "typescript_file": "packages/contracts/src/generated/sot--turn-plan.ts",
+      "typescript_sha256": "ae45069f679a42bcaea983b801ee3f597487c98116916a4b8612055cfef1334a",
+      "namespace": "SotTurnPlan"
+    },
+    {
+      "schema_id": "urn:rpg-engine:turn-resolution:1.0",
+      "schema_file": "sot/turn-resolution.schema.json",
+      "schema_sha256": "44e3ad77f2165d58fa10af18ef41cf1de34cd97b7690a5ed0d4a5716e2acffa8",
+      "typescript_file": "packages/contracts/src/generated/sot--turn-resolution.ts",
+      "typescript_sha256": "073c885c2edeb7f9723eef8938d2647a341e4a650a1a69891a3386975be3b30d",
+      "namespace": "SotTurnResolution"
+    }
+  ]
+}
